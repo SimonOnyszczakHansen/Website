@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'skibidi';
+    src: url('assets/fonts/heavitas/Heavitas.ttf');
+}
+
+body {
+    margin: 0;
+}

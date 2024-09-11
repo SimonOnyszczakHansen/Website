@@ -1,0 +1,69 @@
+body {
+    background: rgb(7,0,134);
+    background: radial-gradient(circle, rgb(0, 0, 49) 0%, rgb(0, 0, 5) 100%);
+    min-height: 100em;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: skibidi;
+}  
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    color: white;
+    max-width: 700px;
+  }
+  
+  .hero h3 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 span {
+    background: linear-gradient(to right, #020072, #0065e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #bbb;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5a4ae3;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #726bfa;
+  }
+  

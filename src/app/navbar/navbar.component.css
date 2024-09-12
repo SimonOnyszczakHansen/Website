@@ -7,10 +7,13 @@
     top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(5px);
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1;
+    font-family: skibidi;
 }
 
 .navbar ul {
@@ -19,7 +22,22 @@
     gap: 3em;
     margin: 0;
     padding: 0;
+    z-index: 9;
+    position: relative;
+    padding-inline-start: 0;
 }
+
+.navbar .underline {
+    position: absolute;
+    bottom: -0.5em;
+    height: 4px;
+    background: linear-gradient(to right, #0300a8, #0065e9);
+    transition: width 0.5s ease, left 0.5s ease;
+    z-index: 0;
+    left: 0;
+    border-radius: 2rem;
+}
+
 
 .navbar .nav-link {
     color: #ffffff;
@@ -29,6 +47,8 @@
     padding: 10px 20px;
     transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     border-radius: 5px;
+    position: relative;
+    z-index: 1;
 }
 
 .navbar .nav-link:hover {
@@ -36,18 +56,8 @@
 }
 
 .navbar .active {
-    color: #0065e9;
-    position: relative;
-}
-
-.navbar .active::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: #0065e9;
-    width: 100%;
-    position: absolute;
-    justify-self: unset;
-    bottom: -5px;
-    left: 0;
+    background: linear-gradient(to right, #0300a8, #0065e9);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 1;
 }

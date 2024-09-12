@@ -6,3 +6,17 @@
 body {
     margin: 0;
 }
+
+/* Styling the scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #020072, #00295f);
+    border-radius: 10px;
+}

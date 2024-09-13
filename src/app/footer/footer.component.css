@@ -1,13 +1,11 @@
 .footer {
-    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
     padding: 2em 0;
     text-align: center;
-    color: #fff; /* Ensure white text */
+    color: #fff;
     font-size: 0.9rem;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
-    border-top: 2px solid transparent; /* Transparent border to hold the gradient */
+    border-top: 2px solid transparent;
     background-clip: padding-box;
     position: relative;
     overflow: hidden;
@@ -20,8 +18,8 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(to right, #0065e9, #0300a8); /* Gradient border effect */
-    animation: moveGradient 3s infinite linear; /* Gradient animation */
+    background: linear-gradient(to right, #0065e9, #0300a8);
+    animation: moveGradient 3s infinite linear;
   }
   
   @keyframes moveGradient {

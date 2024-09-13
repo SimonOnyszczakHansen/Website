@@ -3,11 +3,18 @@
     src: url('assets/fonts/heavitas/Heavitas.ttf');
 }
 
+* {
+    font-family: skibidi;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
 
-/* Styling the scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
 }

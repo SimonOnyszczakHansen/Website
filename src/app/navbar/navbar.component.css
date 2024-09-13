@@ -1,3 +1,4 @@
+/* Existing styles */
 .navbar {
     display: flex;
     justify-content: center;
@@ -37,6 +38,10 @@
     border-radius: 2rem;
 }
 
+/* Disable transition on initial load */
+.no-transition .underline {
+    transition: none; /* Disable transition during initial placement */
+}
 
 .navbar .nav-link {
     color: #ffffff;
@@ -59,4 +64,8 @@
     -webkit-background-clip: text;
     color: transparent;
     opacity: 1;
+}
+
+@media (max-width: 600px) {
+    /* Add your responsive styles here */
 }

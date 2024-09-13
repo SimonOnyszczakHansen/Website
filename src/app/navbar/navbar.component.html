@@ -9,10 +9,10 @@
 <body>    
   <nav class="navbar" #navbar>
     <ul>
-      <li><a class="nav-link" [class.active]="activeSection === 'home'" (click)="setActive('home')">Home</a></li>
-      <li><a class="nav-link" [class.active]="activeSection === 'projects'" (click)="setActive('projects')">Projects</a></li>
-      <li><a class="nav-link" [class.active]="activeSection === 'about'" (click)="setActive('about')">About</a></li>
-      <li><a class="nav-link" [class.active]="activeSection === 'contact'" (click)="setActive('contact')">Contact</a></li>
+      <li><a class="nav-link" [class.active]="activeSection === 'home'" (click)="setActive('home'); goToHome()">Home</a></li>
+      <li><a class="nav-link" [class.active]="activeSection === 'projects'" (click)="setActive('projects'); goToProjects()">Projects</a></li>
+      <li><a class="nav-link" [class.active]="activeSection === 'about'" (click)="setActive('about'); goToAbout()">About</a></li>
+      <li><a class="nav-link" [class.active]="activeSection === 'contact'" (click)="setActive('contact'); goToContact()">Contact</a></li>
       <span class="underline" [style.width.px]="underlineWidth" [style.left.px]="underlineLeft"></span>
     </ul>
   </nav>   

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
 
@@ -7,7 +7,7 @@ import { FooterComponent } from '../footer/footer.component';
   standalone: true,
   imports: [NavbarComponent, FooterComponent],
   templateUrl: './projects-page.component.html',
-  styleUrl: './projects-page.component.css'
+  styleUrls: ['./projects-page.component.css']
 })
 export class ProjectsPageComponent {
 

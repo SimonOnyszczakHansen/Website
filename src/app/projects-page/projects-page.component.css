@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
 }
 
 .hero {
@@ -86,6 +86,7 @@ body {
 }
 
 .project-card {
+    visibility: hidden;
     display: flex;
     align-items: center;
     margin: 2em auto;
@@ -95,7 +96,25 @@ body {
     max-width: 80%;
     color: white;
     background-color: rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
 }
+
+.project-card.visible {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
 
 .project-image img {
     width: 40vw;
@@ -128,7 +147,8 @@ body {
 }
 
 .project-details p {
-    font-size: 1rem;
+    font-size: 15px;
+    line-height: 21px;
     color: #888888;
 }
 
@@ -138,4 +158,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    scroll-padding: 50px;
+    scroll-behavior: smooth;
+}
+
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.tech-logos .tech-logo {
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tech-logos .fa-html5 {
+    color: #E34F26;
+}
+
+.tech-logos .fa-css3 {
+    color: #1572B6;
+}
+
+.tech-logos .fa-js {
+    color: #F7DF1E;
+}
+
+.tech-logos .tech-logo:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
 }

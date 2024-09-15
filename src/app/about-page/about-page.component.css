@@ -1,4 +1,3 @@
-/* Existing CSS */
 body {
     margin: 0;
     padding: 0;
@@ -56,15 +55,14 @@ body {
     }
 }
 
-/* Carousel Styles */
 .carousel3d {
-    perspective: 1200px; /* Increase perspective to give more depth */
-    height: 500px; /* Increase height */
+    perspective: 1200px;
+    height: 500px;
     position: relative;
     margin: 50px auto;
     overflow: hidden;
     width: 100%;
-    max-width: 120em; /* Increase max-width */
+    max-width: 120em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,19 +73,19 @@ body {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    animation: rotateCarousel 20s infinite linear;
+    animation: rotateCarousel 40s infinite linear;
 }
 
 .carousel3d-item {
     position: absolute;
-    width: 200px; /* Increase item size */
-    height: 200px; /* Increase item size */
+    width: 200px;
+    height: 200px;
     top: 50%;
     left: 50%;
-    margin: -100px 0 0 -100px; /* Adjust margin to center larger items */
+    margin: -100px 0 0 -100px;
     transform-style: preserve-3d;
     background-color: rgba(255, 255, 255, 0.05);
-    border: 2px solid #020072;
+    border: 3px solid #020072;
     border-radius: 25px;
     backdrop-filter: blur(5px);
     display: flex;
@@ -98,22 +96,22 @@ body {
 }
 
 .carousel3d-item i {
-    font-size: 8rem; /* Increase icon size */
+    font-size: 8rem;
     color: #0065e9;
 }
 
 .carousel3d-item p {
     margin-top: 10px;
-    font-size: 1.2rem; /* Slightly increase text size */
+    font-size: 1.2rem;
     color: white;
 }
 
 /* Position the items around the carousel */
 .carousel3d-item:nth-child(1) {
-    transform: rotateY(0deg) translateZ(400px); /* Increase translateZ for larger distance */
+    transform: rotateY(0deg) translateZ(400px);
 }
 .carousel3d-item:nth-child(2) {
-    transform: rotateY(45deg) translateZ(400px); /* Adjusted translateZ */
+    transform: rotateY(45deg) translateZ(400px);
 }
 .carousel3d-item:nth-child(3) {
     transform: rotateY(90deg) translateZ(400px);

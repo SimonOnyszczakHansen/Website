@@ -1,14 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 .hero {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 
 .hero-content {
   color: white;
-  max-width: 40em;
+  max-width: 35em;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s ease-out forwards;

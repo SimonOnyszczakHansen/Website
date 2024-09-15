@@ -1,0 +1,145 @@
+/* Existing CSS */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    color: white;
+    max-width: 35em;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    background: linear-gradient(to right, #020072, #0065e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #bbb;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Carousel Styles */
+.carousel3d {
+    perspective: 1200px; /* Increase perspective to give more depth */
+    height: 500px; /* Increase height */
+    position: relative;
+    margin: 50px auto;
+    overflow: hidden;
+    width: 100%;
+    max-width: 120em; /* Increase max-width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel3d-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCarousel 20s infinite linear;
+}
+
+.carousel3d-item {
+    position: absolute;
+    width: 200px; /* Increase item size */
+    height: 200px; /* Increase item size */
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px; /* Adjust margin to center larger items */
+    transform-style: preserve-3d;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid #020072;
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel3d-item i {
+    font-size: 8rem; /* Increase icon size */
+    color: #0065e9;
+}
+
+.carousel3d-item p {
+    margin-top: 10px;
+    font-size: 1.2rem; /* Slightly increase text size */
+    color: white;
+}
+
+/* Position the items around the carousel */
+.carousel3d-item:nth-child(1) {
+    transform: rotateY(0deg) translateZ(400px); /* Increase translateZ for larger distance */
+}
+.carousel3d-item:nth-child(2) {
+    transform: rotateY(45deg) translateZ(400px); /* Adjusted translateZ */
+}
+.carousel3d-item:nth-child(3) {
+    transform: rotateY(90deg) translateZ(400px);
+}
+.carousel3d-item:nth-child(4) {
+    transform: rotateY(135deg) translateZ(400px);
+}
+.carousel3d-item:nth-child(5) {
+    transform: rotateY(180deg) translateZ(400px);
+}
+.carousel3d-item:nth-child(6) {
+    transform: rotateY(225deg) translateZ(400px);
+}
+.carousel3d-item:nth-child(7) {
+    transform: rotateY(270deg) translateZ(400px);
+}
+.carousel3d-item:nth-child(8) {
+    transform: rotateY(315deg) translateZ(400px);
+}
+
+/* Rotate the carousel */
+@keyframes rotateCarousel {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(-360deg);
+    }
+}

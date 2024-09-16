@@ -2,59 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Projects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Projects</title>
 </head>
 
 <body>
-    <div class="hero">
-        <div class="hero-content">
-          <h1>Hey There, Check Out My <span>Work!</span></h1>
-          <p>Check out the cool apps and coding projects I've been working on!</p>
-        </div>
-        <div class="scroll-down">
-          <p>Scroll down</p>
-          <a href="#"><i class="fas fa-arrow-down"></i></a>
-        </div>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Hey There, Check Out My <span>Work!</span></h1>
+      <p>Check out the cool apps and coding projects I've been working on!</p>
+    </div>
+    <div class="scroll-down">
+      <p>Scroll down</p>
+      <a href="#"><i class="fas fa-arrow-down"></i></a>
+    </div>
+  </div>
+  <div class="project-card-container">
+    <div class="project-card" #projectCard>
+      <div class="project-image-slideshow">
+        <img *ngFor="let image of images; let i = index" [src]="image" [class.active-slide]="i === currentSlide"
+          alt="Project Image">
       </div>
-      <div class="project-card-container">
-      <div class="project-card" #projectCard>
-        <div class="project-image">
-          <img src="assets/images/PasswordGenerator.png" alt="Password Generator">
-        </div>
-        <div class="project-details">
-          <h2>Password Generator</h2>
-          <p>WOIJDJIOWDIO IWJ IODWQJIO DJWI OJDO WIJOI WJDI J I JWIOJOIWJIOJOIWJIODWQJIDJOWQID JIOWJI JW OWJI JOWJIO JIO JIOJO OII J JO JI JIOJ IJI  IJIOJOJOIJIJJ OIOOIOIJ OIJIOJIOJJI JIOIOJJIOJIOIJOIJOOJI IJOJIOIJOIJOJI OJI JIO JOIJ IOIOJ IIOJ IO IOJ IJO IJOIJOJIO IOJIJJIO JIOJIOOJI IOJ OIJIJJI IJOIJIOJ OIJ OIJIJOIJ IJO OIJJOIOJI OIJ IO JIOOJI IOJ JIO IOI J II OIJOIJOJIOJI IJOOIJOIJIOJ IOJOIOI J OI OIJIOIO IO JO JIO JIIJO JI JOI JOI IOJ IJ JIOJ JOI  OIJ JJ OIJ IOIJOOJI IJOJIOJIJIOJI IJJJ IOJO IOJIO IJO IJO JIOJIOI JOO JIJIO JIOJOIJOIJIO JIOJOI OJI OJI OIJOIJIOJOIJ OJI OIJ JIO IOJIOJ OIJ JI  IJIJ</p>
-          <div class="tech-logos">
-            <i class="fab fa-html5 tech-logo"></i>
-            <i class="fab fa-css3 tech-logo"></i>
-            <i class="fab fa-js tech-logo"></i>
-          </div>
+      <div class="project-details">
+        <h2>Password Generator</h2>
+        <p>
+          The <span>Password Generator</span> is a secure and customizable tool for creating strong, personalized
+          passwords.
+        </p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+          <li><strong>Interest-based Password Creation:</strong> Users can input their interests or numbers, which are
+            then incorporated into the password.</li>
+          <li><strong>Variable Password Length:</strong> Sliders allow users to set the password length and determine
+            how many characters are derived from each interest.</li>
+          <li><strong>Service Name Integration:</strong> Predefined services, like Facebook or Google, can be included
+            in the password for added personalization.</li>
+          <li><strong>Password Strength Meter:</strong> The generator analyzes the password's strength, providing
+            real-time feedback to ensure security standards are met.</li>
+          <li><strong>Responsive Design:</strong> The tool is fully responsive, adapting to any device size for optimal
+            user experience.</li>
+        </ul>
+        <p>This password generator emphasizes user experience, security, and customization, and is built using modern
+          web technologies like HTML, CSS, JavaScript, and the Bootstrap framework.</p>
+        <div class="tech-logos">
+          <i class="fab fa-html5 tech-logo"></i>
+          <i class="fab fa-css3 tech-logo"></i>
+          <i class="fab fa-js tech-logo"></i>
+          <i class="fab fa-bootstrap tech-logo"></i>
         </div>
       </div>
     </div>
-    <div class="project-card-container">
-      <div class="project-card" #projectCard>
-        <div class="project-image">
-          <img src="assets/images/PasswordGenerator.png" alt="Password Generator">
-        </div>
-        <div class="project-details">
-          <h2>Password Generator</h2>
-          <p>WOIJDJIOWDIO IWJ IODWQJIO DJWI OJDO WIJOI WJDI J I JWIOJOIWJIOJOIWJIODWQJIDJOWQID JIOWJI JW OWJI JOWJIO JIO JIOJO OII J JO JI JIOJ IJI  IJIOJOJOIJIJJ OIOOIOIJ OIJIOJIOJJI JIOIOJJIOJIOIJOIJOOJI IJOJIOIJOIJOJI OJI JIO JOIJ IOIOJ IIOJ IO IOJ IJO IJOIJOJIO IOJIJJIO JIOJIOOJI IOJ OIJIJJI IJOIJIOJ OIJ OIJIJOIJ IJO OIJJOIOJI OIJ IO JIOOJI IOJ JIO IOI J II OIJOIJOJIOJI IJOOIJOIJIOJ IOJOIOI J OI OIJIOIO IO JO JIO JIIJO JI JOI JOI IOJ IJ JIOJ JOI  OIJ JJ OIJ IOIJOOJI IJOJIOJIJIOJI IJJJ IOJO IOJIO IJO IJO JIOJIOI JOO JIJIO JIOJOIJOIJIO JIOJOI OJI OJI OIJOIJIOJOIJ OJI OIJ JIO IOJIOJ OIJ JI  IJIJ</p>
-          <div class="tech-logos">
-            <i class="fab fa-html5 tech-logo"></i>
-            <i class="fab fa-css3 tech-logo"></i>
-            <i class="fab fa-js tech-logo"></i>
-          </div>
+  </div>
+  <div class="project-card-container">
+    <div class="project-card" #projectCard>
+      <div class="project-image">
+        <img src="assets/images/PasswordGenerator.png" alt="Password Generator">
+      </div>
+      <div class="project-details">
+        <h2></h2>
+        <p></p>
+        <div class="tech-logos">
+          <i class="fab fa-html5 tech-logo"></i>
+          <i class="fab fa-css3 tech-logo"></i>
+          <i class="fab fa-js tech-logo"></i>
         </div>
       </div>
     </div>
-      
-      <app-footer></app-footer>
-      
+  </div>
+
+  <app-footer></app-footer>
+
 </body>
 
 </html>

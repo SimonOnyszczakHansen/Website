@@ -23,6 +23,13 @@ body {
     transition: opacity 1s ease, transform 1s ease;
 }
 
+.hero-content h3 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
 .hero-content h1 {
     font-size: 2.5rem;
     font-weight: bold;
@@ -73,7 +80,7 @@ body {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    animation: rotateCarousel 40s infinite linear;
+    animation: rotateCarousel 50s infinite linear;
 }
 
 .carousel3d-item {

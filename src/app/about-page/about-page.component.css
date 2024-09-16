@@ -80,7 +80,7 @@ body {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    animation: rotateCarousel 50s infinite linear;
+    animation: rotateCarousel 40s infinite linear;
 }
 
 .carousel3d-item {

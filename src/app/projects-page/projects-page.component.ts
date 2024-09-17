@@ -13,15 +13,24 @@ import { NgFor } from '@angular/common';
 export class ProjectsPageComponent implements AfterViewInit, OnInit, OnDestroy {
   @ViewChildren('projectCard') projectCards!: QueryList<ElementRef>;
 
-  images: string[] = [
+  passwordGeneratorImages: string[] = [
     "assets/images/PasswordGenerator.png",
     "assets/images/PasswordGenerator2.png"
   ];
-  currentSlide: number = 0;
-  slideIntervalId: any;
+
+  vscodeThemeImages: string[] = [
+    "assets/images/CustomTheme1.png",
+    "assets/images/CustomTheme2.png"
+  ]
+  currentSlidePasswordGenerator: number = 0;
+  slideIntervalIdPasswordGenerator: any;
+
+  currentSlideVscodeTheme: number = 0;
+  slideIntervalIdVscodeTheme: any;
 
   ngOnInit(): void {
-    this.startSlideshow();
+    this.startPasswordGeneratorSlideshow();
+    this.startVscodeThemeSlideshow();
   }
 
   ngAfterViewInit() {
@@ -42,19 +51,30 @@ export class ProjectsPageComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.clearSlideshow();
+    this.clearPasswordGeneratorSlideshow();
   }
 
-  // Slideshow logic
-  startSlideshow() {
-    this.slideIntervalId = setInterval(() => {
-      this.currentSlide = (this.currentSlide + 1) % this.images.length;
+  startPasswordGeneratorSlideshow() {
+    this.slideIntervalIdPasswordGenerator = setInterval(() => {
+      this.currentSlidePasswordGenerator = (this.currentSlidePasswordGenerator + 1) % this.passwordGeneratorImages.length;
     }, 8000);
   }
 
-  clearSlideshow() {
-    if (this.slideIntervalId) {
-      clearInterval(this.slideIntervalId);
+  startVscodeThemeSlideshow() {
+    this.slideIntervalIdVscodeTheme = setInterval(() => {
+      this.currentSlideVscodeTheme = (this.currentSlideVscodeTheme + 1) % this.vscodeThemeImages.length;
+      }, 8000);
+  }
+
+  clearPasswordGeneratorSlideshow() {
+    if (this.slideIntervalIdPasswordGenerator) {
+      clearInterval(this.slideIntervalIdPasswordGenerator);
     }
+  }
+
+  clearVscodeThemeSlideshow() {
+    if (this.slideIntervalIdVscodeTheme) {
+      clearInterval(this.slideIntervalIdVscodeTheme);
+      }
   }
 }

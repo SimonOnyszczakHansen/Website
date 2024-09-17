@@ -23,7 +23,7 @@
   <div class="project-card-container">
     <div class="project-card" #projectCard>
       <div class="project-image-slideshow">
-        <img *ngFor="let image of images; let i = index" [src]="image" [class.active-slide]="i === currentSlide"
+        <img *ngFor="let image of passwordGeneratorImages; let i = index" [src]="image" [class.active-slide]="i === currentSlidePasswordGenerator"
           alt="Project Image">
       </div>
       <div class="project-details">
@@ -58,16 +58,15 @@
   </div>
   <div class="project-card-container">
     <div class="project-card" #projectCard>
-      <div class="project-image">
-        <img src="assets/images/PasswordGenerator.png" alt="Password Generator">
+      <div class="project-image-slideshow">
+        <img *ngFor="let image of vscodeThemeImages; let i = index" [src]="image" [class.active-slide]="i === currentSlideVscodeTheme"
+          alt="Project Image">
       </div>
       <div class="project-details">
-        <h2></h2>
-        <p></p>
+        <h2>Custom VSCode Theme</h2>
+        <p>A vibrant and dynamic Visual Studio Code theme designed to enhance both aesthetics and functionality. This theme features gradient-based text effects with bold colors, including animated, shifting borders for active tabs that create a modern, flowing visual experience. Custom link styling, colorful badge highlights, and eye-catching text gradients bring a lively, futuristic touch to your coding environment, while ensuring clear and intuitive navigation.</p>
         <div class="tech-logos">
-          <i class="fab fa-html5 tech-logo"></i>
           <i class="fab fa-css3 tech-logo"></i>
-          <i class="fab fa-js tech-logo"></i>
         </div>
       </div>
     </div>

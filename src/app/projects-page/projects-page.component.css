@@ -99,7 +99,7 @@ body {
     visibility: hidden;
     display: flex;
     margin: 2em auto;
-    padding: 4em;
+    padding: 2em;
     border: 2px solid #020072;
     border-radius: 20px;
     max-width: 80%;
@@ -108,6 +108,8 @@ body {
     opacity: 0;
     transform: translateX(-100px);
     transition: opacity 1s ease, transform 1s ease;
+    height: auto;
+    width: auto;
 }
 
 .project-card.visible {
@@ -124,29 +126,24 @@ body {
     }
 }
 
- img {
-    width: 40vw;
-    height: auto;
-    display: block;
-    box-shadow: 0 0 10px 5px rgba(0, 50, 255, 0.2);
-    transition: box-shadow 10s ease-in-out;
-    border-radius: 25px;
-}
-
 .project-image-slideshow {
     position: relative;
     width: 40vw;
     height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .project-image-slideshow img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: auto;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    object-fit: cover;
+    object-fit: cover;
 }
 
 .project-image-slideshow img.active-slide {
@@ -156,6 +153,8 @@ body {
 .project-details {
     flex: 1;
     margin-left: 3em;
+    justify-content: center;
+    padding: 3em;
 }
 
 .project-details h2,

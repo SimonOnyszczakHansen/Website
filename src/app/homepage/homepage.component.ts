@@ -1,6 +1,7 @@
 import { Component, ElementRef, Renderer2, HostListener } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -10,7 +11,7 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './homepage.component.css'
 })
 export class HomepageComponent {
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2, private route: Router) {}
 
   // Listen to window scroll events
   @HostListener('window:scroll', [])
@@ -23,5 +24,9 @@ export class HomepageComponent {
         this.renderer.addClass(heroContent, 'in-view');
       }
     }
+  }
+
+  goToContactPage() {
+    this.route.navigate(['contact'])
   }
 }

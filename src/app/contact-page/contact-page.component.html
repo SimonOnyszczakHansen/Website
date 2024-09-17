@@ -1,1 +1,46 @@
-<p>contact-page works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Simon Onyszczak Hansen</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Contact <span>Me</span></h1>
+            <p>Feel free to get in touch with me. I'd love to hear from you!</p>
+        </div>
+    </header>
+    <!-- Contact Section -->
+    <main>
+        <section class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send a Message</h2>
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <input type="text" formControlName="name" required placeholder=" " aria-label="Your Name" />
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" formControlName="email" required placeholder=" " aria-label="Your Email" />
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea formControlName="message" rows="6" required placeholder=" "
+                            aria-label="Your Message"></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <app-footer></app-footer>
+</body>
+
+</html>

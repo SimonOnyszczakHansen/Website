@@ -1,12 +1,46 @@
 import { Component } from '@angular/core';
+import { FooterComponent } from '../footer/footer.component';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-page',
   standalone: true,
-  imports: [],
+  imports: [FooterComponent, ReactiveFormsModule, FormsModule, HttpClientModule],
   templateUrl: './contact-page.component.html',
-  styleUrl: './contact-page.component.css'
+  styleUrls: ['./contact-page.component.css'],
 })
-export class ContactPageComponent {
 
+export class ContactPageComponent {
+  contactForm: FormGroup;
+
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient // Inject HttpClient
+  ) {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required],
+    });
+  }
+
+  onSubmit() {
+    if (this.contactForm.valid) {
+      const formData = this.contactForm.value;
+      // Send the form data to the backend
+      this.http.post('/api/send-email', formData).subscribe(
+        (response) => {
+          // Handle successful response
+          alert('Your message has been sent successfully!');
+          this.contactForm.reset();
+        },
+        (error) => {
+          // Handle error response
+          alert('An error occurred while sending your message.');
+          console.error(error);
+        }
+      );
+    }
+  }
 }

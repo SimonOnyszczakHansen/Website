@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 35em;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    background: linear-gradient(to right, #020072, #0065e9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #020072, #0065e9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.contact-form .form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #0065e9;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-bottom-color: #00d4ff;
+}
+
+.contact-form label {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: #aaaaaa;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus~label,
+.contact-form input:not(:placeholder-shown)~label,
+.contact-form textarea:focus~label,
+.contact-form textarea:not(:placeholder-shown)~label {
+    top: -10px;
+    font-size: 0.9rem;
+    color: #00d4ff;
+}
+
+.contact-form button {
+    background: linear-gradient(to right, #020072, #0065e9);
+    border: none;
+    padding: 15px 30px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(to right, #0065e9, #00d4ff);
+}
+/* Slide In Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

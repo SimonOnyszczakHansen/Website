@@ -241,13 +241,60 @@ body {
 }
 
 @media (max-width: 768px) {
+    .hero-content {
+        padding: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero h3 {
+        font-size: 0.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 30px;
+    }
+}
+@media (max-width: 768px) {
+    .carousel3d-item {
+        width: 120px;
+        height: 120px;
+        margin: -60px 0 0 -60px;
+    }
+
+    .carousel3d-item i {
+        font-size: 4rem;
+    }
+
+    .carousel3d-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
     .card-container {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.4rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .card-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
 }

@@ -73,4 +73,16 @@
     width: 100%;
   }
   
-  
+  @media (max-width: 768px) {
+    .footer {
+        padding: 1.5em 0;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+
+    .social-media a {
+        font-size: 1.2rem;
+    }
+}

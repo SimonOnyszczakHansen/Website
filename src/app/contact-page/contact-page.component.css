@@ -162,3 +162,28 @@ body {
         transform: translateX(0);
     }
 }
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .contact-form {
+        margin: 0;
+    }
+
+    .contact-form h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .contact-form button {
+        font-size: 0.9rem;
+        padding: 12px 24px;
+    }
+}

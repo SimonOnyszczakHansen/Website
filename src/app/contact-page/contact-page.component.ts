@@ -16,7 +16,7 @@ export class ContactPageComponent {
 
   constructor(
     private fb: FormBuilder,
-    private http: HttpClient // Inject HttpClient
+    private http: HttpClient
   ) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -28,8 +28,7 @@ export class ContactPageComponent {
   onSubmit() {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
-      // Send the form data to the backend
-      this.http.post('/api/send-email', formData).subscribe(
+      this.http.post('/api/send-email.php', formData).subscribe(
         (response) => {
           // Handle successful response
           alert('Your message has been sent successfully!');

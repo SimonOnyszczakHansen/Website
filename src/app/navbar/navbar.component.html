@@ -2,19 +2,37 @@
 <html lang="da">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
-<body>    
+
+<body>
   <nav class="navbar" #navbar>
-    <ul>
-      <li><a class="nav-link" [class.active]="activeSection === 'home'" (click)="setActive('home'); goToHome()">Home</a></li>
-      <li><a class="nav-link" [class.active]="activeSection === 'projects'" (click)="setActive('projects'); goToProjects()">Projects</a></li>
-      <li><a class="nav-link" [class.active]="activeSection === 'about'" (click)="setActive('about'); goToAbout()">About</a></li>
-      <li><a class="nav-link" [class.active]="activeSection === 'contact'" (click)="setActive('contact'); goToContact()">Contact</a></li>
-      <span class="underline" [style.width.px]="underlineWidth" [style.left.px]="underlineLeft"></span>
+    <!-- Hamburger Menu Icon -->
+    <div 
+        class="hamburger" 
+        (click)="toggleMenu()" 
+        [attr.aria-expanded]="isMenuActive" 
+        role="button" 
+        tabindex="0"
+        (keydown.enter)="toggleMenu()"
+        (keydown.space)="toggleMenu()"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <!-- Navigation Links -->
+    <ul [class.active]="isMenuActive">
+        <li><a class="nav-link" [class.active]="activeSection === 'home'" (click)="goToHome()">Home</a></li>
+        <li><a class="nav-link" [class.active]="activeSection === 'projects'" (click)="goToProjects()">Projects</a></li>
+        <li><a class="nav-link" [class.active]="activeSection === 'about'" (click)="goToAbout()">About</a></li>
+        <li><a class="nav-link" [class.active]="activeSection === 'contact'" (click)="goToContact()">Contact</a></li>
+        <span class="underline" [style.width.px]="underlineWidth" [style.left.px]="underlineLeft"></span>
     </ul>
-  </nav>   
+</nav>
 </body>
+
 </html>

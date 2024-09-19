@@ -1,12 +1,4 @@
-import { 
-  Component, 
-  AfterViewInit, 
-  ElementRef, 
-  ViewChild, 
-  ChangeDetectorRef, 
-  OnInit, 
-  HostListener 
-} from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, ChangeDetectorRef, OnInit, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
@@ -14,7 +6,7 @@ import { Router, NavigationEnd } from '@angular/router';
   standalone: true,
   imports: [],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'] // Corrected from 'styleUrl' to 'styleUrls'
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements AfterViewInit, OnInit {
   activeSection: string = '';
@@ -22,7 +14,6 @@ export class NavbarComponent implements AfterViewInit, OnInit {
   underlineLeft: number = 0;
   isInitialLoad: boolean = true;
 
-  // New Property to Track Menu State
   isMenuActive: boolean = false;
 
   @ViewChild('navbar', { static: false }) navbar!: ElementRef;
@@ -52,27 +43,29 @@ export class NavbarComponent implements AfterViewInit, OnInit {
     this.setUnderlinePosition();
   }
 
-  /**
-   * Toggles the visibility of the mobile menu.
-   */
   toggleMenu(): void {
     this.isMenuActive = !this.isMenuActive;
+    this.cdr.detectChanges();
+
+    const hamburger = this.navbar.nativeElement.querySelector('.hamburger');
+    if (hamburger) {
+      hamburger.classList.toggle('active', this.isMenuActive);
+    }
   }
 
-  /**
-   * Handles navigation link clicks.
-   * Sets the active section, navigates, and closes the menu.
-   * @param section The section to activate.
-   */
   onNavClick(section: string): void {
     this.setActive(section);
-    this.isMenuActive = false; // Close the menu after selection
+    this.isMenuActive = false;
+
+    // Remove 'active' class from hamburger
+    const hamburger = this.navbar.nativeElement.querySelector('.hamburger');
+    if (hamburger) {
+      hamburger.classList.remove('active');
+    }
+
+    this.cdr.detectChanges();
   }
 
-  /**
-   * Sets the active section and navigates to the corresponding route.
-   * @param section The section to activate.
-   */
   setActive(section: string): void {
     this.activeSection = section;
     this.router.navigate(['/' + section]);
@@ -82,9 +75,6 @@ export class NavbarComponent implements AfterViewInit, OnInit {
     }, 0);
   }
 
-  /**
-   * Navigation Methods
-   */
   goToHome() {
     this.onNavClick('home');
   }
@@ -125,16 +115,19 @@ export class NavbarComponent implements AfterViewInit, OnInit {
       this.cdr.detectChanges();
     }
   }
-
-  /**
-   * Optional: Closes the mobile menu when clicking outside of the navbar.
-   */
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: Event): void {
     const target = event.target as HTMLElement;
     if (this.navbar && !this.navbar.nativeElement.contains(target)) {
       if (this.isMenuActive) {
         this.isMenuActive = false;
+        
+        // Remove 'active' class from hamburger
+        const hamburger = this.navbar.nativeElement.querySelector('.hamburger');
+        if (hamburger) {
+          hamburger.classList.remove('active');
+        }
+
         this.cdr.detectChanges();
       }
     }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 </head>
+
 <body>
     <header class="hero">
         <div class="hero-content">
@@ -36,6 +38,16 @@
                     <button type="submit">Send Message</button>
                 </form>
             </div>
+            <!-- Modal for showing messages -->
+            <div class="modal" [class.active]="showModal" (click)="closeModalOnOutsideClick($event)">
+                <div class="modal-content" (click)="$event.stopPropagation()">
+                    <span class="close" (click)="closeModal()">&times;</span>
+                    <h2>{{ modalTitle }}</h2>
+                    <p>{{ modalMessage }}</p>
+                </div>
+            </div>
+
+
         </section>
     </main>
     <app-footer></app-footer>

@@ -38,7 +38,25 @@
                     <button type="submit">Send Message</button>
                 </form>
             </div>
-            <!-- Modal for showing messages -->
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>You can also reach me here:</p>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> <span class="contactInfoHeader">Email: </span> <a
+                            href="mailto:simon@onyszczak.dk">simon&#64;onyszczak.dk</a></li>
+                    <li><i class="fas fa-phone"></i> <span class="contactInfoHeader">Phone: </span> <span
+                            id="phoneNumber"><span id="countryCode">+45</span> 24 87 65 84</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span class="contactInfoHeader">Location: </span> Nysted,
+                        Denmark</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/simon-hansen-nysted/" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/SimonOnyszczakHansen" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
             <div class="modal" [class.active]="showModal" (click)="closeModalOnOutsideClick($event)">
                 <div class="modal-content" (click)="$event.stopPropagation()">
                     <span class="close" (click)="closeModal()">&times;</span>
@@ -46,8 +64,6 @@
                     <p>{{ modalMessage }}</p>
                 </div>
             </div>
-
-
         </section>
     </main>
     <app-footer></app-footer>

@@ -23,16 +23,18 @@
                 <h2>Send a Message</h2>
                 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
-                        <input type="text" formControlName="name" required placeholder=" " aria-label="Your Name" />
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name" formControlName="name" required placeholder="Your Name" aria-label="Your Name" />
                         <label for="name">Your Name</label>
                     </div>
                     <div class="form-group">
-                        <input type="email" formControlName="email" required placeholder=" " aria-label="Your Email" />
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" formControlName="email" required placeholder="Your Email" aria-label="Your Email" />
                         <label for="email">Your Email</label>
                     </div>
                     <div class="form-group">
-                        <textarea formControlName="message" rows="6" required placeholder=" "
-                            aria-label="Your Message"></textarea>
+                        <i class="fas fa-comment"></i>
+                        <textarea id="message" formControlName="message" rows="6" required placeholder="Your Message" aria-label="Your Message"></textarea>
                         <label for="message">Your Message</label>
                     </div>
                     <button type="submit">Send Message</button>
@@ -43,20 +45,16 @@
                 <h2>Contact Information</h2>
                 <p>You can also reach me here:</p>
                 <ul>
-                    <li><i class="fas fa-envelope"></i> <span class="contactInfoHeader">Email: </span> <a
-                            href="mailto:simon@onyszczak.dk">simon&#64;onyszczak.dk</a></li>
-                    <li><i class="fas fa-phone"></i> <span class="contactInfoHeader">Phone: </span> <span
-                            id="phoneNumber"><span id="countryCode">+45</span> 24 87 65 84</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span class="contactInfoHeader">Location: </span> Nysted,
-                        Denmark</li>
+                    <li><i class="fas fa-envelope"></i> <span class="contactInfoHeader">Email:</span> <a href="mailto:simon@onyszczak.dk">simon&#64;onyszczak.dk</a></li>
+                    <li><i class="fas fa-phone"></i> <span class="contactInfoHeader">Phone:</span> <span id="phoneNumber"><span id="countryCode">+45</span> 24 87 65 84</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span class="contactInfoHeader">Location:</span> Nysted, Denmark</li>
                 </ul>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/simon-hansen-nysted/" target="_blank" aria-label="LinkedIn"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/SimonOnyszczakHansen" target="_blank" aria-label="GitHub"><i
-                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/simon-hansen-nysted/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/SimonOnyszczakHansen" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
             </div>
+            <!-- Modal for Form Submission Messages -->
             <div class="modal" [class.active]="showModal" (click)="closeModalOnOutsideClick($event)">
                 <div class="modal-content" (click)="$event.stopPropagation()">
                     <span class="close" (click)="closeModal()">&times;</span>

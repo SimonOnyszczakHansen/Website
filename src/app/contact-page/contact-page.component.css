@@ -1,11 +1,14 @@
+/* Global Styles */
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
     overflow-x: hidden;
     color: white;
+    font-family: Arial, sans-serif;
 }
 
+/* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
@@ -28,7 +31,6 @@ body {
 
 .hero-content h1 span {
     background: linear-gradient(to right, #020072, #0065e9);
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -40,6 +42,7 @@ body {
     line-height: 1.6;
 }
 
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -52,85 +55,6 @@ body {
     }
 }
 
-.contact-container {
-    max-width: 1000px;
-    margin: 0 auto 50px auto;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.contact-form {
-    flex: 1;
-    margin-right: 20px;
-    animation: slideInLeft 1s ease-out forwards;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 2px solid;
-    border-color: #0300c2;
-    border-radius: 25px;
-    padding: 2em;
-}
-
-.contact-form h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    background: linear-gradient(to right, #020072, #0065e9);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.contact-form .form-group {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 15px;
-    background: transparent;
-    border: none;
-    color: #ffffff;
-    font-size: 1rem;
-    outline: none;
-    transition: all 0.3s ease;
-    border: 2px solid;
-    border-color: #0300c2;
-    border-radius: 8px;
-}
-
-.contact-form label {
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    color: #aaaaaa7e;
-    font-size: 1rem;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.contact-form input:focus~label,
-.contact-form input:not(:placeholder-shown)~label,
-.contact-form textarea:focus~label,
-.contact-form textarea:not(:placeholder-shown)~label {
-    display: none;
-}
-
-.contact-form button {
-    background: linear-gradient(to right, #020072, #0065e9);
-    border: none;
-    padding: 15px 30px;
-    color: #ffffff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    border-radius: 5px;
-}
-
-.contact-form button:hover {
-    background: linear-gradient(to right, #0065e9, #00d4ff);
-}
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -153,6 +77,186 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Contact Container */
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Updated Contact Form Styles */
+.contact-form {
+    flex: 1;
+    margin-right: 20px;
+    animation: slideInLeft 1s ease-out forwards;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 2px solid #0065e9;
+    border-radius: 15px;
+    padding: 2em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    background: linear-gradient(to right, #020072, #0065e9);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.contact-form .form-group {
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 86%;
+    padding: 15px 15px 15px 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #0065e9;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00d4ff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.contact-form label {
+    position: absolute;
+    top: -0.7em;
+    left: 1em;
+    background-color: rgba(31, 31, 31, 0.9);
+    padding: 0 0.5em;
+    color: #00d4ff;
+    font-size: 0.9rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: transparent;
+}
+
+.contact-form button {
+    width: 100%;
+    background: linear-gradient(to right, #020072, #0065e9);
+    border: none;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 8px;
+    margin-top: 1em;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(to right, #0065e9, #00d4ff);
+}
+
+/* Icons inside input fields */
+.form-group i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #00d4ff;
+    font-size: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding-left: 45px; /* Adjust padding to accommodate icon */
+}
+
+/* Contact Information */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    margin-left: 20px;
+    color: #dddddd;
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.contact-info h2,
+.contact-info h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #020072, #0065e9);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.contact-info li i {
+    margin-right: 10px;
+    color: #0065e9;
+}
+
+.contact-info a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffffff;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin-right: 15px;
+    font-size: 1.5rem;
+    color: #00d4ff;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffffff;
 }
 
 /* Modal Styles */
@@ -190,7 +294,6 @@ body {
     font-size: 1.8rem;
     margin-bottom: 10px;
     background: linear-gradient(to right, #020072, #0065e9);
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -218,110 +321,16 @@ body {
     color: #00d4ff;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.contact-info {
-    flex: 1;
-    min-width: 300px;
-    margin-left: 20px;
-    color: #dddddd;
-    animation: slideInRight 1s ease-out forwards;
-}
-
-.contact-info h2,
-.contact-info h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    background: linear-gradient(to right, #020072, #0065e9);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.contact-info p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-.contact-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-info li {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-}
-
-.contact-info li i {
-    margin-right: 10px;
-    color: #0065e9;
-}
-
-.contact-info a {
-    background: linear-gradient(to right, #0300c2, #0065e9);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-decoration: none;
-}
-
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
-    margin-right: 15px;
-    font-size: 1.5rem;
-    color: #ffffff;
-    transition: color 0.3s;
-}
-
-/* Animation for the contact info */
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
+/* Additional Styles */
 #countryCode {
-    background: linear-gradient(to right, #0300c2, #0065e9);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    color: #00d4ff;
 }
 
 .contactInfoHeader {
     color: white;
 }
 
-
+/* Responsive Styles */
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
@@ -330,6 +339,7 @@ body {
 
     .contact-form {
         margin: 0;
+        margin-bottom: 2em;
     }
 
     .contact-form h2 {
@@ -346,3 +356,4 @@ body {
         padding: 12px 24px;
     }
 }
+

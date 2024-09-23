@@ -1,22 +1,18 @@
-/* General Styles */
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    height: 100vh;
     overflow-x: hidden;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
+    color: white;
 }
 
-/* Hero Section */
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
-    padding: 0 20px;
 }
 
 .hero-content {
@@ -59,7 +55,7 @@ body {
 .contact-container {
     max-width: 1200px;
     margin: 0 auto 50px auto;
-    padding: 0 20px;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

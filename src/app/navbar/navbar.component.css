@@ -125,14 +125,13 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(5px);
         border-radius: 0;
         border: none;
     }
 
     .navbar ul.active {
-        max-height: 500px; /* Enough height to show all menu items */
+        margin-top: 5%;
+        max-height: 600px;
     }
 
     .navbar ul li {

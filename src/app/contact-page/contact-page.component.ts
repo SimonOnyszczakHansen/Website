@@ -35,7 +35,7 @@ export class ContactPageComponent {
         (response) => {
           // Show success modal
           this.modalTitle = 'Success';
-          this.modalMessage = 'Your message has been sent successfully!';
+          this.modalMessage = 'Your message has been sent successfully! Thank you for reaching out!';
           this.showModal = true;
           this.contactForm.reset();
         },

@@ -24,17 +24,17 @@
                 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                         <i class="fas fa-user"></i>
-                        <input type="text" id="name" formControlName="name" required placeholder="Your Name" aria-label="Your Name" />
+                        <input type="text" id="name" formControlName="name" required placeholder="Your Name" aria-label="Your Name" autocomplete="off"/>
                         <label for="name">Your Name</label>
                     </div>
                     <div class="form-group">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" id="email" formControlName="email" required placeholder="Your Email" aria-label="Your Email" />
+                        <input type="email" id="email" formControlName="email" required placeholder="Your Email" aria-label="Your Email" autocomplete="off"/>
                         <label for="email">Your Email</label>
                     </div>
                     <div class="form-group">
                         <i class="fas fa-comment"></i>
-                        <textarea id="message" formControlName="message" rows="6" required placeholder="Your Message" aria-label="Your Message"></textarea>
+                        <textarea id="message" formControlName="message" rows="6" required placeholder="Your Message" aria-label="Your Message" autocomplete="off"></textarea>
                         <label for="message">Your Message</label>
                     </div>
                     <button type="submit">Send Message</button>
@@ -45,9 +45,9 @@
                 <h2>Contact Information</h2>
                 <p>You can also reach me here:</p>
                 <ul>
-                    <li><i class="fas fa-envelope"></i> <span class="contactInfoHeader">Email:</span> <a href="mailto:simon@onyszczak.dk">simon&#64;onyszczak.dk</a></li>
-                    <li><i class="fas fa-phone"></i> <span class="contactInfoHeader">Phone:</span> <span id="phoneNumber"><span id="countryCode">+45</span> 24 87 65 84</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span class="contactInfoHeader">Location:</span> Nysted, Denmark</li>
+                    <li><i class="fas fa-envelope"></i> <span class="contactInfoHeader">Email: </span> <a href="mailto:simon@onyszczak.dk">simon&#64;onyszczak.dk</a></li>
+                    <li><i class="fas fa-phone"></i> <span class="contactInfoHeader">Phone: </span> <span id="phoneNumber"><span id="countryCode">+45</span> 24 87 65 84</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span class="contactInfoHeader">Location: </span> Nysted, Denmark</li>
                 </ul>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/simon-hansen-nysted/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>

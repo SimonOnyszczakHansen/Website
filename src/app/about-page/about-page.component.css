@@ -5,6 +5,10 @@ body {
     overflow-x: hidden;
 }
 
+h1, h2, h3, p {
+    margin: 0;
+}
+
 .hero {
     height: 100vh;
     display: flex;
@@ -62,6 +66,13 @@ body {
     }
 }
 
+.strength-section {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #0065e9;
+    margin-bottom: 40px;}
+
 .skills-container {
     display: flex;
     justify-content: center;
@@ -78,6 +89,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: -20%;
+    margin-top: 10%;
 }
 
 .carousel3d {
@@ -166,6 +178,62 @@ body {
     }
 }
 
+/* About Me Section */
+.about-me-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    border-top: 2px solid #020072;
+    border-bottom: 2px solid #020072;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.about-me-content {
+    max-width: 800px;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    transition: opacity 1s ease, transform 1s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-me-content h1 {
+    display: inline-block;
+    background: linear-gradient(to right, #020072, #0065e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+
+.about-me-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 1.5em;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -238,6 +306,23 @@ body {
     width: 300px;
     height: 300px;
     background: radial-gradient(circle, rgba(0, 101, 233, 0.5), transparent);
+}
+
+.strengths-header-container {
+    text-align: center;
+}
+
+.strengths-header {
+    display: inline-block;
+    background: linear-gradient(to right, #020072, #0065e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
 }
 
 @media (max-width: 768px) {

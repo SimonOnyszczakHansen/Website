@@ -5,7 +5,6 @@ body {
     height: 100vh;
     overflow-x: hidden;
     color: white;
-    font-family: Arial, sans-serif;
 }
 
 /* Hero Section */
@@ -107,14 +106,17 @@ body {
     margin-right: 20px;
     animation: slideInLeft 1s ease-out forwards;
     background-color: rgba(255, 255, 255, 0.08);
-    border: 2px solid #0065e9;
+    border: 2px solid #0300b4;
     border-radius: 15px;
     padding: 2em;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     min-width: 300px;
+    text-align: center;
+    justify-content: center;
 }
 
 .contact-form h2 {
+    display: inline-block;
     font-size: 2rem;
     margin-bottom: 1em;
     background: linear-gradient(to right, #020072, #0065e9);
@@ -133,7 +135,7 @@ body {
     width: 86%;
     padding: 15px 15px 15px 45px;
     background: rgba(255, 255, 255, 0.1);
-    border: 2px solid #0065e9;
+    border: 2px solid #0300b4;
     border-radius: 8px;
     color: #ffffff;
     font-size: 1rem;
@@ -143,7 +145,7 @@ body {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #00d4ff;
+    border-color: #0065e9;
     background: rgba(255, 255, 255, 0.15);
 }
 
@@ -153,7 +155,7 @@ body {
     left: 1em;
     background-color: rgba(31, 31, 31, 0.9);
     padding: 0 0.5em;
-    color: #00d4ff;
+    color: #0065e9;
     font-size: 0.9rem;
     pointer-events: none;
     transition: all 0.3s ease;
@@ -177,17 +179,13 @@ body {
     margin-top: 1em;
 }
 
-.contact-form button:hover {
-    background: linear-gradient(to right, #0065e9, #00d4ff);
-}
-
 /* Icons inside input fields */
 .form-group i {
     position: absolute;
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
-    color: #00d4ff;
+    color: #0065e9;
     font-size: 1.2rem;
 }
 
@@ -199,19 +197,26 @@ body {
 /* Contact Information */
 .contact-info {
     flex: 1;
+    margin-right: 20px;
+    animation: slideInLeft 1s ease-out forwards;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 2px solid #0300b4;
+    border-radius: 15px;
+    padding: 2em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     min-width: 300px;
-    margin-left: 20px;
-    color: #dddddd;
-    animation: slideInRight 1s ease-out forwards;
+    justify-content: center;
 }
 
 .contact-info h2,
 .contact-info h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 1.97rem;
+    margin-bottom: 1em;
     background: linear-gradient(to right, #020072, #0065e9);
     -webkit-background-clip: text;
     color: transparent;
+    text-align: center;
 }
 
 .contact-info p {
@@ -235,33 +240,35 @@ body {
 }
 
 .contact-info a {
-    color: #00d4ff;
+    color: #0065e9;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: #ffffff;
+    color: #0065e9;
 }
 
 .social-links {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .social-links a {
     margin-right: 15px;
     font-size: 1.5rem;
-    color: #00d4ff;
+    color: #0065e9;
     transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: #ffffff;
+    color: #0300b4;
 }
 
 /* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -274,7 +281,7 @@ body {
 }
 
 .modal.active {
-    display: flex; /* Show the modal when active */
+    display: flex;
 }
 
 .modal-content {
@@ -286,7 +293,7 @@ body {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     max-width: 500px;
     margin: 0 auto;
-    position: relative; /* To position the close button inside */
+    position: relative;
     animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -323,7 +330,7 @@ body {
 
 /* Additional Styles */
 #countryCode {
-    color: #00d4ff;
+    color: #0065e9;
 }
 
 .contactInfoHeader {

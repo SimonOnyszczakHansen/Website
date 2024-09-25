@@ -2,7 +2,12 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  overflow-x: hidden;
   overflow-y: scroll;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+  box-sizing: border-box;
 }
 
 .hero {
@@ -12,6 +17,8 @@ body {
   align-items: center;
   text-align: center;
   position: relative;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .hero-content {
@@ -23,15 +30,15 @@ body {
   transition: opacity 1s ease, transform 1s ease;
 }
 
-.hero-content:inview {
+.hero-content.inview {
   opacity: 1;
   transform: translate(0);
 }
 
 @keyframes fadeInUp {
   to {
-    opacity: 1;
-    transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
   }
 }
 
@@ -68,14 +75,106 @@ body {
   color: white;
   text-decoration: none;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   border-radius: 25px;
   background-image: linear-gradient(to right, #020072, #0065e9), linear-gradient(to right, transparent, transparent);
   background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
 }
 
 .cta-button:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 15px rgba(0, 101, 233, 0.8);
+  border-color: #0065e9;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero {
+      padding: 40px 20px;
+  }
+
+  .hero-content h1 {
+      font-size: 2.2rem;
+  }
+
+  .hero-content p {
+      font-size: 1.1rem;
+  }
+
+  .cta-button {
+      padding: 12px 45px;
+      font-size: 1.05rem;
+  }
+}
+
+/* Tablets and large smartphones */
+@media (max-width: 768px) {
+  .hero {
+      padding: 30px 15px;
+  }
+
+  .hero-content h1 {
+      font-size: 2rem;
+  }
+
+  .hero-content p {
+      font-size: 1rem;
+      margin-bottom: 25px;
+  }
+
+  .cta-button {
+      padding: 10px 35px;
+      font-size: 0.95rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+
+  .hero {
+      padding: 40px 20px;
+  }
+
+  .hero-content h1 {
+      font-size: 1.8rem;
+  }
+
+  .hero-content h3 {
+      font-size: 0.9rem;
+  }
+
+  .hero-content p {
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+  }
+
+  .cta-button {
+      padding: 8px 30px;
+      font-size: 0.9rem;
+      border-radius: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-content h1 {
+      font-size: 1.6rem;
+  }
+
+  .hero-content h3 {
+      font-size: 0.85rem;
+  }
+
+  .hero-content p {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+  }
+
+  .cta-button {
+      padding: 6px 25px;
+      font-size: 0.85rem;
+      border-radius: 18px;
+  }
 }

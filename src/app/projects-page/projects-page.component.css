@@ -5,9 +5,8 @@ body {
     padding: 0;
     height: 100vh;
     overflow-y: scroll;
-    scroll-snap-type: y proximity;
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box; /* Ensure padding and border are included in element widths */
+    box-sizing: border-box;
 }
 
 *, *::before, *::after {
@@ -98,7 +97,6 @@ body {
 }
 
 .project-card-container {
-    scroll-snap-align: start;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -158,10 +156,10 @@ body {
 
 .project-details {
     flex: 1;
-    margin-left: 2em; /* Reduce margin to prevent text overflow */
+    margin-left: 2em;
     justify-content: center;
     padding: 2em;
-    box-sizing: border-box; /* Ensure padding is within width */
+    box-sizing: border-box;
 }
 
 .project-details h2,
@@ -176,7 +174,7 @@ body {
 .project-details p,
 .project-details ul,
 .project-details li {
-    word-wrap: break-word; /* Ensure long words break to prevent overflow */
+    word-wrap: break-word;
     overflow-wrap: break-word;
 }
 

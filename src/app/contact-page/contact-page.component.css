@@ -5,6 +5,7 @@ body {
     height: 100vh;
     overflow-x: hidden;
     color: white;
+    font-family: Arial, sans-serif; /* Added a default font for better consistency */
 }
 
 /* Hero Section */
@@ -15,6 +16,8 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
+    padding: 20px; /* Added padding for smaller screens */
+    box-sizing: border-box; /* Ensures padding doesn't affect total height */
 }
 
 .hero-content {
@@ -98,6 +101,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
 }
 
 /* Updated Contact Form Styles */
@@ -113,6 +117,7 @@ body {
     min-width: 300px;
     text-align: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .contact-form h2 {
@@ -132,7 +137,7 @@ body {
 
 .contact-form input,
 .contact-form textarea {
-    width: 86%;
+    width: 100%; /* Changed to 100% for better responsiveness */
     padding: 15px 15px 15px 45px;
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid #0300b4;
@@ -141,6 +146,7 @@ body {
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s ease, background 0.3s ease;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
 }
 
 .contact-form input:focus,
@@ -152,7 +158,7 @@ body {
 .contact-form label {
     position: absolute;
     top: -0.7em;
-    left: 1em;
+    left: 15px;
     background-color: rgba(31, 31, 31, 0.9);
     padding: 0 0.5em;
     color: #0065e9;
@@ -179,6 +185,10 @@ body {
     margin-top: 1em;
 }
 
+.contact-form button:hover {
+    background: linear-gradient(to right, #0065e9, #020072); /* Added hover effect */
+}
+
 /* Icons inside input fields */
 .form-group i {
     position: absolute;
@@ -198,7 +208,7 @@ body {
 .contact-info {
     flex: 1;
     margin-right: 20px;
-    animation: slideInLeft 1s ease-out forwards;
+    animation: slideInRight 1s ease-out forwards; /* Changed to slideInRight for variety */
     background-color: rgba(255, 255, 255, 0.08);
     border: 2px solid #0300b4;
     border-radius: 15px;
@@ -206,6 +216,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     min-width: 300px;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .contact-info h2,
@@ -232,6 +243,8 @@ body {
 .contact-info li {
     margin-bottom: 15px;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
 }
 
 .contact-info li i {
@@ -246,17 +259,18 @@ body {
 }
 
 .contact-info a:hover {
-    color: #0065e9;
+    color: #00d4ff; /* Changed to a different hover color for better visibility */
 }
 
 .social-links {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
 }
 
 .social-links a {
-    margin-right: 15px;
+    margin: 0 10px 10px 0; /* Adjusted margins for better spacing */
     font-size: 1.5rem;
     color: #0065e9;
     transition: color 0.3s;
@@ -278,6 +292,8 @@ body {
     background-color: rgba(0, 0, 0, 0.7); /* Background is clickable */
     justify-content: center;
     align-items: center;
+    padding: 10px; /* Added padding for smaller screens */
+    box-sizing: border-box;
 }
 
 .modal.active {
@@ -292,9 +308,11 @@ body {
     color: #ffffff;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     max-width: 500px;
+    width: 100%; /* Ensures modal doesn't exceed screen width */
     margin: 0 auto;
     position: relative;
     animation: fadeIn 0.3s ease-in-out;
+    box-sizing: border-box;
 }
 
 .modal-content h2 {
@@ -338,15 +356,39 @@ body {
 }
 
 /* Responsive Styles */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .contact-container {
+        padding: 0 15px;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 1.5em;
+    }
+}
+
+/* Tablets and large smartphones */
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
         padding: 0 10px;
     }
 
-    .contact-form {
+    .contact-form,
+    .contact-info {
         margin: 0;
         margin-bottom: 2em;
+        padding: 1.5em;
     }
 
     .contact-form h2 {
@@ -362,5 +404,119 @@ body {
         font-size: 0.9rem;
         padding: 12px 24px;
     }
+
+    .social-links a {
+        font-size: 1.3rem;
+    }
 }
 
+/* Mobile Phones */
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 1em;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.85rem;
+        padding: 10px 10px 10px 35px;
+    }
+
+    .form-group i {
+        left: 10px;
+        font-size: 1rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .contact-info h2,
+    .contact-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info li {
+        font-size: 1rem;
+    }
+
+    .social-links a {
+        font-size: 1.2rem;
+        margin: 0 8px 8px 0;
+    }
+
+    .modal-content {
+        padding: 15px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content p {
+        font-size: 0.95rem;
+    }
+
+    .modal .close {
+        font-size: 1.2rem;
+    }
+}
+
+/* Landscape Phones and Small Devices */
+@media (max-width: 320px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px 8px 8px 30px;
+    }
+
+    .form-group i {
+        left: 8px;
+        font-size: 0.9rem;
+    }
+
+    .contact-form button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .social-links a {
+        font-size: 1.1rem;
+        margin: 0 5px 5px 0;
+    }
+
+    .modal-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .modal-content p {
+        font-size: 0.9rem;
+    }
+}

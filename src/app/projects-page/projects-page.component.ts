@@ -14,13 +14,13 @@ export class ProjectsPageComponent implements AfterViewInit, OnInit, OnDestroy {
   @ViewChildren('projectCard') projectCards!: QueryList<ElementRef>;
 
   passwordGeneratorImages: string[] = [
-    "assets/images/PasswordGenerator.png",
-    "assets/images/PasswordGenerator2.png"
+    "assets/images/PasswordGenerator.webp",
+    "assets/images/PasswordGenerator2.webp"
   ];
 
   vscodeThemeImages: string[] = [
-    "assets/images/CustomTheme1.png",
-    "assets/images/CustomTheme2.png"
+    "assets/images/CustomTheme1.webp",
+    "assets/images/CustomTheme2.webp"
   ]
   currentSlidePasswordGenerator: number = 0;
   slideIntervalIdPasswordGenerator: any;
@@ -55,9 +55,11 @@ export class ProjectsPageComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   startPasswordGeneratorSlideshow() {
-    this.slideIntervalIdPasswordGenerator = setInterval(() => {
+    const slideShow = () => {
       this.currentSlidePasswordGenerator = (this.currentSlidePasswordGenerator + 1) % this.passwordGeneratorImages.length;
-    }, 8000);
+      requestAnimationFrame(slideShow);
+    };
+    requestAnimationFrame(slideShow);
   }
 
   startVscodeThemeSlideshow() {

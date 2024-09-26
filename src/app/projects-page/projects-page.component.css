@@ -30,6 +30,7 @@ body {
     transform: translateY(20px);
     animation: fadeInUp 1s ease-out forwards;
     transition: opacity 1s ease, transform 1s ease;
+    will-change: opacity, transform;
 }
 
 @keyframes fadeInUp {
@@ -120,9 +121,10 @@ body {
     transform: translateX(-100px);
     transition: opacity 1s ease, transform 1s ease;
     height: auto;
-    width: 100%; /* Ensure full width of container */
-    box-sizing: border-box; /* Ensure padding is included in width */
-    overflow: hidden; /* Prevent overflow */
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    will-change: opacity, transform;
 }
 
 .project-card.visible {

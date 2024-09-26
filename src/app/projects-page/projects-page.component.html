@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="preload" href="path-to-your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>Projects</title>
 </head>
 
@@ -23,8 +24,9 @@
   <div class="project-card-container">
     <div class="project-card" #projectCard>
       <div class="project-image-slideshow">
-        <img *ngFor="let image of passwordGeneratorImages; let i = index" [src]="image" [class.active-slide]="i === currentSlidePasswordGenerator"
-          alt="Project Image">
+        <img *ngFor="let image of passwordGeneratorImages; let i = index" 
+        [src]="image" [class.active-slide]="i === currentSlidePasswordGenerator"
+        alt="Project Image" loading="lazy">
       </div>
       <div class="project-details">
         <h2>Password Generator</h2>

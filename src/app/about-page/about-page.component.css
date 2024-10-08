@@ -9,6 +9,7 @@ h1, h2, h3, p {
     margin: 0;
 }
 
+/* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
@@ -66,13 +67,96 @@ h1, h2, h3, p {
     }
 }
 
-.strength-section {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    color: #0065e9;
-    margin-bottom: 40px;}
+/* About Me Section */
+.about-me-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    border-top: 2px solid #020072;
+    border-bottom: 2px solid #020072;
+    background-color: rgba(255, 255, 255, 0.05);
+}
 
+.about-me-content {
+    max-width: 1000px;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    transition: opacity 1s ease, transform 1s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-me-content h1 {
+    display: inline-block;
+    background: linear-gradient(to right, #020072, #0065e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.about-me-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-me-text {
+    color: #ddd;
+    text-align: center;
+}
+
+.about-me-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-me-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.highlight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid #0065e9;
+    border-radius: 15px;
+    padding: 15px;
+    flex: 1 1 200px;
+    transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+    transform: translateY(-5px);
+}
+
+.highlight i {
+    font-size: 2rem;
+    color: #0065e9;
+}
+
+.highlight p {
+    font-size: 1rem;
+    color: #bbb;
+    margin: 0;
+}
+
+/* Skills Section */
 .skills-container {
     display: flex;
     justify-content: center;
@@ -102,7 +186,7 @@ h1, h2, h3, p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%
+    height: 100%;
 }
 
 .carousel3d-container {
@@ -168,7 +252,6 @@ h1, h2, h3, p {
     transform: rotateY(315deg) translateZ(400px);
 }
 
-/* Rotate the carousel */
 @keyframes rotateCarousel {
     from {
         transform: rotateY(0deg);
@@ -178,29 +261,12 @@ h1, h2, h3, p {
     }
 }
 
-/* About Me Section */
-.about-me-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 20px;
-    border-top: 2px solid #020072;
-    border-bottom: 2px solid #020072;
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.about-me-content {
-    max-width: 800px;
-    color: white;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-    transition: opacity 1s ease, transform 1s ease;
-    padding: 20px;
+/* Strengths Section */
+.strengths-header-container {
     text-align: center;
 }
 
-.about-me-content h1 {
+.strengths-header {
     display: inline-block;
     background: linear-gradient(to right, #020072, #0065e9);
     -webkit-background-clip: text;
@@ -208,31 +274,10 @@ h1, h2, h3, p {
     background-clip: text;
     padding: 10px;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 2rem;
     margin-top: 0;
 }
-
-
-.about-me-content p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #ddd;
-    margin-bottom: 1.5em;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
 
 .card-container {
     display: grid;
@@ -308,46 +353,23 @@ h1, h2, h3, p {
     background: radial-gradient(circle, rgba(0, 101, 233, 0.5), transparent);
 }
 
-.strengths-header-container {
-    text-align: center;
-}
-
-.strengths-header {
-    display: inline-block;
-    background: linear-gradient(to right, #020072, #0065e9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    margin-top: 0;
-}
-
+/* Media Queries */
 @media (max-width: 768px) {
     .hero-content {
         padding: 0 10px;
     }
 
-    .hero h1 {
+    .hero-content h1 {
         font-size: 1.8rem;
     }
 
-    .hero h3 {
+    .hero-content h3 {
         font-size: 0.8rem;
     }
 
-    .hero p {
+    .hero-content p {
         font-size: 0.9rem;
     }
-
-    .cta-button {
-        font-size: 0.9rem;
-        padding: 8px 30px;
-    }
-}
-@media (max-width: 768px) {
 
     .carousel3d-item {
         width: 120px;
@@ -362,19 +384,15 @@ h1, h2, h3, p {
     .carousel3d-item p {
         font-size: 0.9rem;
     }
-}
 
-@media (max-width: 768px) {
-    .about-me-content h1 {
-        font-size: 2rem;
-    }
-
-    .about-me-content p {
+    .about-me-text p {
         font-size: 1rem;
     }
-}
 
-@media (max-width: 768px) {
+    .highlight {
+        flex: 1 1 100%;
+    }
+
     .skills-header {
         font-size: 1.5rem;
     }
@@ -398,7 +416,6 @@ h1, h2, h3, p {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
     .card-container {
         grid-template-columns: 1fr 1fr;
     }

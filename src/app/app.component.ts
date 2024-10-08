@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, Route, Router } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 
@@ -10,6 +10,11 @@ import { NavbarComponent } from './navbar/navbar.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Website';
+
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
 }
+

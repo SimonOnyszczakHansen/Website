@@ -3,9 +3,9 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    overflow-x: hidden;
     color: white;
-    font-family: Arial, sans-serif; /* Added a default font for better consistency */
+    overflow-x: hidden; 
+    font-family: Arial, sans-serif;
 }
 
 /* Hero Section */

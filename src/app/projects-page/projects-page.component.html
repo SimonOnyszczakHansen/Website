@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="print" onload="this.media='all'">
-  <link rel="preload" href="path-to-your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>Projects</title>
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="print"
+    onload="this.media='all'">
+  <!-- Preload Font (Ensure you replace 'path-to-your-font.woff2' with your actual font path) -->
+  <link rel="preload" href="path-to-your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body>
@@ -18,57 +20,30 @@
     </div>
     <div class="scroll-down">
       <p>Scroll down</p>
-      <a href="#"><i class="fas fa-arrow-down"></i></a>
+      <a><i class="fas fa-arrow-down"></i></a>
     </div>
   </div>
+
   <div class="project-card-container">
-    <div class="project-card" #projectCard>
-      <div class="project-image-slideshow">
-        <img *ngFor="let image of passwordGeneratorImages; let i = index" 
-        [src]="image" [class.active-slide]="i === currentSlidePasswordGenerator"
-        alt="Project Image" loading="lazy">
-      </div>
-      <div class="project-details">
-        <h2>Password Generator</h2>
-        <p>
-          The <span>Password Generator</span> is a secure and customizable tool for creating strong, personalized
-          passwords.
-        </p>
-        <p><strong>Key Features:</strong></p>
-        <ul>
-          <li><strong>Interest-based Password Creation:</strong> Users can input their interests or numbers, which are
-            then incorporated into the password.</li>
-          <li><strong>Variable Password Length:</strong> Sliders allow users to set the password length and determine
-            how many characters are derived from each interest.</li>
-          <li><strong>Service Name Integration:</strong> Predefined services, like Facebook or Google, can be included
-            in the password for added personalization.</li>
-          <li><strong>Password Strength Meter:</strong> The generator analyzes the password's strength, providing
-            real-time feedback to ensure security standards are met.</li>
-          <li><strong>Responsive Design:</strong> The tool is fully responsive, adapting to any device size for optimal
-            user experience.</li>
-        </ul>
-        <p>This password generator emphasizes user experience, security, and customization, and is built using modern
-          web technologies like HTML, CSS, JavaScript, and the Bootstrap framework.</p>
-        <div class="tech-logos">
-          <i class="fab fa-html5 tech-logo"></i>
-          <i class="fab fa-css3 tech-logo"></i>
-          <i class="fab fa-js tech-logo"></i>
-          <i class="fab fa-bootstrap tech-logo"></i>
+    <div class="project-card-outline">
+      <div class="project-card">
+        <i class="fas fa-arrow-right arrow-icon"></i>
+        <div class="project-details">
+          <h1>Password Generator</h1>
+          <h3>ZBC <span>— Giving people a unique and safe password</span></h3>
+          <img src="assets/images/PasswordGenerator.png" alt="Password Generator">
         </div>
       </div>
     </div>
   </div>
   <div class="project-card-container">
-    <div class="project-card" #projectCard>
-      <div class="project-image-slideshow">
-        <img *ngFor="let image of vscodeThemeImages; let i = index" [src]="image" [class.active-slide]="i === currentSlideVscodeTheme"
-          alt="Project Image">
-      </div>
-      <div class="project-details">
-        <h2>Custom VSCode Theme</h2>
-        <p>A vibrant and dynamic Visual Studio Code theme designed to enhance both aesthetics and functionality. This theme features gradient-based text effects with bold colors, including animated, shifting borders for active tabs that create a modern, flowing visual experience. Custom link styling, colorful badge highlights, and eye-catching text gradients bring a lively, futuristic touch to your coding environment, while ensuring clear and intuitive navigation.</p>
-        <div class="tech-logos">
-          <i class="fab fa-css3 tech-logo"></i>
+    <div class="project-card-outline">
+      <div class="project-card">
+        <i class="fas fa-arrow-right arrow-icon"></i>
+        <div class="project-details">
+          <h1>Custom VSCode Theme</h1>
+          <h3>Personal <span> — A colorful and aesthetically pleasing theme for VSCode</span></h3>
+          <img src="assets/images/CustomTheme1.webp" alt="Custom VSCode Theme">
         </div>
       </div>
     </div>

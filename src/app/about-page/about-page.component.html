@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="print" onload="this.media='all'">
-    <link rel="preload" href="path-to-your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <title>About</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preload" href="/src/assets/fonts/heavitas" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body>
@@ -21,39 +23,34 @@
     <div class="about-me-section">
         <div class="about-me-content">
             <h1>About Me</h1>
-
-            <p>
-                I am a 19-year-old passionate and ambitious developer with a burning enthusiasm for IT and programming.
-                Currently, I am undergoing school-based training at ZBC Ringsted, where I have successfully completed my
-                third main course. My motivation to learn and develop is exceptionally strong, and I constantly strive
-                to become the best possible version of myself.
-            </p>
-
-            <p>
-                From an early age, I had the opportunity to intern as a programmer during primary school, which
-                solidified my conviction that this is my dream career. I am deeply curious and extremely motivated to
-                learn new things. I'm not afraid to take on big tasks; I work diligently and am good at seeking help
-                when I need it.
-            </p>
-
-            <p>
-                I'm currently working on a password generator for a client which helps the user get a more secure and
-                personalized password. I consider myself mature enough to handle tasks and challenges, always
-                approaching them with dedication and a logical mindset.
-            </p>
-
-            <p>
-                In my free time, I find joy either on the football field or in front of the screen, where I enhance my
-                programming skills or stay active through a game of football. I'm a good team player—helpful and
-                collaborative—yet also capable of diving deep into work tasks, ensuring deadlines are met.
-            </p>
-
-            <p>
-                I'm open and ready to relocate anywhere in Denmark for the right opportunity. Embracing new environments
-                and challenges excites me, and I'm always prepared to adapt and grow.
-            </p>
+            <div class="about-me-grid">
+                <div class="about-me-text">
+                    <p>
+                        Hi! I'm Simon, a 19-year-old passionate developer with a love for IT and programming.
+                    </p>
+                    <div class="about-me-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-school"></i>
+                            <p>Studying at ZBC Ringsted</p>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-code"></i>
+                            <p>Working on a Password Generator</p>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-futbol"></i>
+                            <p>Football Enthusiast</p>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-plane"></i>
+                            <p>Open to Relocation in Denmark</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
     <div class="skills-container">
         <div class="skills-header">
             <h1>My Skills</h1>
@@ -96,65 +93,54 @@
         </div>
     </div>
     <div class="strengths-header-container">
-        <h1 class="strengths-header">My Strenghts</h1>
+        <h1 class="strengths-header">My Strengths</h1>
     </div>
     <div class="card-container">
         <div class="card">
             <i class="fas fa-plane-departure"></i>
             <h2>Flexibility</h2>
             <p>
-                I’m open to relocating anywhere in Denmark for the right opportunity. Whether it’s a position in
-                Copenhagen or Aalborg, I’m ready to embrace new environments and challenges!
+                I’m open to relocating anywhere in Denmark for the right opportunity. Embracing new environments and challenges excites me.
             </p>
         </div>
 
-        <!-- Adaptability Card -->
         <div class="card">
             <i class="fas fa-sync-alt"></i>
             <h2>Adaptability</h2>
             <p>
-                Thriving in dynamic environments where learning new technologies is constant, I quickly adapt to
-                changes, ensuring success in fast-paced projects.
+                Thriving in dynamic environments, I quickly adapt to changes, ensuring success in fast-paced projects.
             </p>
         </div>
 
-        <!-- Teamwork Card -->
         <div class="card">
             <i class="fas fa-users"></i>
             <h2>Teamwork</h2>
             <p>
-                Collaborating with teams to bring ideas to life excites me. Through brainstorming and code reviews, my
-                collaborative approach fosters productive teamwork and successful outcomes.
+                Collaborating with teams to bring ideas to life excites me. My collaborative approach fosters productive teamwork and successful outcomes.
             </p>
         </div>
 
-        <!-- Problem Solving Card -->
         <div class="card">
             <i class="fas fa-brain"></i>
             <h2>Problem Solving</h2>
             <p>
-                Solving complex problems with elegant code drives me. I approach every challenge with a logical and
-                creative mindset, always striving for the most effective solution.
+                Solving complex problems with elegant code drives me. I approach every challenge with a logical and creative mindset.
             </p>
         </div>
 
-        <!-- Creativity Card -->
         <div class="card">
             <i class="fas fa-lightbulb"></i>
             <h2>Creativity</h2>
             <p>
-                With an eye for design, I bring creativity to each project. Whether finding unique solutions or crafting
-                visually stunning interfaces, I aim to deliver innovative work.
+                With an eye for design, I bring creativity to each project, crafting visually stunning interfaces.
             </p>
         </div>
 
-        <!-- Communication Card -->
         <div class="card">
             <i class="fas fa-comments"></i>
             <h2>Communication</h2>
             <p>
-                Effective communication is key to successful collaboration. I prioritize clear and concise exchanges to
-                ensure everyone is aligned and informed, contributing to smoother project execution.
+                Effective communication is key. I prioritize clear exchanges to ensure everyone is aligned and informed.
             </p>
         </div>
     </div>

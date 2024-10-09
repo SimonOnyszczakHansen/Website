@@ -3,7 +3,7 @@ body {
     padding: 0;
     height: 100vh;
     color: white;
-    overflow-x: hidden; 
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
 }
@@ -88,6 +88,7 @@ body {
 }
 
 @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -142,7 +143,7 @@ body {
     border-radius: 16px;
     padding: 2em;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -162,9 +163,9 @@ body {
     right: 0;
     bottom: 0;
     background: linear-gradient(190deg, #0065e97c, #0200727c);
-    opacity: 0; /* Start transparent */
+    opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: 0; /* Place behind content */
+    z-index: 0;
 }
 
 /* Hover effect to fade in the background */
@@ -172,9 +173,14 @@ body {
     opacity: 1;
 }
 
-.project-card > * {
+.project-card:hover {
+    border: 1px solid#fff;
+}
+
+.project-card>* {
     position: relative;
-    z-index: 1; /* Ensure content is above the pseudo-element */
+    z-index: 1;
+    /* Ensure content is above the pseudo-element */
 }
 
 .project-card::after {
@@ -184,12 +190,10 @@ body {
     left: 15%;
     right: 0;
     height: 1px;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.8),
-        rgba(255, 255, 255, 0)
-    );
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0));
     z-index: 2;
     width: 70%;
 }
@@ -214,12 +218,10 @@ body {
     left: 5%;
     right: 0;
     height: 1px;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0)
-    );
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 1),
+            rgba(255, 255, 255, 0));
     z-index: 2;
     width: 90%;
 }
@@ -239,12 +241,13 @@ body {
     margin-bottom: -80px;
     margin-left: auto;
     margin-right: auto;
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 /* Hover Effects */
 .project-card:hover .project-details img {
     transform: translateY(-10px);
+    border: 1px solid #fff
 }
 
 .project-details h1 {
@@ -276,13 +279,28 @@ body {
     font-weight: 500;
 }
 
+@media (max-width: 1024px) {
+    .project-card-container {
+        margin: 0;
+        padding: 0;
+        height: 80vh;
+    }
+}
+
 @media (max-width: 768px) {
+    .project-card-container {
+        margin: 0;
+        padding: 0;
+        height: 60vh;
+        font-size: 100%
+    }
+
     .project-card {
         padding: 1em;
     }
 
     .project-card-outline {
-        padding: 1em;
+        padding: 0.7em;
     }
 
     .project-details img {

@@ -154,7 +154,6 @@ body {
     cursor: pointer;
 }
 
-/* Pseudo-element for fade-in background effect */
 .project-card::before {
     content: '';
     position: absolute;
@@ -168,7 +167,6 @@ body {
     z-index: 0;
 }
 
-/* Hover effect to fade in the background */
 .project-card:hover::before {
     opacity: 1;
 }
@@ -180,7 +178,6 @@ body {
 .project-card>* {
     position: relative;
     z-index: 1;
-    /* Ensure content is above the pseudo-element */
 }
 
 .project-card::after {
@@ -244,7 +241,6 @@ body {
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Hover Effects */
 .project-card:hover .project-details img {
     transform: translateY(-10px);
     border: 1px solid #fff

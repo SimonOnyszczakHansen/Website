@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="da">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Simon Onyszczak Hansen</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="print" onload="this.media='all'">
-    <link rel="preload" href="path-to-your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-</head>
-
 <body>
     <header class="hero">
         <div class="hero-content">
@@ -18,7 +7,6 @@
     </header>
     <main>
         <section class="contact-container">
-            <!-- Contact Form -->
             <div class="contact-form">
                 <h2>Send a Message</h2>
                 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
@@ -40,7 +28,6 @@
                     <button type="submit">Send Message</button>
                 </form>
             </div>
-            <!-- Contact Information -->
             <div class="contact-info">
                 <h2>Contact Information</h2>
                 <p>You can also reach me here:</p>
@@ -54,7 +41,6 @@
                     <a href="https://github.com/SimonOnyszczakHansen" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-            <!-- Modal for Form Submission Messages -->
             <div class="modal" [class.active]="showModal" (click)="closeModalOnOutsideClick($event)">
                 <div class="modal-content" (click)="$event.stopPropagation()">
                     <span class="close" (click)="closeModal()">&times;</span>
@@ -66,5 +52,3 @@
     </main>
     <app-footer></app-footer>
 </body>
-
-</html>

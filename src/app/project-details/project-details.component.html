@@ -1,3 +1,8 @@
 <body>
-    <h2 style="color: azure;">Details for {{ projectId }}</h2>
+    <div id="button-back" (click)="goBack()">
+        <a><i class="fas fa-arrow-left"></i> Back</a>
+    </div>
+    <h2>Details for {{ projectId }}</h2>
+    <div *ngIf="loading">Loading...</div>
+    <div *ngIf="error">{{ error }}</div>
 </body>

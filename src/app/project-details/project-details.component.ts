@@ -13,6 +13,7 @@ export class ProjectDetailsComponent implements OnInit {
   projectId!: string;
   loading: boolean = true;
   error: string | null = null;
+  activeSection: string = 'section1';
 
   constructor(private route: ActivatedRoute, private location: Location) {}
 
@@ -34,6 +35,10 @@ export class ProjectDetailsComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  setActiveSection(section: string): void {
+    this.activeSection = section;
   }
 
   fetchProjectDetails(): void {

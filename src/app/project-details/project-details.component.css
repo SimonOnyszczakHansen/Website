@@ -58,7 +58,7 @@ li {
 }
 
 #button-back {
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 20px;
   background: none;
@@ -76,7 +76,7 @@ li {
 }
 
 #table-of-contents {
-  position: absolute;
+  position: fixed;
   top: 20rem;
   right: 20px;
   padding: 1rem;

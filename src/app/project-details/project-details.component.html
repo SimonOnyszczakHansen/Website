@@ -1,92 +1,77 @@
 <button id="button-back" (click)="goBack()" aria-label="Go back">
-    <i class="fas fa-arrow-left"></i> Back
-  </button>
-  
-  <nav id="table-of-contents" aria-label="Table of Contents">
-    <h4>Contents</h4>
+  <i class="fas fa-arrow-left"></i> Back
+</button>
+
+<nav id="table-of-contents" aria-label="Table of Contents">
+  <h4>Contents</h4>
+  <ul>
+    <li>
+      <button (click)="setActiveSection('section1')" [class.active]="activeSection === 'section1'"
+        aria-label="Go to Section 1">
+        Section 1
+      </button>
+    </li>
+    <li>
+      <button (click)="setActiveSection('section2')" [class.active]="activeSection === 'section2'"
+        aria-label="Go to Section 2">
+        Section 2
+      </button>
+    </li>
+    <li>
+      <button (click)="setActiveSection('section3')" [class.active]="activeSection === 'section3'"
+        aria-label="Go to Section 3">
+        Section 3
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <h1>Details for {{ projectId }}</h1>
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="error">{{ error }}</div>
+
+  <section id="section1" aria-labelledby="section1-heading">
+    <h2 id="section1-heading">1. Introduction & Overview</h2>
+    <p>
+      Welcome to my <strong>Password Generator</strong> project! This application creates secure,
+      memorable passwords by combining personal “interests” (or favorite words) with random
+      elements. It supports both Danish and English language settings, automatically detecting
+      your browser’s language.
+    </p>
+    <p>
+      The interface is built with <em>HTML</em>, <em>JavaScript</em>, and
+      <em>Bootstrap</em> for icons, plus a custom <em>CSS</em> theme for styling. Below is a
+      quick look at the final UI:
+    </p>
+
+    <img src="assets/images/PasswordGenerator.png" alt="Password Generator Preview" class="image-preview" />
+
+    <p><strong>Key highlights:</strong></p>
     <ul>
-      <li>
-        <button
-          (click)="setActiveSection('section1')"
-          [class.active]="activeSection === 'section1'"
-          aria-label="Go to Section 1"
-        >
-          Section 1
-        </button>
-      </li>
-      <li>
-        <button
-          (click)="setActiveSection('section2')"
-          [class.active]="activeSection === 'section2'"
-          aria-label="Go to Section 2"
-        >
-          Section 2
-        </button>
-      </li>
-      <li>
-        <button
-          (click)="setActiveSection('section3')"
-          [class.active]="activeSection === 'section3'"
-          aria-label="Go to Section 3"
-        >
-          Section 3
-        </button>
-      </li>
+      <li>Add your own interests, favorite numbers, or colors.</li>
+      <li>Dynamically enforces minimum password length and includes special characters.</li>
+      <li>Language auto-detect (English or Danish).</li>
+      <li>A built-in strength meter checks for weak patterns.</li>
+      <li>Generates site-specific passwords by appending a portion of each website’s name.</li>
     </ul>
-  </nav>
-  
-  <main>
-    <h1>Details for {{ projectId }}</h1>
-    <div *ngIf="loading">Loading...</div>
-    <div *ngIf="error">{{ error }}</div>
-  
-    <section id="section1" aria-labelledby="section1-heading">
-      <h2 id="section1-heading">1. Introduction & Overview</h2>
-      <p>
-        Welcome to my <strong>Password Generator</strong> project! This application creates secure,
-        memorable passwords by combining personal “interests” (or favorite words) with random
-        elements. It supports both Danish and English language settings, automatically detecting
-        your browser’s locale.
-      </p>
-      <p>
-        The interface is built with <em>HTML</em>, <em>vanilla JavaScript</em>, and
-        <em>Bootstrap</em> for icons, plus a custom <em>CSS</em> theme for styling. Below is a
-        quick look at the final UI:
-      </p>
-  
-      <img
-        src="assets/images/PasswordGenerator.png"
-        alt="Password Generator Preview"
-        class="image-preview"
-      />
-  
-      <p><strong>Key highlights:</strong></p>
-      <ul>
-        <li>Add your own interests, favorite numbers, or colors.</li>
-        <li>Dynamically enforces minimum password length and includes special characters.</li>
-        <li>Language auto-detect (English or Danish).</li>
-        <li>A built-in strength meter checks for weak patterns.</li>
-        <li>Generates site-specific passwords by appending a portion of each website’s name.</li>
-      </ul>
-    </section>
-  
-    <!-- SECTION 2: How It Works -->
-    <section id="section2" aria-labelledby="section2-heading">
-      <h2 id="section2-heading">2. How It Works</h2>
-      <p>
-        The core logic lives in <code>script.js</code>. As users add tags (e.g., “soccer,” “beer,”
-        or “23”), these are merged into a <strong>base password</strong> with optional
-        special-character transformations (e.g., converting “æ” or “ø” to ASCII). The app also
-        capitalizes the first letter of each interest if desired and inserts user numbers at
-        specific points.
-      </p>
-      <p>
-        Below is a simplified snippet from the password-generation logic, showing how a special
-        character is inserted and interests are capitalized:
-      </p>
-  
-      <!-- Code Snippet -->
-      <pre ngNonBindable><code class="language-javascript">
+  </section>
+
+  <section id="section2" aria-labelledby="section2-heading">
+    <h2 id="section2-heading">2. How It Works</h2>
+    <p>
+      The core logic lives in <code>script.js</code>. As users add tags (e.g., “soccer,” “beer,”
+      or “23”), these are merged into a <strong>base password</strong> with optional
+      special-character transformations (e.g., converting “æ” or “ø” to ASCII). The app also
+      capitalizes the first letter of each interest if desired and inserts user numbers at
+      specific points.
+    </p>
+    <p>
+      Below is a simplified snippet from the password-generation logic, showing how a special
+      character is inserted and interests are capitalized:
+    </p>
+
+    <pre ngNonBindable><code class="language-javascript">
   // Example from script.js
   function generateBasePassword(tags, charactersPerInterest, minLength) {{ '{' }}
     let basePasswordParts = [];
@@ -132,37 +117,36 @@
     return basePasswordParts.join("");
   {{ '}' }}
       </code></pre>
-  
-      <p>
-        Once the base password is generated, you can append a subset of a site’s name (“Facebook,”
-        “GitHub,” etc.) to get unique passwords per service.
-      </p>
-    </section>
-  
-    <!-- SECTION 3: Usage & Extra Features -->
-    <section id="section3" aria-labelledby="section3-heading">
-      <h2 id="section3-heading">3. Usage & Extra Features</h2>
-      <p>
-        After clicking “Generate Password,” you’ll see a base password plus site-specific
-        passwords. Some noteworthy features:
-      </p>
-      <ul>
-        <li>
-          <strong>Strength Meter:</strong> Checks uppercase, lowercase, numeric, and special
-          characters, and flags any known weak patterns.
-        </li>
-        <li>
-          <strong>Video Tutorial Modal:</strong> A quick demo of adding tags, setting length, etc.
-        </li>
-        <li>
-          <strong>Predefined Sets:</strong> Offers recommended interests, colors, and numbers for
-          faster input.
-        </li>
-      </ul>
-  
-      <p>Below is a short snippet from <code>style.css</code> showing how tags are displayed in a row:</p>
-  
-      <pre ngNonBindable><code class="language-css">
+
+    <p>
+      Once the base password is generated, you can append a subset of a site’s name (“Facebook,”
+      “GitHub,” etc.) to get unique passwords per service.
+    </p>
+  </section>
+
+  <section id="section3" aria-labelledby="section3-heading">
+    <h2 id="section3-heading">3. Usage & Extra Features</h2>
+    <p>
+      After clicking “Generate Password,” you’ll see a base password plus site-specific
+      passwords. Some noteworthy features:
+    </p>
+    <ul>
+      <li>
+        <strong>Strength Meter:</strong> Checks uppercase, lowercase, numeric, and special
+        characters, and flags any known weak patterns.
+      </li>
+      <li>
+        <strong>Video Tutorial Modal:</strong> A quick demo of adding tags, setting length, etc.
+      </li>
+      <li>
+        <strong>Predefined Sets:</strong> Offers recommended interests, colors, and numbers for
+        faster input.
+      </li>
+    </ul>
+
+    <p>Below is a short snippet from <code>style.css</code> showing how tags are displayed in a row:</p>
+
+    <pre ngNonBindable><code class="language-css">
   #tags {{ '{' }}
     display: flex;
     flex-wrap: wrap;
@@ -180,18 +164,9 @@
     cursor: pointer;
   {{ '}' }}
       </code></pre>
-  
-      <p>And here’s how the final passwords might appear:</p>
-  
-      <img
-        src="assets/images/password-generator-result.png"
-        alt="Example of Generated Password"
-        class="image-preview"
-      />
-  
-      <p>
-        Thanks for checking out this project! Feel free to reach out with feedback or ideas for
-        future improvements.
-      </p>
-    </section>
-  </main>
+
+    <p>And here’s how the final passwords might appear:</p>
+
+    <img src="assets/images/password-generator-result.png" alt="Example of Generated Password" class="image-preview" />
+  </section>
+</main>

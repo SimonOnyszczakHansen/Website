@@ -6,7 +6,7 @@ import {
   OnDestroy,
   ChangeDetectorRef
 } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink} from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 interface Project {
   id: string;
@@ -41,7 +41,7 @@ export class ProjectDetailsComponent implements OnInit, AfterViewInit, OnDestroy
   constructor(
     private route: ActivatedRoute,
     private cdr: ChangeDetectorRef
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe({
@@ -62,7 +62,7 @@ export class ProjectDetailsComponent implements OnInit, AfterViewInit, OnDestroy
     });
   }
 
-  ngAfterViewInit(): void {}
+  ngAfterViewInit(): void { }
 
   ngOnDestroy(): void {
     if (this.intersectionObserver) {
@@ -105,6 +105,23 @@ export class ProjectDetailsComponent implements OnInit, AfterViewInit, OnDestroy
             result: 'assets/images/password-generator-result.png',
           },
         };
+      } else if (id === 'PortionPal') {
+        this.project = {
+          id: 'PortionPal',
+          title: 'PortionPal',
+          description: 'This app controls an automatic pet feeding machine...',
+          sections: {
+            introduction: 'Introduction text about PortionPal...',
+            howItWorks:
+              'Explanation of how PortionPal communicates with the feeding machine...',
+            usage:
+              'Instructions on how to set portion sizes, schedule feeding times, etc...',
+          },
+          images: {
+            preview: 'assets/images/PortionPal.png',
+            result: 'assets/images/PortionPal-result.png',
+          },
+        }
       } else {
         this.error = 'Project not found';
       }
@@ -113,7 +130,7 @@ export class ProjectDetailsComponent implements OnInit, AfterViewInit, OnDestroy
       this.initializeIntersectionObserver();
     }, 1000);
   }
-  
+
 
   private initializeIntersectionObserver(): void {
     if (this.intersectionObserver) {

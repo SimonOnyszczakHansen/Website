@@ -1,5 +1,5 @@
 import { NgIf, Location } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,20 +9,21 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.css'
 })
-export class ProjectDetailsComponent implements OnInit {
+export class ProjectDetailsComponent implements OnInit, AfterViewInit, OnDestroy {
   projectId!: string;
-  loading: boolean = true;
+  loading = true;
   error: string | null = null;
-  activeSection: string = 'section1';
+  activeSection = 'section1';
 
-  constructor(private route: ActivatedRoute, private location: Location) {}
+  private observer!: IntersectionObserver;
+
+  constructor(private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const id = params.get('id');
       if (id) {
         this.projectId = id;
-        this.fetchProjectDetails();
       } else {
         this.error = 'Project ID not found';
       }
@@ -33,15 +34,47 @@ export class ProjectDetailsComponent implements OnInit {
     });
   }
 
+  ngAfterViewInit(): void {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.4
+    };
+
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.activeSection = entry.target.id;
+        }
+      });
+    }, options);
+
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach(section => this.observer.observe(section));
+  }
+
+  ngOnDestroy(): void {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  }
+
   goBack(): void {
     this.location.back();
   }
 
-  setActiveSection(section: string): void {
-    this.activeSection = section;
-  }
+  scrollToSection(sectionId: string): void {
+    const offset = 100;
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const scrollPosition = elementPosition + window.scrollY - offset;
 
-  fetchProjectDetails(): void {
-
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth',
+      });
+      this.activeSection = sectionId;
+    }
   }
 }

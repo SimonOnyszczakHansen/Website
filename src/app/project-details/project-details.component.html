@@ -6,21 +6,18 @@
   <h4>Contents</h4>
   <ul>
     <li>
-      <button (click)="setActiveSection('section1')" [class.active]="activeSection === 'section1'"
-        aria-label="Go to Section 1">
-        Section 1
+      <button (click)="scrollToSection('section1')" [class.active]="activeSection === 'section1'">
+        1. Introduction & Overview
       </button>
     </li>
     <li>
-      <button (click)="setActiveSection('section2')" [class.active]="activeSection === 'section2'"
-        aria-label="Go to Section 2">
-        Section 2
+      <button (click)="scrollToSection('section2')" [class.active]="activeSection === 'section2'">
+        2. How It Works
       </button>
     </li>
     <li>
-      <button (click)="setActiveSection('section3')" [class.active]="activeSection === 'section3'"
-        aria-label="Go to Section 3">
-        Section 3
+      <button (click)="scrollToSection('section3')" [class.active]="activeSection === 'section3'">
+        3. Usage & Extra Features
       </button>
     </li>
   </ul>

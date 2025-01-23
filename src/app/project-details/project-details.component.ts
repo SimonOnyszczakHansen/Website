@@ -1,4 +1,4 @@
-import { NgIf, Location } from '@angular/common';
+import { NgIf } from '@angular/common';
 import {
   Component,
   OnInit,
@@ -6,7 +6,7 @@ import {
   OnDestroy,
   ChangeDetectorRef
 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink} from '@angular/router';
 
 interface Project {
   id: string;
@@ -26,7 +26,7 @@ interface Project {
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, RouterLink],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.css',
 })
@@ -40,7 +40,6 @@ export class ProjectDetailsComponent implements OnInit, AfterViewInit, OnDestroy
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location,
     private cdr: ChangeDetectorRef
   ) {}
 
@@ -69,10 +68,6 @@ export class ProjectDetailsComponent implements OnInit, AfterViewInit, OnDestroy
     if (this.intersectionObserver) {
       this.intersectionObserver.disconnect();
     }
-  }
-
-  goBack(): void {
-    this.location.back();
   }
 
   scrollToSection(sectionId: string): void {

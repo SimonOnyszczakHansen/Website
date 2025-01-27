@@ -4,9 +4,14 @@ import {
   OnInit,
   AfterViewInit,
   OnDestroy,
-  ChangeDetectorRef
+  ChangeDetectorRef,
+  OnChanges,
+  SimpleChanges,
 } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import * as prism from 'prismjs';
+import 'prismjs/components/prism-typescript';
 
 interface Project {
   id: string;
@@ -21,6 +26,7 @@ interface Project {
     preview: string;
     result: string;
   };
+  codesnippet: string;
 }
 
 @Component({
@@ -28,20 +34,24 @@ interface Project {
   standalone: true,
   imports: [NgIf, RouterLink],
   templateUrl: './project-details.component.html',
-  styleUrl: './project-details.component.css',
+  styleUrls: ['./project-details.component.css'],
 })
-export class ProjectDetailsComponent implements OnInit, AfterViewInit, OnDestroy {
+export class ProjectDetailsComponent
+  implements OnInit, AfterViewInit, OnDestroy, OnChanges
+{
   projectId!: string;
   project!: Project;
   loading = true;
   error: string | null = null;
   activeSection = 'section1';
+  sanitizedCodeSnippet: SafeHtml | null = null;
   private intersectionObserver!: IntersectionObserver;
 
   constructor(
     private route: ActivatedRoute,
-    private cdr: ChangeDetectorRef
-  ) { }
+    private cdr: ChangeDetectorRef,
+    private sanitizer: DomSanitizer
+  ) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe({
@@ -62,7 +72,16 @@ export class ProjectDetailsComponent implements OnInit, AfterViewInit, OnDestroy
     });
   }
 
-  ngAfterViewInit(): void { }
+  ngAfterViewInit(): void {
+    prism.highlightAll(); // Initial highlighting after view initialization
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    // Re-run Prism.js highlighting if the content changes dynamically
+    if (changes['project'] && this.project?.codesnippet) {
+      this.sanitizeAndHighlightCode(this.project.codesnippet);
+    }
+  }
 
   ngOnDestroy(): void {
     if (this.intersectionObserver) {
@@ -91,37 +110,45 @@ export class ProjectDetailsComponent implements OnInit, AfterViewInit, OnDestroy
           id: 'password-generator',
           title: 'Password Generator',
           description:
-            'This application generates robust, memorable passwords by blending personal words or interests with random elements. Unlike typical generators that churn out random gibberish, this approach ensures each password remains highly secure yet easy to recall. The tool also detects whether your browser is set to English or Danish, enhancing usability across different language settings.',
+            'This application securely generates memorable passwords by mixing personal keywords (like your hobbies) with randomized elements. Unlike typical generators that churn out random gibberish, ours ensures each password remains both robust and easy to recall. It also detects your browser language (English or Danish) for a smoother experience.',
           sections: {
             introduction:
-              'Welcome to my Password Generator project! This tool lets you combine personal keywords—like your hobbies, favorite foods, or even special numbers—with randomly added symbols and characters to create truly unique passwords. It supports both Danish and English out of the box, switching automatically based on your browser settings. Each password is crafted to be both strong and user-friendly, reflecting your individual preferences while maintaining the highest security standards.',
+              'Welcome to my Password Generator project! Here, you can combine personal keywords—such as your favorite foods, hobbies, or important numbers—with randomized symbols and characters to craft a truly unique password. The tool supports Danish and English right out of the box, automatically matching your browser’s settings. Each generated password is secure and personalized, ensuring strong protection while staying easy to remember.',
             howItWorks:
-              'Under the hood, the main logic is implemented in script.js. When you add one or more tags—perhaps “soccer,” “pizza,” or “2023”—the script merges them with randomized elements and inserts special characters to increase complexity. If your tags contain Danish letters (æ, ø, å), they can be selectively converted for added security. The result is a personalized password that balances memorability with best-practice security measures, ensuring it’s difficult to crack yet easy for you to remember.',
+              'Under the hood, the main logic resides in script.js. When you add one or more tags—perhaps “football,” “pizza,” or “2023”—they are merged with random characters and special symbols for added complexity. If your tags contain Danish letters (æ, ø, å), the system can selectively convert them for an extra layer of security. This creates a password that balances memorability with top-tier security measures, making it tough to crack but easy for you to recall.',
             usage:
-              'After providing your tags, simply click “Generate Password” to see a newly created base password and optional site-specific variations. A built-in strength meter will let you know if your password meets recommended security levels. Additional features include a video tutorial accessible via a modal window and predefined tag sets for quick starts. Whether you need a quick login credential for social media or a complex passphrase for financial accounts, this Password Generator adapts to your requirements while maintaining top-tier security.',
+              'Begin by entering your chosen tags, then click “Generate Password” to see a newly created base password along with optional site-specific variations. A built-in strength meter checks whether your password meets recommended security thresholds. Additional features include a video tutorial, accessible through a modal, and predefined tag sets to help you get started quickly. Whether it’s for social media or secure financial logins, the Password Generator adapts to your needs while maintaining the highest security standards.',
           },
           images: {
             preview: 'assets/images/PasswordGenerator.png',
-            result: 'assets/images/password-generator-result.png',
+            result: 'assets/images/PasswordGeneratorResult.png',
           },
+          codesnippet: `
+function generateBasePassword(tags, charactersPerTag, minLength) {
+  const nonNumberTags = tags.filter((tag) => isNaN(tag));
+  const numbers = tags.filter((tag) => !isNaN(tag));
+  let password = '';
+
+  // Build the password by partially combining each interest with a number
+  nonNumberTags.forEach((tag) => {
+    let partial = tag.slice(0, charactersPerTag);
+    // Capitalize the first letter
+    partial = partial.charAt(0).toUpperCase() + partial.slice(1);
+    password += partial;
+    
+    if (numbers.length) {
+      password += numbers.shift(); // Insert a number after each interest
+    }
+  });
+
+  // Append leftover numbers, ensure at least one special character
+  if (!/[!@#$%^&*()_\-+=[\]{};:'"\\|,.<>/?]/.test(password)) {
+    password += '!';
+  }
+  return password + numbers.join('');
+}`,
         };
-      } else if (id === 'PortionPal') {
-        this.project = {
-          id: 'PortionPal',
-          title: 'PortionPal',
-          description: 'This app controls an automatic pet feeding machine...',
-          sections: {
-            introduction: 'Introduction text about PortionPal...',
-            howItWorks:
-              'Explanation of how PortionPal communicates with the feeding machine...',
-            usage:
-              'Instructions on how to set portion sizes, schedule feeding times, etc...',
-          },
-          images: {
-            preview: 'assets/images/PortionPal.png',
-            result: 'assets/images/PortionPal-result.png',
-          },
-        }
+        this.sanitizeAndHighlightCode(this.project.codesnippet);
       } else {
         this.error = 'Project not found';
       }
@@ -131,6 +158,15 @@ export class ProjectDetailsComponent implements OnInit, AfterViewInit, OnDestroy
     }, 1000);
   }
 
+  private sanitizeAndHighlightCode(code: string): void {
+    // Sanitize the raw code snippet and prepare for rendering
+    this.sanitizedCodeSnippet = this.sanitizer.bypassSecurityTrustHtml(
+      `<pre><code class="language-js">${code}</code></pre>`
+    );
+
+    // Re-run Prism.js after sanitizing
+    setTimeout(() => prism.highlightAll(), 0);
+  }
 
   private initializeIntersectionObserver(): void {
     if (this.intersectionObserver) {

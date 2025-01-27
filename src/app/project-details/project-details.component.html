@@ -1,3 +1,6 @@
+<head>
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
 <button id="button-back" [routerLink]="['/projects']" aria-label="Go back">
   <i class="fas fa-arrow-left"></i> Back
 </button>
@@ -31,73 +34,24 @@
   <section id="section1" aria-labelledby="section1-heading" *ngIf="project">
     <h2 id="section1-heading"><span>1. Introduction & Overview</span></h2>
     <p>{{ project.sections.introduction }}</p>
-    <img [src]="project.images.preview" alt="Password Generator Preview" class="image-preview" />
-    <p><strong>Key highlights:</strong></p>
-    <ul>
-      <li>Add your own interests, favorite numbers, or colors.</li>
-      <li>Dynamically enforces minimum password length and includes special characters.</li>
-      <li>Language auto-detect (English or Danish).</li>
-      <li>A built-in strength meter checks for weak patterns.</li>
-      <li>Generates site-specific passwords by appending a portion of each website’s name.</li>
-    </ul>
+    <img [src]="project.images.preview" alt="" class="image-preview" />
   </section>
 
   <section id="section2" aria-labelledby="section2-heading" *ngIf="project">
     <h2 id="section2-heading"><span>2. How It Works</span></h2>
     <p>{{ project.sections.howItWorks }}</p>
-    <pre ngNonBindable>
-      <code class="language-javascript">
-        // Example from script.js
-        function generateBasePassword(tags, charactersPerInterest, minLength) {{ '{' }}
-          let basePasswordParts = [];
-          let numbers = [];
-          let nonNumberTags = [];
-          let specialCharacterInserted = false;
-
-          // Separate numeric vs. non-numeric tags
-          tags.forEach(tag => {{ '{' }}
-            if (!isNaN(tag)) {{ '{' }}
-              numbers.push(tag);
-            {{ '}' }} else {{ '{' }}
-              nonNumberTags.push(tag);
-            {{ '}' }}
-          {{ '}' }});
-
-          // Process each non-number tag
-          nonNumberTags.forEach(tag => {{ '{' }}
-            let segment = tag.substring(0, charactersPerInterest);
-
-            // Insert a special character if needed
-            if (!specialCharacterInserted) {{ '{' }}
-              // Example logic for æ, ø, å conversion...
-              specialCharacterInserted = true;
-            {{ '}' }}
-
-            // Capitalize first letter
-            segment = segment.charAt(0).toUpperCase() + segment.slice(1);
-
-            basePasswordParts.push(segment);
-
-            // Insert one number after each tag if available
-            if (numbers.length > 0) {{ '{' }}
-              basePasswordParts.push(numbers.shift());
-            {{ '}' }}
-          {{ '}' }});
-
-          // If no special character was used, add one at the end
-          if (!specialCharacterInserted) {{ '{' }}
-            basePasswordParts.push("!");
-          {{ '}' }}
-
-          return basePasswordParts.join("");
-        {{ '}' }}
-      </code>
-    </pre>
+    <div *ngIf="project.codesnippet">
+      <pre>
+        <code class="language-js">
+        {{ project.codesnippet }}
+        </code>
+      </pre>
+    </div>
   </section>
 
   <section id="section3" aria-labelledby="section3-heading" *ngIf="project">
     <h2 id="section3-heading"><span>3. Usage & Extra Features</span></h2>
     <p>{{ project.sections.usage }}</p>
-    <img [src]="project.images.result" alt="Example of Generated Password" class="image-preview" />
+    <img [src]="project.images.result" alt="" class="image-preview" />
   </section>
 </main>

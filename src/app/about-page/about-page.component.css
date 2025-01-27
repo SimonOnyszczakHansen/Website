@@ -143,6 +143,7 @@ h1, h2, h3, p {
 
 .highlight:hover {
     transform: translateY(-5px);
+    cursor: pointer;
 }
 
 .highlight i {

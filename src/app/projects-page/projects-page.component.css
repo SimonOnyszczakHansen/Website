@@ -172,7 +172,7 @@ body {
 }
 
 .project-card:hover {
-    border: 1px solid#fff;
+    border: 1px solid#ffffffc5;
 }
 
 .project-card>* {
@@ -243,7 +243,7 @@ body {
 
 .project-card:hover .project-details img {
     transform: translateY(-10px);
-    border: 1px solid #fff
+    border: 1px solid #ffffffc5
 }
 
 .project-details h1 {

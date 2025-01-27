@@ -166,11 +166,13 @@ code {
   outline: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   #table-of-contents {
     display: none;
   }
+}
 
+@media (max-width: 768px) {
   #button-back {
     top: 80px;
   }

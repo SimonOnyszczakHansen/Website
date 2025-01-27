@@ -154,11 +154,11 @@ function generateBasePassword(tags, charactersPerTag, minLength) {
           id: 'portionpal',
           title: 'PortionPal',
           description:
-            '',
+            '...',
           sections: {
-            introduction: '',
-            howItWorks: '',
-            usage: '',
+            introduction: '...',
+            howItWorks: '...',
+            usage: '...',
           },
           images: {
             preview: 'assets/images/PortionPal.png',
@@ -170,11 +170,11 @@ function generateBasePassword(tags, charactersPerTag, minLength) {
         this.project = {
           id: 'smart-city-traffic-management',
           title: 'Smart City Traffic Management',
-          description: '',
+          description: '...',
           sections: {
-            introduction: '',
-            howItWorks: '',
-            usage: '',
+            introduction: '...',
+            howItWorks: '...',
+            usage: '...',
           },
           images: {
             preview: 'assets/images/TrafficManagement.png',
@@ -193,12 +193,10 @@ function generateBasePassword(tags, charactersPerTag, minLength) {
   }
 
   private sanitizeAndHighlightCode(code: string): void {
-    // Sanitize the raw code snippet and prepare for rendering
     this.sanitizedCodeSnippet = this.sanitizer.bypassSecurityTrustHtml(
       `<pre><code class="language-js">${code}</code></pre>`
     );
 
-    // Re-run Prism.js after sanitizing
     setTimeout(() => prism.highlightAll(), 0);
   }
 

@@ -149,7 +149,41 @@ function generateBasePassword(tags, charactersPerTag, minLength) {
 }`,
         };
         this.sanitizeAndHighlightCode(this.project.codesnippet);
-      } else {
+      } else if (id == 'portionpal') {
+        this.project = {
+          id: 'portionpal',
+          title: 'PortionPal',
+          description:
+            '',
+          sections: {
+            introduction: '',
+            howItWorks: '',
+            usage: '',
+          },
+          images: {
+            preview: 'assets/images/PortionPal.png',
+            result: 'assets/images/PortionPalResult.png',
+          },
+          codesnippet: ''
+        }
+      } else if (id == "smart-city-traffic-management")  {
+        this.project = {
+          id: 'smart-city-traffic-management',
+          title: 'Smart City Traffic Management',
+          description: '',
+          sections: {
+            introduction: '',
+            howItWorks: '',
+            usage: '',
+          },
+          images: {
+            preview: 'assets/images/TrafficManagement.png',
+            result: '',
+          },
+          codesnippet: '',
+        }
+      }    
+      else {
         this.error = 'Project not found';
       }
       this.loading = false;

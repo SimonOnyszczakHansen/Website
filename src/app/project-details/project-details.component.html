@@ -28,9 +28,8 @@
     </h2>
     <p>{{ section.content }}</p>
     <img *ngIf="section.image" [src]="section.image" [alt]="section.title + ' image'" class="section-image">
-
-    <div *ngIf="section.id === 'logic' && project.codesnippet">
-      <pre><code class="language-js">{{ project.codesnippet }}</code></pre>
+    <div *ngIf="section.codesnippet">
+      <pre><code class="language-js">{{ section.codesnippet }}</code></pre>
     </div>
   </section>
 </main>

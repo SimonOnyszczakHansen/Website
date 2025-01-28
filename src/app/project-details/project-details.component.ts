@@ -1,7 +1,7 @@
 import { NgIf, NgFor } from '@angular/common';
 import { Component, OnInit, AfterViewInit, OnDestroy, ChangeDetectorRef, OnChanges, SimpleChanges } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { SafeHtml } from '@angular/platform-browser';
 import * as prism from 'prismjs';
 import 'prismjs/components/prism-typescript';
 
@@ -10,6 +10,7 @@ interface Section {
   title: string,
   content: string,
   image?: string,
+  codesnippet?: string,
 }
 
 interface Project {
@@ -17,7 +18,6 @@ interface Project {
   title: string;
   description: string;
   sections: Section[];
-  codesnippet: string;
 }
 
 @Component({
@@ -28,7 +28,7 @@ interface Project {
   styleUrl: './project-details.component.css',
 })
 export class ProjectDetailsComponent
-  implements OnInit, AfterViewInit, OnDestroy, OnChanges {
+  implements OnInit, OnDestroy {
   projectId!: string;
   project!: Project;
   loading = true;
@@ -40,7 +40,6 @@ export class ProjectDetailsComponent
   constructor(
     private route: ActivatedRoute,
     private cdr: ChangeDetectorRef,
-    private sanitizer: DomSanitizer
   ) { }
 
   ngOnInit(): void {
@@ -60,16 +59,6 @@ export class ProjectDetailsComponent
         this.loading = false;
       },
     });
-  }
-
-  ngAfterViewInit(): void {
-    prism.highlightAll();
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['project'] && this.project?.codesnippet) {
-      this.sanitizeAndHighlightCode(this.project.codesnippet);
-    }
   }
 
   ngOnDestroy(): void {
@@ -114,7 +103,55 @@ export class ProjectDetailsComponent
             {
               id: 'technology',
               title: 'Technology and Implementation',
-              content: 'The project uses HTML, CSS, and Vanilla JavaScript for a responsive, intuitive single-page application. The code dynamically enforces rules as you type, instantly updating what the password might look like and whether it meets the criteria. The interface is styled to adapt gracefully to different screens, and each step is designed to guide the user without overwhelming them with too many fields at once. Hoverable tooltips clarify any confusing features, such as how the special character mapping works or how many characters from a website name get appended. A short modal video can also guide new users through the entire process in case they feel uncertain about generating a secure passphrase.',
+              content:
+                'The project uses HTML, CSS, and Vanilla JavaScript for a responsive, intuitive single-page application. The code dynamically enforces rules as you type, instantly updating what the password might look like and whether it meets the criteria. The interface is styled to adapt gracefully to different screens, and each step is designed to guide the user without overwhelming them with too many fields at once. Hoverable tooltips clarify any confusing features, such as how the special character mapping works or how many characters from a website name get appended. A short modal video can also guide new users through the entire process in case they feel uncertain about generating a secure passphrase.',
+              codesnippet: `
+function checkMinimumInterests() {
+  const totalPasswordLength = parseInt(passwordLength.value, 10);
+  const charactersPerInterest = parseInt(charactersSlider.value, 10);
+
+  const nonNumberTags = tags.filter((tag) => isNaN(tag));
+  const numbers = tags.filter((tag) => !isNaN(tag));
+
+  // Calculate expected password length (+1 for the special character)
+  const expectedLength =
+    nonNumberTags.length * charactersPerInterest +
+    numbers.reduce((sum, num) => sum + num.length, 0) +
+    1;
+
+  let errorMessages = [];
+
+  // If we don't meet the desired total length, ask for more interests
+  if (expectedLength < totalPasswordLength) {
+    const minInterestsRequired = Math.ceil(
+      (totalPasswordLength -
+        numbers.reduce((sum, num) => sum + num.length, 0) -
+        1) /
+        charactersPerInterest
+    );
+    const minInterestsMessage = selectedLang.minInterestsMessage.replace(
+      "{minInterests}",
+      minInterestsRequired
+    );
+    errorMessages.push(minInterestsMessage);
+  } else if (numbers.length === 0) {
+    // Also ensure at least one number is included
+    const numberRequiredMessage = selectedLang.numberRequiredMessage;
+    errorMessages.push(numberRequiredMessage);
+  }
+
+  if (errorMessages.length > 0) {
+    minInterestsFeedback.innerHTML = errorMessages.join("<br>");
+    minInterestsFeedback.style.display = "block";
+    document.getElementById("generatePassword").disabled = true;
+    return false;
+  } else {
+    minInterestsFeedback.style.display = "none";
+    document.getElementById("generatePassword").disabled = false;
+    return true;
+  }
+}
+              `,
             },
             {
               id: 'conclusion',
@@ -123,9 +160,7 @@ export class ProjectDetailsComponent
               image: 'assets/images/PasswordGeneratorResult.png',
             },
           ],
-          codesnippet: '',
         };
-        this.sanitizeAndHighlightCode(this.project.codesnippet);
       } else if (id == 'portionpal') {
         this.project = {
           id: 'portionpal',
@@ -139,7 +174,6 @@ export class ProjectDetailsComponent
               content: '',
             }
           ],
-          codesnippet: ''
         }
       } else if (id == "smart-city-traffic-management") {
         this.project = {
@@ -153,7 +187,6 @@ export class ProjectDetailsComponent
               content: '',
             }
           ],
-          codesnippet: '',
         }
       }
       else {
@@ -162,15 +195,8 @@ export class ProjectDetailsComponent
       this.loading = false;
       this.cdr.detectChanges();
       this.initializeIntersectionObserver();
+      setTimeout(() => prism.highlightAll(), 0)
     }, 2000);
-  }
-
-  private sanitizeAndHighlightCode(code: string): void {
-    this.sanitizedCodeSnippet = this.sanitizer.bypassSecurityTrustHtml(
-      `<pre><code class="language-js">${code}</code></pre>`
-    );
-
-    setTimeout(() => prism.highlightAll(), 0);
   }
 
   private initializeIntersectionObserver(): void {

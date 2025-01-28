@@ -4,6 +4,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SafeHtml } from '@angular/platform-browser';
 import * as prism from 'prismjs';
 import 'prismjs/components/prism-typescript';
+import { FooterComponent } from "../footer/footer.component";
 
 interface Section {
   id: string,
@@ -11,6 +12,7 @@ interface Section {
   content: string,
   image?: string,
   codesnippet?: string,
+  additionalText?: string,
 }
 
 interface Project {
@@ -23,7 +25,7 @@ interface Project {
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [NgIf, NgFor, RouterLink],
+  imports: [NgIf, NgFor, RouterLink, FooterComponent],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.css',
 })
@@ -92,19 +94,19 @@ export class ProjectDetailsComponent
             {
               id: 'introduction',
               title: 'Introduction',
-              content: 'The Password Generator is built around the idea that a strong password should not only resist brute-force attacks but also be easy to remember. It accomplishes this by letting users input personal words—such as hobbies, colors, and numbers—and blending them with special characters, uppercase options, and random placement to produce unique combinations. The generator ensures the final result meets modern security standards, including length and character variety, while remaining personal enough to recall without hassle.',
+              content: 'The Password Generator is built around the idea that a strong password should not only resist brute-force attacks but also be easy to remember. It accomplishes this by letting users input personal words—such as hobbies, colors, and numbers—and blending them with special characters, uppercase options, and random placement to produce unique combinations. The generator ensures the final result meets modern security standards, including length and character variety, while remaining personal enough to recall without hassle. In the screenshot, you can see the main interface labeled “Adgangskode Generator” (Danish for “Password Generator”), where users add their interests and favorite number. Sliders let you adjust how many letters to pull from each interest and set the total password length, along with toggles for using special characters and capitalization.',
               image: 'assets/images/PasswordGenerator.png',
             },
             {
               id: 'features',
               title: 'Key Features',
-              content: 'One of its central features is dynamic input: interests and numbers can be typed or chosen from predefined lists, making it easy to experiment with different memorable words. A built-in mechanism transforms certain Danish characters into symbols for enhanced security, automatically detecting if the browser is in Danish or English. On-screen sliders let users instantly adjust overall length or how many letters are extracted from each interest. The tool evaluates the strength of the password on the spot, highlighting whether it meets criteria such as lowercase, uppercase, numbers, special characters, and overall length. Once a base password is formed, an additional slider allows for appending abbreviated service names, ensuring that each login (such as for Facebook, Google, or LinkedIn) gets a unique, traceable, yet still memorable password.',
+              content: 'One of its central features is dynamic input: interests and numbers can be typed or chosen from predefined lists, making it easy to experiment with different memorable words. A built-in mechanism transforms certain Danish characters into symbols for enhanced security, automatically detecting if the browser is in Danish or English. On-screen sliders let users instantly adjust overall length or how many letters are extracted from each interest. The generator evaluates password strength on the spot, highlighting whether it meets criteria such as lowercase, uppercase, numbers, special characters, and overall length. Once a base password is formed, an additional slider allows for appending abbreviated service names, ensuring that each login (such as for Facebook, Google, or LinkedIn) gets a unique, traceable—yet still memorable—password.'
             },
             {
               id: 'technology',
               title: 'Technology and Implementation',
               content:
-                'The project uses HTML, CSS, and Vanilla JavaScript for a responsive, intuitive single-page application. The code dynamically enforces rules as you type, instantly updating what the password might look like and whether it meets the criteria. The interface is styled to adapt gracefully to different screens, and each step is designed to guide the user without overwhelming them with too many fields at once. Hoverable tooltips clarify any confusing features, such as how the special character mapping works or how many characters from a website name get appended. A short modal video can also guide new users through the entire process in case they feel uncertain about generating a secure passphrase.',
+                'The project uses HTML, CSS, and Vanilla JavaScript for a responsive, intuitive single-page application. The code dynamically enforces rules as you type, instantly updating what the password might look like and whether it meets the criteria. The interface is styled to adapt gracefully to different screens, and each step is designed to guide the user without overwhelming them with too many fields at once. Hoverable tooltips clarify any confusing features, such as how the special character mapping works or how many characters from a website name get appended. A short modal video can also guide new users through the entire process in case they feel uncertain about generating a secure passphrase. Below is a snippet demonstrating how the generator verifies that users have specified enough interests and at least one number before enabling password creation:',
               codesnippet: `
 function checkMinimumInterests() {
   const totalPasswordLength = parseInt(passwordLength.value, 10);
@@ -152,11 +154,12 @@ function checkMinimumInterests() {
   }
 }
               `,
+              additionalText: 'This logic forms the backbone of user input validation, ensuring each password has enough complexity.'
             },
             {
               id: 'conclusion',
               title: 'Conclusion',
-              content: 'This Password Generator proves that memorable passwords can be safe when carefully combining personal interests with structured randomness. By automating best practices and nudging the user to include a variety of character types, the generator produces truly robust credentials. The multilingual functionality further extends accessibility for users, whether they prefer an English or Danish interface. This project reflects an ongoing commitment to security-minded design, offering not just raw strength but practical memorability for everyday use.',
+              content: 'The final screenshot shows how your chosen interests (and special character conversions) are listed, along with the generated password, a color-coded strength meter, and an option to append each website’s abbreviation. This Password Generator demonstrates that memorable passwords can be strong when carefully combining personal interests with structured randomness. By automating best practices and nudging the user to include a variety of character types, it produces truly robust credentials. The multilingual functionality also extends accessibility for users, whether they prefer an English or Danish interface. Overall, this project reflects an ongoing commitment to security-minded design, offering not just raw strength but practical memorability for everyday use.',
               image: 'assets/images/PasswordGeneratorResult.png',
             },
           ],

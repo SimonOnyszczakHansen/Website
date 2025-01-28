@@ -58,6 +58,13 @@ li {
   margin-bottom: 0.5rem;
 }
 
+span {
+  background: linear-gradient(to right, #020072, #0065e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 #button-back {
   position: fixed;
   top: 20px;
@@ -119,47 +126,21 @@ li {
 }
 
 #table-of-contents button.active {
-  font-weight: bold;
-  color: #0150b8;
+  color: white;
 }
 
 section {
   margin-bottom: 2rem;
 }
 
-pre {
-  background-color: #1e1e1e;
-  padding: 1rem;
-  border-radius: 5px;
-  overflow-x: auto;
-  margin-bottom: 1rem;
-}
-
-code {
-  color: #c5c8c6;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  font-size: 0.9rem;
-}
-
-.image-preview {
+.section-image {
+  display: block;
   max-width: 100%;
   height: auto;
-  margin: 1rem 0;
+  margin: 1rem auto;
   border: 1px solid #333;
   border-radius: 5px;
-}
-
-#section1 span,
-#section2 span,
-#section3 span {
-  background: linear-gradient(to right, #020072, #0065e9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-#section3 img {
-  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 [aria-label],

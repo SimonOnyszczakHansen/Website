@@ -1,44 +1,34 @@
-import { NgIf } from '@angular/common';
-import {
-  Component,
-  OnInit,
-  AfterViewInit,
-  OnDestroy,
-  ChangeDetectorRef,
-  OnChanges,
-  SimpleChanges,
-} from '@angular/core';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { NgIf, NgFor } from '@angular/common';
+import { Component, OnInit, AfterViewInit, OnDestroy, ChangeDetectorRef, OnChanges, SimpleChanges } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { SafeHtml } from '@angular/platform-browser';
 import * as prism from 'prismjs';
 import 'prismjs/components/prism-typescript';
+
+interface Section {
+  id: string,
+  title: string,
+  content: string,
+  image?: string,
+  codesnippet?: string,
+}
 
 interface Project {
   id: string;
   title: string;
   description: string;
-  sections: {
-    introduction: string;
-    howItWorks: string;
-    usage: string;
-  };
-  images: {
-    preview: string;
-    result: string;
-  };
-  codesnippet: string;
+  sections: Section[];
 }
 
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [NgIf, RouterLink],
+  imports: [NgIf, NgFor, RouterLink],
   templateUrl: './project-details.component.html',
-  styleUrls: ['./project-details.component.css'],
+  styleUrl: './project-details.component.css',
 })
 export class ProjectDetailsComponent
-  implements OnInit, AfterViewInit, OnDestroy, OnChanges
-{
+  implements OnInit, OnDestroy {
   projectId!: string;
   project!: Project;
   loading = true;
@@ -50,8 +40,7 @@ export class ProjectDetailsComponent
   constructor(
     private route: ActivatedRoute,
     private cdr: ChangeDetectorRef,
-    private sanitizer: DomSanitizer
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe({
@@ -72,17 +61,6 @@ export class ProjectDetailsComponent
     });
   }
 
-  ngAfterViewInit(): void {
-    prism.highlightAll(); // Initial highlighting after view initialization
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    // Re-run Prism.js highlighting if the content changes dynamically
-    if (changes['project'] && this.project?.codesnippet) {
-      this.sanitizeAndHighlightCode(this.project.codesnippet);
-    }
-  }
-
   ngOnDestroy(): void {
     if (this.intersectionObserver) {
       this.intersectionObserver.disconnect();
@@ -90,7 +68,7 @@ export class ProjectDetailsComponent
   }
 
   scrollToSection(sectionId: string): void {
-    const offset = 150;
+    const offset = 200;
     const element = document.getElementById(sectionId);
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
@@ -109,95 +87,116 @@ export class ProjectDetailsComponent
         this.project = {
           id: 'password-generator',
           title: 'Password Generator',
-          description:
-            'This application securely generates memorable passwords by mixing personal keywords (like your hobbies) with randomized elements. Unlike typical generators that churn out random gibberish, ours ensures each password remains both robust and easy to recall. It also detects your browser language (English or Danish) for a smoother experience.',
-          sections: {
-            introduction:
-              'Welcome to my Password Generator project! Here, you can combine personal keywords—such as your favorite foods, hobbies, or important numbers—with randomized symbols and characters to craft a truly unique password. The tool supports Danish and English right out of the box, automatically matching your browser’s settings. Each generated password is secure and personalized, ensuring strong protection while staying easy to remember.',
-            howItWorks:
-              'Under the hood, the main logic resides in script.js. When you add one or more tags—perhaps “football,” “pizza,” or “2023”—they are merged with random characters and special symbols for added complexity. If your tags contain Danish letters (æ, ø, å), the system can selectively convert them for an extra layer of security. This creates a password that balances memorability with top-tier security measures, making it tough to crack but easy for you to recall.',
-            usage:
-              'Begin by entering your chosen tags, then click “Generate Password” to see a newly created base password along with optional site-specific variations. A built-in strength meter checks whether your password meets recommended security thresholds. Additional features include a video tutorial, accessible through a modal, and predefined tag sets to help you get started quickly. Whether it’s for social media or secure financial logins, the Password Generator adapts to your needs while maintaining the highest security standards.',
-          },
-          images: {
-            preview: 'assets/images/PasswordGenerator.png',
-            result: 'assets/images/PasswordGeneratorResult.png',
-          },
-          codesnippet: `
-function generateBasePassword(tags, charactersPerTag, minLength) {
+          description: 'This application securely generates memorable passwords by mixing personal keywords (like your hobbies) with randomized elements. Unlike typical generators that churn out random gibberish, ours ensures each password remains both robust and easy to recall. It also detects your browser language (English or Danish) for a smoother experience.',
+          sections: [
+            {
+              id: 'introduction',
+              title: 'Introduction',
+              content: 'The Password Generator is built around the idea that a strong password should not only resist brute-force attacks but also be easy to remember. It accomplishes this by letting users input personal words—such as hobbies, colors, and numbers—and blending them with special characters, uppercase options, and random placement to produce unique combinations. The generator ensures the final result meets modern security standards, including length and character variety, while remaining personal enough to recall without hassle.',
+              image: 'assets/images/PasswordGenerator.png',
+            },
+            {
+              id: 'features',
+              title: 'Key Features',
+              content: 'One of its central features is dynamic input: interests and numbers can be typed or chosen from predefined lists, making it easy to experiment with different memorable words. A built-in mechanism transforms certain Danish characters into symbols for enhanced security, automatically detecting if the browser is in Danish or English. On-screen sliders let users instantly adjust overall length or how many letters are extracted from each interest. The tool evaluates the strength of the password on the spot, highlighting whether it meets criteria such as lowercase, uppercase, numbers, special characters, and overall length. Once a base password is formed, an additional slider allows for appending abbreviated service names, ensuring that each login (such as for Facebook, Google, or LinkedIn) gets a unique, traceable, yet still memorable password.',
+            },
+            {
+              id: 'technology',
+              title: 'Technology and Implementation',
+              content:
+                'The project uses HTML, CSS, and Vanilla JavaScript for a responsive, intuitive single-page application. The code dynamically enforces rules as you type, instantly updating what the password might look like and whether it meets the criteria. The interface is styled to adapt gracefully to different screens, and each step is designed to guide the user without overwhelming them with too many fields at once. Hoverable tooltips clarify any confusing features, such as how the special character mapping works or how many characters from a website name get appended. A short modal video can also guide new users through the entire process in case they feel uncertain about generating a secure passphrase.',
+              codesnippet: `
+function checkMinimumInterests() {
+  const totalPasswordLength = parseInt(passwordLength.value, 10);
+  const charactersPerInterest = parseInt(charactersSlider.value, 10);
+
   const nonNumberTags = tags.filter((tag) => isNaN(tag));
   const numbers = tags.filter((tag) => !isNaN(tag));
-  let password = '';
 
-  // Build the password by partially combining each interest with a number
-  nonNumberTags.forEach((tag) => {
-    let partial = tag.slice(0, charactersPerTag);
-    // Capitalize the first letter
-    partial = partial.charAt(0).toUpperCase() + partial.slice(1);
-    password += partial;
-    
-    if (numbers.length) {
-      password += numbers.shift(); // Insert a number after each interest
-    }
-  });
+  // Calculate expected password length (+1 for the special character)
+  const expectedLength =
+    nonNumberTags.length * charactersPerInterest +
+    numbers.reduce((sum, num) => sum + num.length, 0) +
+    1;
 
-  // Append leftover numbers, ensure at least one special character
-  if (!/[!@#$%^&*()_\-+=[\]{};:'"\\|,.<>/?]/.test(password)) {
-    password += '!';
+  let errorMessages = [];
+
+  // If we don't meet the desired total length, ask for more interests
+  if (expectedLength < totalPasswordLength) {
+    const minInterestsRequired = Math.ceil(
+      (totalPasswordLength -
+        numbers.reduce((sum, num) => sum + num.length, 0) -
+        1) /
+        charactersPerInterest
+    );
+    const minInterestsMessage = selectedLang.minInterestsMessage.replace(
+      "{minInterests}",
+      minInterestsRequired
+    );
+    errorMessages.push(minInterestsMessage);
+  } else if (numbers.length === 0) {
+    // Also ensure at least one number is included
+    const numberRequiredMessage = selectedLang.numberRequiredMessage;
+    errorMessages.push(numberRequiredMessage);
   }
-  return password + numbers.join('');
-}`,
+
+  if (errorMessages.length > 0) {
+    minInterestsFeedback.innerHTML = errorMessages.join("<br>");
+    minInterestsFeedback.style.display = "block";
+    document.getElementById("generatePassword").disabled = true;
+    return false;
+  } else {
+    minInterestsFeedback.style.display = "none";
+    document.getElementById("generatePassword").disabled = false;
+    return true;
+  }
+}
+              `,
+            },
+            {
+              id: 'conclusion',
+              title: 'Conclusion',
+              content: 'This Password Generator proves that memorable passwords can be safe when carefully combining personal interests with structured randomness. By automating best practices and nudging the user to include a variety of character types, the generator produces truly robust credentials. The multilingual functionality further extends accessibility for users, whether they prefer an English or Danish interface. This project reflects an ongoing commitment to security-minded design, offering not just raw strength but practical memorability for everyday use.',
+              image: 'assets/images/PasswordGeneratorResult.png',
+            },
+          ],
         };
-        this.sanitizeAndHighlightCode(this.project.codesnippet);
       } else if (id == 'portionpal') {
         this.project = {
           id: 'portionpal',
           title: 'PortionPal',
           description:
             '...',
-          sections: {
-            introduction: '...',
-            howItWorks: '...',
-            usage: '...',
-          },
-          images: {
-            preview: 'assets/images/PortionPal.png',
-            result: 'assets/images/PortionPalResult.png',
-          },
-          codesnippet: ''
+          sections: [
+            {
+              id: '',
+              title: '',
+              content: '',
+            }
+          ],
         }
-      } else if (id == "smart-city-traffic-management")  {
+      } else if (id == "smart-city-traffic-management") {
         this.project = {
           id: 'smart-city-traffic-management',
           title: 'Smart City Traffic Management',
           description: '...',
-          sections: {
-            introduction: '...',
-            howItWorks: '...',
-            usage: '...',
-          },
-          images: {
-            preview: 'assets/images/TrafficManagement.png',
-            result: '',
-          },
-          codesnippet: '',
+          sections: [
+            {
+              id: '',
+              title: '',
+              content: '',
+            }
+          ],
         }
-      }    
+      }
       else {
         this.error = 'Project not found';
       }
       this.loading = false;
       this.cdr.detectChanges();
       this.initializeIntersectionObserver();
-    }, 1000);
-  }
-
-  private sanitizeAndHighlightCode(code: string): void {
-    this.sanitizedCodeSnippet = this.sanitizer.bypassSecurityTrustHtml(
-      `<pre><code class="language-js">${code}</code></pre>`
-    );
-
-    setTimeout(() => prism.highlightAll(), 0);
+      setTimeout(() => prism.highlightAll(), 0)
+    }, 2000);
   }
 
   private initializeIntersectionObserver(): void {

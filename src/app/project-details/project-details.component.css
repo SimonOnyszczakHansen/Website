@@ -119,7 +119,8 @@ li {
 }
 
 #table-of-contents button.active {
-  color: #ffffff;
+  font-weight: bold;
+  color: #0150b8;
 }
 
 section {

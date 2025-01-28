@@ -1,27 +1,21 @@
-import { NgIf } from '@angular/common';
-import {
-  Component,
-  OnInit,
-  AfterViewInit,
-  OnDestroy,
-  ChangeDetectorRef,
-  OnChanges,
-  SimpleChanges,
-} from '@angular/core';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { NgIf, NgFor } from '@angular/common';
+import { Component, OnInit, AfterViewInit, OnDestroy, ChangeDetectorRef, OnChanges, SimpleChanges} from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import * as prism from 'prismjs';
 import 'prismjs/components/prism-typescript';
+
+interface Section {
+  id: string,
+  title: string,
+  content: string,
+}
 
 interface Project {
   id: string;
   title: string;
   description: string;
-  sections: {
-    introduction: string;
-    howItWorks: string;
-    usage: string;
-  };
+  sections: Section[];
   images: {
     preview: string;
     result: string;
@@ -32,7 +26,7 @@ interface Project {
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [NgIf, RouterLink],
+  imports: [NgIf, NgFor, RouterLink],
   templateUrl: './project-details.component.html',
   styleUrls: ['./project-details.component.css'],
 })
@@ -111,14 +105,28 @@ export class ProjectDetailsComponent
           title: 'Password Generator',
           description:
             'This application securely generates memorable passwords by mixing personal keywords (like your hobbies) with randomized elements. Unlike typical generators that churn out random gibberish, ours ensures each password remains both robust and easy to recall. It also detects your browser language (English or Danish) for a smoother experience.',
-          sections: {
-            introduction:
-              'Welcome to my Password Generator project! Here, you can combine personal keywords—such as your favorite foods, hobbies, or important numbers—with randomized symbols and characters to craft a truly unique password. The tool supports Danish and English right out of the box, automatically matching your browser’s settings. Each generated password is secure and personalized, ensuring strong protection while staying easy to remember.',
-            howItWorks:
-              'Under the hood, the main logic resides in script.js. When you add one or more tags—perhaps “football,” “pizza,” or “2023”—they are merged with random characters and special symbols for added complexity. If your tags contain Danish letters (æ, ø, å), the system can selectively convert them for an extra layer of security. This creates a password that balances memorability with top-tier security measures, making it tough to crack but easy for you to recall.',
-            usage:
-              'Begin by entering your chosen tags, then click “Generate Password” to see a newly created base password along with optional site-specific variations. A built-in strength meter checks whether your password meets recommended security thresholds. Additional features include a video tutorial, accessible through a modal, and predefined tag sets to help you get started quickly. Whether it’s for social media or secure financial logins, the Password Generator adapts to your needs while maintaining the highest security standards.',
-          },
+          sections: [
+            {
+              id: 'introduction',
+              title: '🔐 How Password Generation Works',
+              content: 'Welcome to my Password Generator project! Here, you can combine personal keywords—such as your favorite foods, hobbies, or important numbers—with randomized symbols and characters to craft a truly unique password. The tool supports Danish and English right out of the box, automatically matching your browser’s settings. Each generated password is secure and personalized, ensuring strong protection while staying easy to remember.',
+            },
+            {
+              id: 'logic',
+              title: '⚙️ The Logic Behind Password Generation',
+              content: 'Under the hood, the main logic resides in script.js...',
+            },
+            {
+              id: 'security',
+              title: '🔒 Security Features',
+              content: 'The password generator applies several security measures to ensure robust protection...',
+            },
+            {
+              id: 'usage',
+              title: '📌 How to Use This Password Generator',
+              content: 'Begin by entering your chosen tags, then click “Generate Password”...',
+            }
+          ],
           images: {
             preview: 'assets/images/PasswordGenerator.png',
             result: 'assets/images/PasswordGeneratorResult.png',
@@ -155,11 +163,13 @@ function generateBasePassword(tags, charactersPerTag, minLength) {
           title: 'PortionPal',
           description:
             '...',
-          sections: {
-            introduction: '...',
-            howItWorks: '...',
-            usage: '...',
-          },
+          sections: [
+            {
+              id: '',
+              title: '',
+              content: '',
+            }
+          ],
           images: {
             preview: 'assets/images/PortionPal.png',
             result: 'assets/images/PortionPalResult.png',
@@ -171,11 +181,13 @@ function generateBasePassword(tags, charactersPerTag, minLength) {
           id: 'smart-city-traffic-management',
           title: 'Smart City Traffic Management',
           description: '...',
-          sections: {
-            introduction: '...',
-            howItWorks: '...',
-            usage: '...',
-          },
+          sections: [
+            {
+              id: '',
+              title: '',
+              content: '',
+            }
+          ],
           images: {
             preview: 'assets/images/TrafficManagement.png',
             result: '',

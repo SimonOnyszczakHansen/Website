@@ -1,35 +1,42 @@
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
 </head>
-<button id="button-back" [routerLink]="['/projects']" aria-label="Go back">
-  <i class="fas fa-arrow-left"></i> Back
-</button>
 
-<nav id="table-of-contents" aria-label="Table of Contents">
-  <h4><span>Contents</span></h4>
-  <ul>
-    <li *ngFor="let section of project?.sections">
-      <button (click)="scrollToSection(section.id)" [class.active]="activeSection === section.id">
-        {{ section.title }}
-      </button>
-    </li>
-  </ul>
-</nav>
+<body>
+  <button id="button-back" [routerLink]="['/projects']" aria-label="Go back">
+    <i class="fas fa-arrow-left"></i> Back
+  </button>
 
-<main>
-  <h1>Details for <span>{{ project?.title }}</span></h1>
-  <div *ngIf="loading">Loading...</div>
-  <div *ngIf="error">{{ error }}</div>
+  <nav id="table-of-contents" aria-label="Table of Contents">
+    <h4><span>Contents</span></h4>
+    <ul>
+      <li *ngFor="let section of project?.sections">
+        <button (click)="scrollToSection(section.id)" [class.active]="activeSection === section.id">
+          {{ section.title }}
+        </button>
+      </li>
+    </ul>
+  </nav>
 
-  <section *ngFor="let section of project?.sections" id="{{ section.id }}"
-    [attr.aria-labelledby]="section.id + '-heading'">
-    <h2 [id]="section.id + '-heading'">
-      <span>{{ section.title }}</span>
-    </h2>
-    <p>{{ section.content }}</p>
-    <img *ngIf="section.image" [src]="section.image" [alt]="section.title + ' image'" class="section-image">
-    <div *ngIf="section.codesnippet">
-      <pre><code class="language-js">{{ section.codesnippet }}</code></pre>
-    </div>
-  </section>
-</main>
+  <main>
+    <h1>Details for <span>{{ project?.title }}</span></h1>
+    <div *ngIf="loading">Loading...</div>
+    <div *ngIf="error">{{ error }}</div>
+
+    <section *ngFor="let section of project?.sections" id="{{ section.id }}"
+      [attr.aria-labelledby]="section.id + '-heading'">
+      <h2 [id]="section.id + '-heading'">
+        <span>{{ section.title }}</span>
+      </h2>
+      <p>{{ section.content }}</p>
+      <img *ngIf="section.image" [src]="section.image" [alt]="section.title + ' image'" class="section-image">
+      <div *ngIf="section.codesnippet">
+        <pre><code class="language-js">{{ section.codesnippet }}</code></pre>
+      </div>
+      <p>{{ section.additionalText }}</p>
+    </section>
+  </main>
+  <div class="footer" *ngIf="!loading">
+    <app-footer></app-footer>
+  </div>
+</body>

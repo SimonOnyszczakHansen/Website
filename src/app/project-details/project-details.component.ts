@@ -1,5 +1,5 @@
 import { NgIf, NgFor } from '@angular/common';
-import { Component, OnInit, AfterViewInit, OnDestroy, ChangeDetectorRef, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SafeHtml } from '@angular/platform-browser';
 import * as prism from 'prismjs';
@@ -29,8 +29,7 @@ interface Project {
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.css',
 })
-export class ProjectDetailsComponent
-  implements OnInit, OnDestroy {
+export class ProjectDetailsComponent implements OnInit, OnDestroy {
   projectId!: string;
   project!: Project;
   loading = true;
@@ -38,6 +37,7 @@ export class ProjectDetailsComponent
   activeSection = 'section1';
   sanitizedCodeSnippet: SafeHtml | null = null;
   private intersectionObserver!: IntersectionObserver;
+  private isScrolling = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -73,13 +73,18 @@ export class ProjectDetailsComponent
     const offset = 200;
     const element = document.getElementById(sectionId);
     if (element) {
+      this.isScrolling = true;
       const elementPosition = element.getBoundingClientRect().top;
       const scrollPosition = window.scrollY + elementPosition - offset;
       window.scrollTo({
         top: scrollPosition,
         behavior: 'smooth',
       });
-      this.activeSection = sectionId;
+
+      setTimeout(() => {
+        this.isScrolling = false;
+        this.activeSection = sectionId;
+      }, 500);
     }
   }
 
@@ -154,7 +159,7 @@ function checkMinimumInterests() {
   }
 }
               `,
-              additionalText: 'This logic forms the backbone of user input validation, ensuring each password has enough complexity.'
+              additionalText: 'This logic forms the backbone of user input validation, ensuring each password has enough complexity.',
             },
             {
               id: 'conclusion',
@@ -213,7 +218,7 @@ function checkMinimumInterests() {
     };
     this.intersectionObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !this.isScrolling) {
           this.activeSection = entry.target.id;
           this.cdr.detectChanges();
         }

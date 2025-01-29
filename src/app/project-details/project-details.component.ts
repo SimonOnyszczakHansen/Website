@@ -15,6 +15,7 @@ interface Section {
   image?: string,
   image2?: string,
   codesnippet?: string,
+  codesnippet2?: string,
 }
 
 interface Project {
@@ -248,12 +249,88 @@ return (statusCode == 200);`,
         this.project = {
           id: 'smart-city-traffic-management',
           title: 'Smart City Traffic Management',
-          description: '...',
+          description: '',
           sections: [
             {
-              id: '',
-              title: '',
-              content: '',
+              id: 'Introduction',
+              title: 'Introduction',
+              content: 'Smart Cit Traffic Management is a project we used as an exercise when i was at school to learn how to handle big amounts of data. The assignment was to collect real time data, so we decided to to use a software called flowkit demo, which simulated a traffic light, where the software identified all the vehicles and pedestrians that passed the traffic light. Below is an image of what the software looked like.',
+              image: 'assets/images/FlowKitDemo.png',
+              content2: 'In the image you can see that there is a zone. This zone is where the software could detect if there was a vehicle or a pedestrian. The gates could register if a vehicle passed through the zone.',
+            },
+            {
+              id: 'Data Collection',
+              title: 'Data Collection',
+              content: 'Here is how our Python scripts collect data from the Flow Demo and forwards it to Kafka. In main.py we create a FlowDemo object and a Scheduler object. The Scheduler object runs the FlowDemo object every minute. That run method triggers data retrievalfrom the Flow Demo API, processes the results, and passes them onward.',
+              codesnippet: `flow = FlowDemo("localhost", 8088)
+
+def createSchedule(flow: FlowDemo):
+    schedule = Scheduler()
+    schedule.every().minute.do(run_thread, flow.run)
+    schedule.run_all()
+
+createSchedule(flow)
+`,
+              content2: 'inside flow_demo.py, the run method goes through each sink, calls getHistory to retrieve snapshot data, and checks whether it’s valid and newer than the last timestamp. When it finds fresh data, it wraps that information in a JSON-like dictionary, then passes it to the Producer for publishing to a Kafka topic named data-distribution.',
+              codesnippet2: `def getDistribution(self, sink: Sink):
+    history = sink.getHistory()
+    snapshots = history["snapshots"]
+    for snapshot in snapshots:
+        if snapshot["data"]["data_validity"] == "ok":
+            if snapshot["data_start_timestamp"] > sink._last_start_timestamp:
+                for category in snapshot["data"]["categories"]:
+                    if int(category["count"]) > 0:
+                        message_data = {
+                            "sensor_name": history["name"],
+                            "start_timestamp": snapshot["data_start_timestamp"],
+                            "end_timestamp": snapshot["data_end_timestamp"],
+                            "category": category["category"],
+                            "count": int(category["count"]),
+                        }
+                        self._producer.sendJsonMessage("data-distribution", message_data)
+                sink._last_start_timestamp = snapshot["data_start_timestamp"]`,
+                content3: 'This snippet shows how the FlowDemo object processes data from the Flow Demo API and forwards it to Kafka for further analysis.',
+            },
+            {
+              id: 'Data Consumption',
+              title: 'Data Consumption',
+              content: 'The code first starts a Kafka consumer in a seperate thread wich continously reads messages off the data-distribution topic. Then inside a Dash callback, we process any messagesin the queue and convert them into Pandas Dataframes foreasy plotting. If no data has arrived yet, we display placeholder text. Otherwisem we draw a bar, pie, and line charts of the traffic counts by vehicle.',
+              codesnippet: `if __name__ == "__main__":
+    runThread1Arg(kafka_consumer, "data-distribution")
+
+    app.run(debug=True, dev_tools_ui=False)
+`,
+              content2: 'In this second snippet, our Dash callback periodically checks the queue for new messages and updates three graphs accordingly. We use Plotly Express to create bar, pie, and line charts from the streaming data. Thanks to Dash’s reactive callbacks, the figures automatically refresh every few seconds, giving a live view of vehicle traffic distribution.',
+              codesnippet2: `@app.callback(
+    [
+        Output("traffic-count-graph", "figure"),
+        Output("traffic-pie-graph", "figure"),
+        Output("traffic-timeline-graph", "figure"),
+    ],
+    [Input("traffic-interval", "n_intervals")],
+)
+def updateDistributionGraphs(n):
+    while not data_queue.empty():
+        data = data_queue.get()
+        streaming_data.append(data)
+
+    if not streaming_data:
+        bar = px.bar(title="Waiting for Data...")
+        pie = px.pie(title="Waiting for Data...")
+        line = px.line(title="Waiting for Data...")
+        return (bar, pie, line)
+
+    df = pd.DataFrame(streaming_data)
+    # Convert data types, group by category, and build the three figures (bar, pie, line)...
+    return figure_bar, figure_pie, figure_timeline
+`,
+              content3: 'This setup ensures that as new traffic data arrives, the consumer immediately adds it to the queue. Then, every few seconds, the Dash callback picks up that data, updates the visualizations, and displays fresh insights on the dashboard.',
+            },
+            {
+              id: 'Conclusion',
+              title: 'Conclusion',
+              content: 'This final dashboard pulls everything together into one real-time view of the traffic data. In the screenshot, you can see three main graphs—a bar chart ranking vehicle types by total count, a pie chart showing the distribution proportions, and a line chart that plots traffic counts over time. Each chart updates automatically every few seconds, reflecting new information flowing in through Kafka. This approach gives us a clear overview of which vehicles are most common at different times of day, helping city planners and traffic engineers spot trends or spikes in activity. Even in a relatively short development cycle, we managed to combine data ingestion, queueing, and dynamic visualization into one clean interface for monitoring real-time traffic conditions.',
+              image: 'assets/images/TrafficManagement.png',
             }
           ],
         }

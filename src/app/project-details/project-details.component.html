@@ -35,6 +35,9 @@
       </div>
       <p>{{ section.content2 }}</p>
       <img *ngIf="section.image2" [src]="section.image2" [alt]="section.title + ' image'" class="section-image">
+      <div *ngIf="section.codesnippet2">
+        <pre><code class="language-js">{{ section.codesnippet2 }}</code></pre>
+      </div>
       <p>{{ section.content3 }}</p>
     </section>
   </main>

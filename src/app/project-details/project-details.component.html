@@ -33,7 +33,9 @@
       <div *ngIf="section.codesnippet">
         <pre><code class="language-js">{{ section.codesnippet }}</code></pre>
       </div>
-      <p>{{ section.additionalText }}</p>
+      <p>{{ section.content2 }}</p>
+      <img *ngIf="section.image2" [src]="section.image2" [alt]="section.title + ' image'" class="section-image">
+      <p>{{ section.content3 }}</p>
     </section>
   </main>
   <div class="footer" *ngIf="!loading">

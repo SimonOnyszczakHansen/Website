@@ -10,9 +10,11 @@ interface Section {
   id: string,
   title: string,
   content: string,
+  content2?: string,
+  content3?: string,
   image?: string,
+  image2?: string,
   codesnippet?: string,
-  additionalText?: string,
 }
 
 interface Project {
@@ -159,7 +161,7 @@ function checkMinimumInterests() {
   }
 }
               `,
-              additionalText: 'This logic forms the backbone of user input validation, ensuring each password has enough complexity.',
+              content2: 'This logic forms the backbone of user input validation, ensuring each password has enough complexity.',
             },
             {
               id: 'conclusion',
@@ -174,12 +176,71 @@ function checkMinimumInterests() {
           id: 'portionpal',
           title: 'PortionPal',
           description:
-            '...',
+            '',
           sections: [
             {
-              id: '',
-              title: '',
-              content: '',
+              id: 'introduction',
+              title: 'introduction',
+              content: 'We call our project PortionPal SmartFeeder, and it’s basically our attempt at making life easier for pet owners who worry about whether their furry friends are eating at the right times and in the right amounts. We worked on this project at Zealand Business College under the guidance of David Svarrer. During the development, our small team combined 3D printing, embedded electronics, and a web-based control interface to create a system that monitors how much food is dispensed, collects feedback from load cells, and even lets you manage it all remotely via a user-friendly dashboard.',
+              image: 'assets/images/PortionPal.png'
+            },
+            {
+              id: '3D Model',
+              title: '3D Model',
+              content: 'We designed a custom enclosure that handles dry pet food using a rotating valve mechanism. The layout focuses on ensuring each part slots together without jamming, leaving room for bearings, the motor bracket, and wiring channels. By iterating on these 3D prints, we refined how the parts lined up so that the valve rotates smoothly even with repeated use. The image shows the basic shape of the dispenser, highlighting how the components stack together in the final build.',
+              image: 'assets/images/3DModel.png'
+            },
+            {
+              id: 'Hardware',
+              title: 'Hardware',
+              content: 'The system runs on an Arduino Uno R4 WiFi, which we chose for its wireless capabilities and easy integration with the stepper motor. We used a 28BYJ-48 stepper motor (with a small driver module) to turn the valve that dispenses the pet food. Two load cells, each hooked up to an HX711 amplifier, measure food weight as it’s dispensed. If the reading is off—maybe because of a jam—the Arduino knows something went wrong. By combining these sensors with the rotating valve, we ensure the portions match whatever the owner has configured. Below is a visual representation of how we put it together.',
+              image: 'assets/images/StepMotor.png',
+              content2: 'We also intended to use a load cell, so we could weigh how much food was dispensed, and to track the pets eating habits. The data we collected from the load cell was supposed to be displayed on a statistics page with all the data that the user could wish for. Here is a image of what the statistics page looked like.',
+              image2: 'assets/images/PortionPalStats.png',
+              content3: 'The bar chart above is supposed to show how much the pet has eaten each day. The gauge diagram is supposed to show how full the bowl is.'
+            },
+            {
+              id: 'Software and Communication',
+              title: 'Software and Communication',
+              content: 'All Arduino logic is written in C++, managing the stepper motor’s rotation and the sensor data. The Arduino checks in with a PHP-based backend over WiFi to receive updated schedules or portion sizes. Owners interact with the feeder through an Angular frontend, where they can log in, adjust feeding times, and see historical records of how much the pet actually ate. Everything lives on GitHub for version control, allowing our team to keep track of code changes and collaborate effectively.',
+              codesnippet: `WiFiSSLClient wifi; // Secure client for HTTPS
+HttpClient client = HttpClient(wifi, serverAddress, serverPort);
+
+// Construct the GET request path with the API key
+String path = String(getSchedulePath) + "?apiKey=" + String(apiKey);
+Serial.print("Requesting URL: ");
+Serial.println(path);
+
+// Send GET request
+int err = client.get(path);
+if (err != 0) {
+  Serial.print("GET request failed with error: ");
+  Serial.println(err);
+  client.stop();
+  return false;
+}
+
+// Read response
+int statusCode = client.responseStatusCode();
+String response = client.responseBody();
+
+Serial.print("Status Code: ");
+Serial.println(statusCode);
+Serial.print("Server Response: ");
+Serial.println(response);
+
+// Close the connection
+client.stop();
+
+// Here, you would parse the 'response' if status code is OK
+// parseFeedingSchedule(response);
+return (statusCode == 200);`,
+              content2: 'This snippet shows how the Arduino securely fetches updated schedules from our server. We build a GET request URL with the API key, send it via HTTPS, and then check the response. If the server returns a 200 status, we parse the returned JSON for feeding times and portion sizes, ensuring our dispenser follows the owner’s most recent instructions.',
+            },
+            {
+              id: 'Conclusion',
+              title: 'Conclusion',
+              content: 'The PortionPal SmartFeeder prototype demonstrates that it’s totally possible to automate pet feeding in a way that is both precise and user-friendly. Printing our own enclosure gave us freedom to customize the internal mechanics, while the Arduino’s WiFi capabilities made it easy to manage everything remotely. We overcame challenges around calibrating load cells and preventing valve jams, and ended up with a working system that can handle daily feeding schedules. Future ideas might include adding a camera or tracking more detailed statistics, but even in its current state, it showcases how a straightforward combination of 3D printing, embedded hardware, and a modern web stack can offer busy owners peace of mind about their pets’ nutrition.',
             }
           ],
         }

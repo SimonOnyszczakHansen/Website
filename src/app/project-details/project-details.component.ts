@@ -20,10 +20,9 @@ interface Section {
 }
 
 interface Project {
-  id: string;
-  title: string;
-  description: string;
-  sections: Section[];
+  id: string,
+  title: string,
+  sections: Section[],
 }
 
 @Component({
@@ -101,7 +100,6 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
         this.project = {
           id: 'password-generator',
           title: 'Password Generator',
-          description: 'This application securely generates memorable passwords by mixing personal keywords (like your hobbies) with randomized elements. Unlike typical generators that churn out random gibberish, ours ensures each password remains both robust and easy to recall. It also detects your browser language (English or Danish) for a smoother experience.',
           sections: [
             {
               id: 'introduction',
@@ -180,8 +178,6 @@ function checkMinimumInterests() {
         this.project = {
           id: 'portionpal',
           title: 'PortionPal',
-          description:
-            '',
           sections: [
             {
               id: 'introduction',
@@ -253,7 +249,6 @@ return (statusCode == 200);`,
         this.project = {
           id: 'smart-city-traffic-management',
           title: 'Smart City Traffic Management',
-          description: '',
           sections: [
             {
               id: 'Introduction',

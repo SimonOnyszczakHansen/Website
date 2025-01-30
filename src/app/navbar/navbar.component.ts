@@ -1,10 +1,11 @@
 import { Component, AfterViewInit, ElementRef, ViewChild, ChangeDetectorRef, OnInit, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
@@ -19,28 +20,35 @@ export class NavbarComponent implements AfterViewInit, OnInit {
   @ViewChild('navbar', { static: false }) navbar!: ElementRef;
 
   constructor(
-    private cdr: ChangeDetectorRef, 
+    private cdr: ChangeDetectorRef,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit() {
+    this.setActiveSectionFromRoute(this.router.url);
+
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        const currentRoute = this.router.url.split('/')[1];
-        if (currentRoute) {
-          this.activeSection = currentRoute;
-        } else {
-          this.activeSection = 'home';
-        }
-        setTimeout(() => {
-          this.setUnderlinePosition();
-        }, 0);
+        this.setActiveSectionFromRoute(event.url);
       }
     });
   }
 
   ngAfterViewInit() {
     this.setUnderlinePosition();
+  }
+
+  setActiveSectionFromRoute(url: string): void {
+    const route = url.split('/')[1];
+    if (route) {
+      this.activeSection = route;
+    } else {
+      this.activeSection = 'home';
+    }
+
+    setTimeout(() => {
+      this.setUnderlinePosition();
+    }, 0);
   }
 
   toggleMenu(): void {
@@ -54,10 +62,8 @@ export class NavbarComponent implements AfterViewInit, OnInit {
   }
 
   onNavClick(section: string): void {
-    this.setActive(section);
     this.isMenuActive = false;
 
-    // Remove 'active' class from hamburger
     const hamburger = this.navbar.nativeElement.querySelector('.hamburger');
     if (hamburger) {
       hamburger.classList.remove('active');
@@ -66,31 +72,6 @@ export class NavbarComponent implements AfterViewInit, OnInit {
     this.cdr.detectChanges();
   }
 
-  setActive(section: string): void {
-    this.activeSection = section;
-    this.router.navigate(['/' + section]);
-
-    setTimeout(() => {
-      this.setUnderlinePosition();
-    }, 0);
-  }
-
-  goToHome() {
-    this.onNavClick('home');
-  }
-
-  goToProjects() {
-    this.onNavClick('projects');
-  }
-
-  goToAbout() {
-    this.onNavClick('about');
-  }
-
-  goToContact() {
-    this.onNavClick('contact');
-  }
-  
   setUnderlinePosition() {
     const navbarElement = this.navbar.nativeElement;
     const activeLink: HTMLElement | null = navbarElement.querySelector(`.nav-link.active`);
@@ -115,14 +96,14 @@ export class NavbarComponent implements AfterViewInit, OnInit {
       this.cdr.detectChanges();
     }
   }
+
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: Event): void {
     const target = event.target as HTMLElement;
     if (this.navbar && !this.navbar.nativeElement.contains(target)) {
       if (this.isMenuActive) {
         this.isMenuActive = false;
-        
-        // Remove 'active' class from hamburger
+
         const hamburger = this.navbar.nativeElement.querySelector('.hamburger');
         if (hamburger) {
           hamburger.classList.remove('active');

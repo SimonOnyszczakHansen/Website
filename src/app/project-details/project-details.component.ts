@@ -5,6 +5,8 @@ import { SafeHtml } from '@angular/platform-browser';
 import * as prism from 'prismjs';
 import 'prismjs/components/prism-typescript';
 import { FooterComponent } from "../footer/footer.component";
+import { NavbarService } from '../services/navbar.service';
+import { NavbarComponent } from "../navbar/navbar.component";
 
 interface Section {
   id: string,
@@ -28,7 +30,7 @@ interface Project {
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [NgIf, NgFor, RouterLink, FooterComponent],
+  imports: [NgIf, NgFor, RouterLink, FooterComponent, NavbarComponent],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.css',
 })
@@ -45,6 +47,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private cdr: ChangeDetectorRef,
+    private navbarService: NavbarService,
   ) { }
 
   ngOnInit(): void {
@@ -64,12 +67,14 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
         this.loading = false;
       },
     });
+    this.navbarService.hideNavbar();
   }
 
   ngOnDestroy(): void {
     if (this.intersectionObserver) {
       this.intersectionObserver.disconnect();
     }
+    this.navbarService.showNavbar();
   }
 
   scrollToSection(sectionId: string): void {
@@ -342,7 +347,7 @@ def updateDistributionGraphs(n):
       this.cdr.detectChanges();
       this.initializeIntersectionObserver();
       setTimeout(() => prism.highlightAll(), 0)
-    }, 2000);
+    },);
   }
 
   private initializeIntersectionObserver(): void {

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ChangeDetectorRef } from '@angular/core';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { NgForOf } from '@angular/common';
 import { NavbarService } from '../services/navbar.service';
@@ -28,10 +28,14 @@ export class AboutCardDetailsComponent implements OnInit, OnDestroy {
   aboutDescriptionId!: string;
   aboutDescription!: AboutDescription;
   error: string | null = null;
+  private intersectionObserver!: IntersectionObserver;
+  private isScrolling = false;
+  activeSection = 'section1';
 
   constructor(
     private route: ActivatedRoute,
-    private navbarService: NavbarService
+    private navbarService: NavbarService,
+    private cdr: ChangeDetectorRef,
   ) { }
 
   ngOnInit(): void {
@@ -51,6 +55,25 @@ export class AboutCardDetailsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.navbarService.showNavbar();
+  }
+
+  scrollToSection(sectionId: string): void {
+    const offset = 200;
+    const element = document.getElementById(sectionId);
+    if (element) {
+      this.isScrolling = true;
+      const elementPosition = element.getBoundingClientRect().top;
+      const scrollPosition = window.scrollY + elementPosition - offset;
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth',
+      });
+
+      setTimeout(() => {
+        this.isScrolling = false;
+        this.activeSection = sectionId;
+      }, 500);
+    }
   }
 
   private loadProjectDetails(id: string): void {
@@ -108,5 +131,28 @@ export class AboutCardDetailsComponent implements OnInit, OnDestroy {
     } else {
       this.error = 'No Descriptions found';
     }
+    this.cdr.detectChanges();
+    this.initializeIntersectionObserver();
+  }
+
+  private initializeIntersectionObserver(): void {
+    if (this.intersectionObserver) {
+      this.intersectionObserver.disconnect();
+    }
+    const options = {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: 0,
+    };
+    this.intersectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !this.isScrolling) {
+          this.activeSection = entry.target.id;
+          this.cdr.detectChanges();
+        }
+      });
+    }, options);
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach((section) => this.intersectionObserver.observe(section));
   }
 }

@@ -155,7 +155,12 @@ section {
 }
 
 @media (max-width: 768px) {
+  h1 {
+    text-align: center;
+  }
+
   #button-back {
-    top: 80px;
+    top: 10px;
+    left: 10px;
   }
 }

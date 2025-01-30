@@ -6,7 +6,6 @@ import * as prism from 'prismjs';
 import 'prismjs/components/prism-typescript';
 import { FooterComponent } from "../footer/footer.component";
 import { NavbarService } from '../services/navbar.service';
-import { NavbarComponent } from "../navbar/navbar.component";
 
 interface Section {
   id: string,
@@ -30,7 +29,7 @@ interface Project {
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [NgIf, NgFor, RouterLink, FooterComponent, NavbarComponent],
+  imports: [NgIf, NgFor, RouterLink, FooterComponent],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.css',
 })

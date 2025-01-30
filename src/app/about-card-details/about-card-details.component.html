@@ -1,3 +1,12 @@
 <button id="button-back" [routerLink]="['/about']" aria-label="Go back">
   <i class="fas fa-arrow-left"></i> Back
 </button>
+
+<main>
+  <h1>Details about <span>{{ aboutDescription.title }}</span></h1>
+  <section *ngFor="let section of aboutDescription.section" id="{{ section.id }}" [attr.aria-labelledby]="section.id + '-heading'">
+    <h2 [id]="section.id + '-heading'">
+      <span>{{ section.title }}</span>
+    </h2>
+  </section>
+</main>

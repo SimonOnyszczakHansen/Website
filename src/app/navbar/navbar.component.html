@@ -1,26 +1,20 @@
-<body>
-  <nav class="navbar" #navbar>
-    <div 
-        class="hamburger" 
-        (click)="toggleMenu()" 
-        [attr.aria-expanded]="isMenuActive" 
-        role="button" 
-        tabindex="0"
-        (keydown.enter)="toggleMenu()"
-        (keydown.space)="toggleMenu()"
-    >
+<nav class="navbar" #navbar>
+    <div class="hamburger" (click)="toggleMenu()" [attr.aria-expanded]="isMenuActive" role="button" tabindex="0"
+        (keydown.enter)="toggleMenu()" (keydown.space)="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
     </div>
-    
-    <!-- Navigation Links -->
+
     <ul [class.active]="isMenuActive">
-        <li><a class="nav-link" [class.active]="activeSection === 'home'" (click)="goToHome()">Home</a></li>
-        <li><a class="nav-link" [class.active]="activeSection === 'projects'" (click)="goToProjects()">Projects</a></li>
-        <li><a class="nav-link" [class.active]="activeSection === 'about'" (click)="goToAbout()">About</a></li>
-        <li><a class="nav-link" [class.active]="activeSection === 'contact'" (click)="goToContact()">Contact</a></li>
+        <li><a class="nav-link" [class.active]="activeSection === 'home'" routerLink="/home"
+                (click)="onNavClick('home')">Home</a></li>
+        <li><a class="nav-link" [class.active]="activeSection === 'projects'" routerLink="/projects"
+                (click)="onNavClick('projects')">Projects</a></li>
+        <li><a class="nav-link" [class.active]="activeSection === 'about'" routerLink="/about"
+                (click)="onNavClick('about')">About</a></li>
+        <li><a class="nav-link" [class.active]="activeSection === 'contact'" routerLink="/contact"
+                (click)="onNavClick('contact')">Contact</a></li>
         <span class="underline" [style.width.px]="underlineWidth" [style.left.px]="underlineLeft"></span>
     </ul>
 </nav>
-</body>

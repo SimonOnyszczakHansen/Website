@@ -16,7 +16,7 @@ body {
 }
 
 main {
-  padding: 7rem 1rem 2rem;
+  padding: 3rem 1rem 3rem;
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.6;
@@ -98,7 +98,7 @@ span {
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
@@ -155,7 +155,12 @@ section {
 }
 
 @media (max-width: 768px) {
+  h1 {
+    text-align: center;
+  }
+
   #button-back {
-    top: 80px;
+    top: 10px;
+    left: 10px;
   }
 }

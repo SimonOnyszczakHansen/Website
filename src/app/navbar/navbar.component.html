@@ -7,13 +7,13 @@
     </div>
 
     <ul [class.active]="isMenuActive">
-        <li><a class="nav-link" [class.active]="activeSection === 'home'" routerLink="/home"
+        <li><a i18n="Navbar home link" class="nav-link" [class.active]="activeSection === 'home'" routerLink="/home"
                 (click)="onNavClick('home')">Home</a></li>
-        <li><a class="nav-link" [class.active]="activeSection === 'projects'" routerLink="/projects"
+        <li><a i18n="Navbar projects link" class="nav-link" [class.active]="activeSection === 'projects'" routerLink="/projects"
                 (click)="onNavClick('projects')">Projects</a></li>
-        <li><a class="nav-link" [class.active]="activeSection === 'about'" routerLink="/about"
+        <li><a i18n="Navbar about link" class="nav-link" [class.active]="activeSection === 'about'" routerLink="/about"
                 (click)="onNavClick('about')">About</a></li>
-        <li><a class="nav-link" [class.active]="activeSection === 'contact'" routerLink="/contact"
+        <li><a i18n="Navbar contact link" class="nav-link" [class.active]="activeSection === 'contact'" routerLink="/contact"
                 (click)="onNavClick('contact')">Contact</a></li>
         <span class="underline" [style.width.px]="underlineWidth" [style.left.px]="underlineLeft"></span>
     </ul>

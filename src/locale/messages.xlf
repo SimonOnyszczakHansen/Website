@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="7759713724015234637" datatype="html">
+        <source>Datatechnician with focus on programming</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">education</note>
+      </trans-unit>
+      <trans-unit id="7304403234628017886" datatype="html">
+        <source>Hi, My Name Is <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Simon Onyszczak Hansen<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+        <note priority="1" from="description">main header</note>
+      </trans-unit>
+      <trans-unit id="1724524106936140668" datatype="html">
+        <source>A passionate developer with a burning passion for Frontend and UX/UI design.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+        <note priority="1" from="description">under header</note>
+      </trans-unit>
+      <trans-unit id="6018686961415145811" datatype="html">
+        <source>About Me</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+        <note priority="1" from="description">main header for about me section</note>
+      </trans-unit>
+      <trans-unit id="2925905443248461592" datatype="html">
+        <source> Hi! I&apos;m Simon, a 20-year-old passionate developer with a love for IT and programming. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+        <note priority="1" from="description">short description</note>
+      </trans-unit>
+      <trans-unit id="6457448676055754889" datatype="html">
+        <source>Studying at ZBC Ringsted</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+        <note priority="1" from="description">card for where i am studying</note>
+      </trans-unit>
+      <trans-unit id="5053361192041358836" datatype="html">
+        <source>Currently Working on a Password Generator</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+        <note priority="1" from="description">card for what i am workin on</note>
+      </trans-unit>
+      <trans-unit id="6729771596514963691" datatype="html">
+        <source>Football Enthusiast</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+        <note priority="1" from="description">card for football details</note>
+      </trans-unit>
+      <trans-unit id="5543430014557512449" datatype="html">
+        <source>Open to Relocation anywhere in Denmark</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+        <note priority="1" from="description">card for relocation</note>
+      </trans-unit>
+      <trans-unit id="634390376712343582" datatype="html">
+        <source>My Skills</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+        <note priority="1" from="description">header for carousel</note>
+      </trans-unit>
+      <trans-unit id="8238256376062053122" datatype="html">
+        <source>My Strengths</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">83,85</context>
+        </context-group>
+        <note priority="1" from="description">main header for my strengths</note>
+      </trans-unit>
+      <trans-unit id="862812480512671297" datatype="html">
+        <source>Flexibility</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+        <note priority="1" from="description">flexibility card header</note>
+      </trans-unit>
+      <trans-unit id="6766735968167355327" datatype="html">
+        <source> I’m open to relocating anywhere in Denmark for the right opportunity. Embracing new environments and challenges excites me. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">90,92</context>
+        </context-group>
+        <note priority="1" from="description">flexibility card description</note>
+      </trans-unit>
+      <trans-unit id="3213804535471794995" datatype="html">
+        <source>Adaptability</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+        <note priority="1" from="description">adaptability card header</note>
+      </trans-unit>
+      <trans-unit id="2339711477654429775" datatype="html">
+        <source> Thriving in dynamic environments, I quickly adapt to changes, ensuring success in fast-paced projects. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">99,101</context>
+        </context-group>
+        <note priority="1" from="description">adaptability card description</note>
+      </trans-unit>
+      <trans-unit id="6369605513485930809" datatype="html">
+        <source>Teamwork</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">105,106</context>
+        </context-group>
+        <note priority="1" from="description">teamwork card header</note>
+      </trans-unit>
+      <trans-unit id="5384636547284923885" datatype="html">
+        <source> Collaborating with teams to bring ideas to life excites me. My collaborative approach fosters productive teamwork and successful outcomes. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">107,109</context>
+        </context-group>
+        <note priority="1" from="description">teamwork card description</note>
+      </trans-unit>
+      <trans-unit id="334482128251128442" datatype="html">
+        <source>Problem Solving</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+        <note priority="1" from="description">problem solving card header</note>
+      </trans-unit>
+      <trans-unit id="9053424607867007487" datatype="html">
+        <source> Solving complex problems with elegant code drives me. I approach every challenge with a logical and creative mindset. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">116,118</context>
+        </context-group>
+        <note priority="1" from="description">problem solving card description</note>
+      </trans-unit>
+      <trans-unit id="638392637754529263" datatype="html">
+        <source>Creativity</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">123,124</context>
+        </context-group>
+        <note priority="1" from="description">Creativity card header</note>
+      </trans-unit>
+      <trans-unit id="2435815341332896686" datatype="html">
+        <source> With an eye for design, I bring creativity to each project, crafting visually stunning interfaces. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">125,127</context>
+        </context-group>
+        <note priority="1" from="description">Creativity card description</note>
+      </trans-unit>
+      <trans-unit id="6915429060840718325" datatype="html">
+        <source>Communication</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">131,132</context>
+        </context-group>
+        <note priority="1" from="description">communication card header</note>
+      </trans-unit>
+      <trans-unit id="1820649579161437463" datatype="html">
+        <source> Effective communication is key. I prioritize clear exchanges to ensure everyone is aligned and informed. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">133,135</context>
+        </context-group>
+        <note priority="1" from="description">communication card description</note>
+      </trans-unit>
+      <trans-unit id="8243979358934089707" datatype="html">
+        <source>Contact <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Me<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">main header for contact page</note>
+      </trans-unit>
+      <trans-unit id="1771867305932344728" datatype="html">
+        <source>Feel free to get in touch with me. I&apos;d love to hear from you!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+        <note priority="1" from="description">under header for contact page</note>
+      </trans-unit>
+      <trans-unit id="3262090913975567330" datatype="html">
+        <source>Send a Message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+        <note priority="1" from="description">header for send message form</note>
+      </trans-unit>
+      <trans-unit id="2297688463310993102" datatype="html">
+        <source>Your Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+        <note priority="1" from="description">label for header for the name box</note>
+      </trans-unit>
+      <trans-unit id="204562474612147063" datatype="html">
+        <source>Your Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+        <note priority="1" from="description">label for header for email box</note>
+      </trans-unit>
+      <trans-unit id="3901848700381049273" datatype="html">
+        <source>Your Message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">26,28</context>
+        </context-group>
+        <note priority="1" from="description">label for header for message box</note>
+      </trans-unit>
+      <trans-unit id="8730666920545442370" datatype="html">
+        <source>Send Message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+        <note priority="1" from="description">send message text for button</note>
+      </trans-unit>
+      <trans-unit id="4090160044021470261" datatype="html">
+        <source>Contact Information</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+        <note priority="1" from="description">header for contact information form</note>
+      </trans-unit>
+      <trans-unit id="6041681553798333379" datatype="html">
+        <source>You can also reach me here:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">33,35</context>
+        </context-group>
+        <note priority="1" from="description">underheader for contact information form</note>
+      </trans-unit>
+      <trans-unit id="8669421592894028079" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-phone&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;contactInfoHeader&quot;&gt;"/>Phone: <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_2" ctype="x-span_2" equiv-text="&lt;span id=&quot;phoneNumber&quot;&gt;"/><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span id=&quot;countryCode&quot;&gt;"/>+45<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> 24 87 65 84<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+        <note priority="1" from="description">text for phone number</note>
+      </trans-unit>
+      <trans-unit id="4851059602214372060" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-map-marker-alt&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;contactInfoHeader&quot;&gt;"/>Location: <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Nysted, Denmark</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+        <note priority="1" from="description">text for location</note>
+      </trans-unit>
+      <trans-unit id="copyrightFooter" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-copyright&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> 2024 Simon Onyszczak Hansen. All rights reserved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+        <note priority="1" from="meaning">Copyright footer text</note>
+      </trans-unit>
+      <trans-unit id="6627702248914992780" datatype="html">
+        <source>Creating Modern Web Experiences</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="meaning">Subheader above the main header</note>
+      </trans-unit>
+      <trans-unit id="1799093258516996800" datatype="html">
+        <source>Transforming Ideas into <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Digital Realities<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+        <note priority="1" from="meaning">page main heading</note>
+      </trans-unit>
+      <trans-unit id="3373531127837716029" datatype="html">
+        <source>Hi! I&apos;m Simon, a developer based in Denmark.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+        <note priority="1" from="description">A brief introduction of my name and where i am from</note>
+        <note priority="1" from="meaning">Short indtroduction</note>
+      </trans-unit>
+      <trans-unit id="3124989159535145255" datatype="html">
+        <source>Get in contact <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-arrow-right&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+        <note priority="1" from="description">button for getting in contact</note>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+        <note priority="1" from="description">Navbar home link</note>
+      </trans-unit>
+      <trans-unit id="7091571651222742304" datatype="html">
+        <source>Projects</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+        <note priority="1" from="description">Navbar projects link</note>
+      </trans-unit>
+      <trans-unit id="1726363342938046830" datatype="html">
+        <source>About</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+        <note priority="1" from="description">Navbar about link</note>
+      </trans-unit>
+      <trans-unit id="7922989125096435449" datatype="html">
+        <source>Contact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+        <note priority="1" from="description">Navbar contact link</note>
+      </trans-unit>
+      <trans-unit id="8908193654743343440" datatype="html">
+        <source>Password Generator</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2171894153326157864" datatype="html">
+        <source>Introduction</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">255</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6466068206902488438" datatype="html">
+        <source>The Password Generator is built around the idea that a strong password should not only resist brute-force attacks but also be easy to remember. It accomplishes this by letting users input personal words—such as hobbies, colors, and numbers—and blending them with special characters, uppercase options, and random placement to produce unique combinations. The generator ensures the final result meets modern security standards, including length and character variety, while remaining personal enough to recall without hassle. In the screenshot, you can see the main interface labeled “Adgangskode Generator” (Danish for “Password Generator”), where users add their interests and favorite number. Sliders let you adjust how many letters to pull from each interest and set the total password length, along with toggles for using special characters and capitalization.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8229343822264094797" datatype="html">
+        <source>Key Features</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6999263501732147609" datatype="html">
+        <source>One of its central features is dynamic input: interests and numbers can be typed or chosen from predefined lists, making it easy to experiment with different memorable words. A built-in mechanism transforms certain Danish characters into symbols for enhanced security, automatically detecting if the browser is in Danish or English. On-screen sliders let users instantly adjust overall length or how many letters are extracted from each interest. The generator evaluates password strength on the spot, highlighting whether it meets criteria such as lowercase, uppercase, numbers, special characters, and overall length. Once a base password is formed, an additional slider allows for appending abbreviated service names, ensuring that each login (such as for Facebook, Google, or LinkedIn) gets a unique, traceable—yet still memorable—password.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6499775365350975385" datatype="html">
+        <source>Technology and Implementation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2237114373666843394" datatype="html">
+        <source>The project uses HTML, CSS, and Vanilla JavaScript for a responsive, intuitive single-page application. The code dynamically enforces rules as you type, instantly updating what the password might look like and whether it meets the criteria. The interface is styled to adapt gracefully to different screens, and each step is designed to guide the user without overwhelming them with too many fields at once. Hoverable tooltips clarify any confusing features, such as how the special character mapping works or how many characters from a website name get appended. A short modal video can also guide new users through the entire process in case they feel uncertain about generating a secure passphrase. Below is a snippet demonstrating how the generator verifies that users have specified enough interests and at least one number before enabling password creation:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2549202259238793027" datatype="html">
+        <source>This logic forms the backbone of user input validation, ensuring each password has enough complexity.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">167</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="174002142932526740" datatype="html">
+        <source>Conclusion</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">171</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">243</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">330</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3524543686809214909" datatype="html">
+        <source>The final screenshot shows how your chosen interests (and special character conversions) are listed, along with the generated password, a color-coded strength meter, and an option to append each website’s abbreviation. This Password Generator demonstrates that memorable passwords can be strong when carefully combining personal interests with structured randomness. By automating best practices and nudging the user to include a variety of character types, it produces truly robust credentials. The multilingual functionality also extends accessibility for users, whether they prefer an English or Danish interface. Overall, this project reflects an ongoing commitment to security-minded design, offering not just raw strength but practical memorability for everyday use.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4651807027467711345" datatype="html">
+        <source>We call our project PortionPal SmartFeeder, and it’s basically our attempt at making life easier for pet owners who worry about whether their furry friends are eating at the right times and in the right amounts. We worked on this project at Zealand Business College under the guidance of David Svarrer. During the development, our small team combined 3D printing, embedded electronics, and a web-based control interface to create a system that monitors how much food is dispensed, collects feedback from load cells, and even lets you manage it all remotely via a user-friendly dashboard.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">185</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1919928338570941583" datatype="html">
+        <source>We designed a custom enclosure that handles dry pet food using a rotating valve mechanism. The layout focuses on ensuring each part slots together without jamming, leaving room for bearings, the motor bracket, and wiring channels. By iterating on these 3D prints, we refined how the parts lined up so that the valve rotates smoothly even with repeated use. The image shows the basic shape of the dispenser, highlighting how the components stack together in the final build.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8886111266175769619" datatype="html">
+        <source>The system runs on an Arduino Uno R4 WiFi, which we chose for its wireless capabilities and easy integration with the stepper motor. We used a 28BYJ-48 stepper motor (with a small driver module) to turn the valve that dispenses the pet food. Two load cells, each hooked up to an HX711 amplifier, measure food weight as it’s dispensed. If the reading is off—maybe because of a jam—the Arduino knows something went wrong. By combining these sensors with the rotating valve, we ensure the portions match whatever the owner has configured. Below is a visual representation of how we put it together.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3426850260751579253" datatype="html">
+        <source>We also intended to use a load cell, so we could weigh how much food was dispensed, and to track the pets eating habits. The data we collected from the load cell was supposed to be displayed on a statistics page with all the data that the user could wish for. Here is a image of what the statistics page looked like.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">199</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6237880448205637507" datatype="html">
+        <source>The bar chart above is supposed to show how much the pet has eaten each day. The gauge diagram is supposed to show how full the bowl is.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">201</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1458753006977233456" datatype="html">
+        <source>Software and Communication</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">205</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2904807629194461602" datatype="html">
+        <source>All Arduino logic is written in C++, managing the stepper motor’s rotation and the sensor data. The Arduino checks in with a PHP-based backend over WiFi to receive updated schedules or portion sizes. Owners interact with the feeder through an Angular frontend, where they can log in, adjust feeding times, and see historical records of how much the pet actually ate. Everything lives on GitHub for version control, allowing our team to keep track of code changes and collaborate effectively.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">206</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3661756712511192028" datatype="html">
+        <source>This snippet shows how the Arduino securely fetches updated schedules from our server. We build a GET request URL with the API key, send it via HTTPS, and then check the response. If the server returns a 200 status, we parse the returned JSON for feeding times and portion sizes, ensuring our dispenser follows the owner’s most recent instructions.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">239</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8445772289716822312" datatype="html">
+        <source>The PortionPal SmartFeeder prototype demonstrates that it’s totally possible to automate pet feeding in a way that is both precise and user-friendly. Printing our own enclosure gave us freedom to customize the internal mechanics, while the Arduino’s WiFi capabilities made it easy to manage everything remotely. We overcame challenges around calibrating load cells and preventing valve jams, and ended up with a working system that can handle daily feeding schedules. Future ideas might include adding a camera or tracking more detailed statistics, but even in its current state, it showcases how a straightforward combination of 3D printing, embedded hardware, and a modern web stack can offer busy owners peace of mind about their pets’ nutrition.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">244</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3901396327702597889" datatype="html">
+        <source>Smart Cit Traffic Management is a project we used as an exercise when i was at school to learn how to handle big amounts of data. The assignment was to collect real time data, so we decided to to use a software called flowkit demo, which simulated a traffic light, where the software identified all the vehicles and pedestrians that passed the traffic light. Below is an image of what the software looked like.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">256</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4253574782501192000" datatype="html">
+        <source>In the image you can see that there is a zone. This zone is where the software could detect if there was a vehicle or a pedestrian. The gates could register if a vehicle passed through the zone.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">258</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1111216166033712978" datatype="html">
+        <source>Data Collection</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">262</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9131191584713762845" datatype="html">
+        <source>Here is how our Python scripts collect data from the Flow Demo and forwards it to Kafka. In main.py we create a FlowDemo object and a Scheduler object. The Scheduler object runs the FlowDemo object every minute. That run method triggers data retrievalfrom the Flow Demo API, processes the results, and passes them onward.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">263</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7265111910370393137" datatype="html">
+        <source>inside flow_demo.py, the run method goes through each sink, calls getHistory to retrieve snapshot data, and checks whether it’s valid and newer than the last timestamp. When it finds fresh data, it wraps that information in a JSON-like dictionary, then passes it to the Producer for publishing to a Kafka topic named data-distribution.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">273</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1936136971191834375" datatype="html">
+        <source>Data Consumption</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">295</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4349452625567036082" datatype="html">
+        <source>The code first starts a Kafka consumer in a seperate thread wich continously reads messages off the data-distribution topic. Then inside a Dash callback, we process any messagesin the queue and convert them into Pandas Dataframes foreasy plotting. If no data has arrived yet, we display placeholder text. Otherwisem we draw a bar, pie, and line charts of the traffic counts by vehicle.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">296</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3804152444505514794" datatype="html">
+        <source>In this second snippet, our Dash callback periodically checks the queue for new messages and updates three graphs accordingly. We use Plotly Express to create bar, pie, and line charts from the streaming data. Thanks to Dash’s reactive callbacks, the figures automatically refresh every few seconds, giving a live view of vehicle traffic distribution.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">302</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4749065167849717318" datatype="html">
+        <source>This setup ensures that as new traffic data arrives, the consumer immediately adds it to the queue. Then, every few seconds, the Dash callback picks up that data, updates the visualizations, and displays fresh insights on the dashboard.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">326</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4979725703539539316" datatype="html">
+        <source>This final dashboard pulls everything together into one real-time view of the traffic data. In the screenshot, you can see three main graphs—a bar chart ranking vehicle types by total count, a pie chart showing the distribution proportions, and a line chart that plots traffic counts over time. Each chart updates automatically every few seconds, reflecting new information flowing in through Kafka. This approach gives us a clear overview of which vehicles are most common at different times of day, helping city planners and traffic engineers spot trends or spikes in activity. Even in a relatively short development cycle, we managed to combine data ingestion, queueing, and dynamic visualization into one clean interface for monitoring real-time traffic conditions.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">331</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4594710971255555004" datatype="html">
+        <source>Hey There, Check Out My <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Work!<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">main header</note>
+      </trans-unit>
+      <trans-unit id="9188870351105543596" datatype="html">
+        <source>Check out the cool apps and coding projects I&apos;ve been working on!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+        <note priority="1" from="description">under header</note>
+      </trans-unit>
+      <trans-unit id="8316106524265301581" datatype="html">
+        <source>Scroll down</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+        <note priority="1" from="description">scroll down text</note>
+      </trans-unit>
+      <trans-unit id="1448321313680916942" datatype="html">
+        <source>School Project <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>— A website to control an automatic pet feeding machine<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+        <note priority="1" from="description">Portionpal project description</note>
+      </trans-unit>
+      <trans-unit id="7096643243200723975" datatype="html">
+        <source>ZBC <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>— Giving people a unique and safe password<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+        <note priority="1" from="description">Password Generator project description</note>
+      </trans-unit>
+      <trans-unit id="1117462918302628055" datatype="html">
+        <source>School Project <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>— A project where we used kafka to handle large amounts of data<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+        <note priority="1" from="description">Smart City Traffic Management project description</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

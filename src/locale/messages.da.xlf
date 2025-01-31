@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="7759713724015234637" datatype="html">
+        <source>Datatechnician with focus on programming</source>
+        <target>Datatekniker med fokus på programmering</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">education</note>
+      </trans-unit>
+      <trans-unit id="7304403234628017886" datatype="html">
+        <source>Hi, My Name Is <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Simon Onyszczak Hansen<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Hej, mit navn er <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Simon Onyszczak Hansen<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+        <note priority="1" from="description">main header</note>
+      </trans-unit>
+      <trans-unit id="1724524106936140668" datatype="html">
+        <source>A passionate developer with a burning passion for Frontend and UX/UI design.</source>
+        <target>En passioneret udvikler med en brændende passion for Frontend og UX/UI design.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+        <note priority="1" from="description">under header</note>
+      </trans-unit>
+      <trans-unit id="6018686961415145811" datatype="html">
+        <source>About Me</source>
+        <target>Om mig</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+        <note priority="1" from="description">main header for about me section</note>
+      </trans-unit>
+      <trans-unit id="2925905443248461592" datatype="html">
+        <source> Hi! I&apos;m Simon, a 20-year-old passionate developer with a love for IT and programming. </source>
+        <target> Hej! Jeg er Simon, en 20-årig passioneret udvikler med en kærlighed for IT og programmering. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+        <note priority="1" from="description">short description</note>
+      </trans-unit>
+      <trans-unit id="6457448676055754889" datatype="html">
+        <source>Studying at ZBC Ringsted</source>
+        <target>Studerer på ZBC Ringsted</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+        <note priority="1" from="description">card for where i am studying</note>
+      </trans-unit>
+      <trans-unit id="5053361192041358836" datatype="html">
+        <source>Currently Working on a Password Generator</source>
+        <target>Arbejder for tiden på en password-generator</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+        <note priority="1" from="description">card for what i am workin on</note>
+      </trans-unit>
+      <trans-unit id="6729771596514963691" datatype="html">
+        <source>Football Enthusiast</source>
+        <target>Fodboldentusiast</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+        <note priority="1" from="description">card for football details</note>
+      </trans-unit>
+      <trans-unit id="5543430014557512449" datatype="html">
+        <source>Open to Relocation anywhere in Denmark</source>
+        <target>Åben for flytning overalt i Danmark</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+        <note priority="1" from="description">card for relocation</note>
+      </trans-unit>
+      <trans-unit id="634390376712343582" datatype="html">
+        <source>My Skills</source>
+        <target>Mine færdigheder</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+        <note priority="1" from="description">header for carousel</note>
+      </trans-unit>
+      <trans-unit id="8238256376062053122" datatype="html">
+        <source>My Strengths</source>
+        <target>Mine styrker</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">83,85</context>
+        </context-group>
+        <note priority="1" from="description">main header for my strengths</note>
+      </trans-unit>
+      <trans-unit id="862812480512671297" datatype="html">
+        <source>Flexibility</source>
+        <target>Fleksibilitet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+        <note priority="1" from="description">flexibility card header</note>
+      </trans-unit>
+      <trans-unit id="6766735968167355327" datatype="html">
+        <source> I’m open to relocating anywhere in Denmark for the right opportunity. Embracing new environments and challenges excites me. </source>
+        <target> Jeg er åben for at flytte overalt i Danmark for den rigtige mulighed. At omfavne nye miljøer og udfordringer exciterer mig. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">90,92</context>
+        </context-group>
+        <note priority="1" from="description">flexibility card description</note>
+      </trans-unit>
+      <trans-unit id="3213804535471794995" datatype="html">
+        <source>Adaptability</source>
+        <target>Tilpasningsevne</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+        <note priority="1" from="description">adaptability card header</note>
+      </trans-unit>
+      <trans-unit id="2339711477654429775" datatype="html">
+        <source> Thriving in dynamic environments, I quickly adapt to changes, ensuring success in fast-paced projects. </source>
+        <target> Jeg trives i dynamiske miljøer og tilpasser mig hurtigt til ændringer, hvilket sikrer succes i hurtigt skiftende projekter. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">99,101</context>
+        </context-group>
+        <note priority="1" from="description">adaptability card description</note>
+      </trans-unit>
+      <trans-unit id="6369605513485930809" datatype="html">
+        <source>Teamwork</source>
+        <target>Teamarbejde</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">105,106</context>
+        </context-group>
+        <note priority="1" from="description">teamwork card header</note>
+      </trans-unit>
+      <trans-unit id="5384636547284923885" datatype="html">
+        <source> Collaborating with teams to bring ideas to life excites me. My collaborative approach fosters productive teamwork and successful outcomes. </source>
+        <target> Samarbejde med teams for at bringe ideer til live exciterer mig. Min samarbejdsorienterede tilgang fremmer produktivt teamwork og succesfulde resultater. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">107,109</context>
+        </context-group>
+        <note priority="1" from="description">teamwork card description</note>
+      </trans-unit>
+      <trans-unit id="334482128251128442" datatype="html">
+        <source>Problem Solving</source>
+        <target>Problemløsning</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+        <note priority="1" from="description">problem solving card header</note>
+      </trans-unit>
+      <trans-unit id="9053424607867007487" datatype="html">
+        <source> Solving complex problems with elegant code drives me. I approach every challenge with a logical and creative mindset. </source>
+        <target> At løse komplekse problemer med elegant kode motiverer mig. Jeg nærmer mig hver udfordring med en logisk og kreativ tilgang. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">116,118</context>
+        </context-group>
+        <note priority="1" from="description">problem solving card description</note>
+      </trans-unit>
+      <trans-unit id="638392637754529263" datatype="html">
+        <source>Creativity</source>
+        <target>Kreativitet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">123,124</context>
+        </context-group>
+        <note priority="1" from="description">Creativity card header</note>
+      </trans-unit>
+      <trans-unit id="2435815341332896686" datatype="html">
+        <source> With an eye for design, I bring creativity to each project, crafting visually stunning interfaces. </source>
+        <target> Med et øje for design bringer jeg kreativitet til hvert projekt og skaber visuelt imponerende grænseflader. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">125,127</context>
+        </context-group>
+        <note priority="1" from="description">Creativity card description</note>
+      </trans-unit>
+      <trans-unit id="6915429060840718325" datatype="html">
+        <source>Communication</source>
+        <target>Kommunikation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">131,132</context>
+        </context-group>
+        <note priority="1" from="description">communication card header</note>
+      </trans-unit>
+      <trans-unit id="1820649579161437463" datatype="html">
+        <source> Effective communication is key. I prioritize clear exchanges to ensure everyone is aligned and informed. </source>
+        <target> Effektiv kommunikation er nøglen. Jeg prioriterer klare udvekslinger for at sikre, at alle er på samme side og informeret. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">133,135</context>
+        </context-group>
+        <note priority="1" from="description">communication card description</note>
+      </trans-unit>
+      <trans-unit id="8243979358934089707" datatype="html">
+        <source>Contact <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Me<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Kontakt <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>mig<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">main header for contact page</note>
+      </trans-unit>
+      <trans-unit id="1771867305932344728" datatype="html">
+        <source>Feel free to get in touch with me. I&apos;d love to hear from you!</source>
+        <target>Du er velkommen til at kontakte mig. Jeg vil elske at høre fra dig!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+        <note priority="1" from="description">under header for contact page</note>
+      </trans-unit>
+      <trans-unit id="3262090913975567330" datatype="html">
+        <source>Send a Message</source>
+        <target>Send en besked</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+        <note priority="1" from="description">header for send message form</note>
+      </trans-unit>
+      <trans-unit id="2297688463310993102" datatype="html">
+        <source>Your Name</source>
+        <target>Dit navn</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+        <note priority="1" from="description">label for header for the name box</note>
+      </trans-unit>
+      <trans-unit id="204562474612147063" datatype="html">
+        <source>Your Email</source>
+        <target>Din e-mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+        <note priority="1" from="description">label for header for email box</note>
+      </trans-unit>
+      <trans-unit id="3901848700381049273" datatype="html">
+        <source>Your Message</source>
+        <target>Din besked</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">26,28</context>
+        </context-group>
+        <note priority="1" from="description">label for header for message box</note>
+      </trans-unit>
+      <trans-unit id="8730666920545442370" datatype="html">
+        <source>Send Message</source>
+        <target>Send besked</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+        <note priority="1" from="description">send message text for button</note>
+      </trans-unit>
+      <trans-unit id="4090160044021470261" datatype="html">
+        <source>Contact Information</source>
+        <target>Kontaktinformation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+        <note priority="1" from="description">header for contact information form</note>
+      </trans-unit>
+      <trans-unit id="6041681553798333379" datatype="html">
+        <source>You can also reach me here:</source>
+        <target>Du kan også nå mig her:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">33,35</context>
+        </context-group>
+        <note priority="1" from="description">underheader for contact information form</note>
+      </trans-unit>
+      <trans-unit id="8669421592894028079" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-phone&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;contactInfoHeader&quot;&gt;"/>Phone: <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_2" ctype="x-span_2" equiv-text="&lt;span id=&quot;phoneNumber&quot;&gt;"/><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span id=&quot;countryCode&quot;&gt;"/>+45<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> 24 87 65 84<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-phone&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;contactInfoHeader&quot;&gt;"/>Telefon: <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_2" ctype="x-span_2" equiv-text="&lt;span id=&quot;phoneNumber&quot;&gt;"/><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span id=&quot;countryCode&quot;&gt;"/>+45<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> 24 87 65 84<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+        <note priority="1" from="description">text for phone number</note>
+      </trans-unit>
+      <trans-unit id="4851059602214372060" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-map-marker-alt&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;contactInfoHeader&quot;&gt;"/>Location: <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Nysted, Denmark</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-map-marker-alt&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;contactInfoHeader&quot;&gt;"/>Lokation: <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Nysted, Danmark</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact-page/contact-page.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+        <note priority="1" from="description">text for location</note>
+      </trans-unit>
+      <trans-unit id="copyrightFooter" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-copyright&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> 2024 Simon Onyszczak Hansen. All rights reserved.</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-copyright&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> 2024 Simon Onyszczak Hansen. Alle rettigheder forbeholdt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+        <note priority="1" from="meaning">Copyright footer text</note>
+      </trans-unit>
+      <trans-unit id="6627702248914992780" datatype="html">
+        <source>Creating Modern Web Experiences</source>
+        <target>Skaber moderne webbaseret oplevelser</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="meaning">Subheader above the main header</note>
+      </trans-unit>
+      <trans-unit id="1799093258516996800" datatype="html">
+        <source>Transforming Ideas into <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Digital Realities<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Forvandler ideer til <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>digitale realiteter<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+        <note priority="1" from="meaning">page main heading</note>
+      </trans-unit>
+      <trans-unit id="3373531127837716029" datatype="html">
+        <source>Hi! I&apos;m Simon, a developer based in Denmark.</source>
+        <target>Hej! Jeg er Simon, en udvikler baseret i Danmark.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+        <note priority="1" from="description">A brief introduction of my name and where i am from</note>
+        <note priority="1" from="meaning">Short indtroduction</note>
+      </trans-unit>
+      <trans-unit id="3124989159535145255" datatype="html">
+        <source>Get in contact <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-arrow-right&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></source>
+        <target>Kom i kontakt <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-arrow-right&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+        <note priority="1" from="description">button for getting in contact</note>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <target>Hjem</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+        <note priority="1" from="description">Navbar home link</note>
+      </trans-unit>
+      <trans-unit id="7091571651222742304" datatype="html">
+        <source>Projects</source>
+        <target>Projekter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+        <note priority="1" from="description">Navbar projects link</note>
+      </trans-unit>
+      <trans-unit id="1726363342938046830" datatype="html">
+        <source>About</source>
+        <target>Om</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+        <note priority="1" from="description">Navbar about link</note>
+      </trans-unit>
+      <trans-unit id="7922989125096435449" datatype="html">
+        <source>Contact</source>
+        <target>Kontakt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+        <note priority="1" from="description">Navbar contact link</note>
+      </trans-unit>
+      <trans-unit id="4594710971255555004" datatype="html">
+        <source>Hey There, Check Out My <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Work!<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Hej, tjek mit <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>arbejde!<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">main header</note>
+      </trans-unit>
+      <trans-unit id="9188870351105543596" datatype="html">
+        <source>Check out the cool apps and coding projects I&apos;ve been working on!</source>
+        <target>Tjek de seje apps og kodeprojekter, jeg har arbejdet på!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+        <note priority="1" from="description">under header</note>
+      </trans-unit>
+      <trans-unit id="8316106524265301581" datatype="html">
+        <source>Scroll down</source>
+        <target>Scroll ned</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+        <note priority="1" from="description">scroll down text</note>
+      </trans-unit>
+      <trans-unit id="1448321313680916942" datatype="html">
+        <source>School Project <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>— A website to control an automatic pet feeding machine<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Skoleprojekt <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>— En hjemmeside til at styre en automatisk maduddelingsmaskine til kæledyr<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+        <note priority="1" from="description">Portionpal project description</note>
+      </trans-unit>
+      <trans-unit id="7096643243200723975" datatype="html">
+        <source>ZBC <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>— Giving people a unique and safe password<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>ZBC <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>— Giver folk et unikt og sikkert password<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+        <note priority="1" from="description">Password Generator project description</note>
+      </trans-unit>
+      <trans-unit id="1117462918302628055" datatype="html">
+        <source>School Project <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>— A project where we used kafka to handle large amounts of data<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Skoleprojekt <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>— Et projekt, hvor vi brugte Kafka til at håndtere store mængder data<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+        <note priority="1" from="description">Smart City Traffic Management project description</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -466,7 +466,8 @@
       </trans-unit>
       <trans-unit id="6466068206902488438" datatype="html">
         <source>The Password Generator is built around the idea that a strong password should not only resist brute-force attacks but also be easy to remember. It accomplishes this by letting users input personal words—such as hobbies, colors, and numbers—and blending them with special characters, uppercase options, and random placement to produce unique combinations. The generator ensures the final result meets modern security standards, including length and character variety, while remaining personal enough to recall without hassle. In the screenshot, you can see the main interface labeled “Adgangskode Generator” (Danish for “Password Generator”), where users add their interests and favorite number. Sliders let you adjust how many letters to pull from each interest and set the total password length, along with toggles for using special characters and capitalization.</source>
-        <context-group purpose="location">
+       <target>Adgangskode Generatoren er bygget omkring ideen, et stærkt password skal ikke kun forhindre brute-force angreb, men også være nem at huske. Den opnår dette ved at lade brugeren vælge sine egne ord, såsom hobbier, ynglingsfarve, og numre som den så blander sammen med special karakterer</target>
+ <context-group purpose="location">
           <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
           <context context-type="linenumber">108</context>
         </context-group>
@@ -487,6 +488,7 @@
       </trans-unit>
       <trans-unit id="6499775365350975385" datatype="html">
         <source>Technology and Implementation</source>
+        <target>Teknologi og Implementering<\target> 
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
           <context context-type="linenumber">118</context>

@@ -466,14 +466,15 @@
       </trans-unit>
       <trans-unit id="6466068206902488438" datatype="html">
         <source>The Password Generator is built around the idea that a strong password should not only resist brute-force attacks but also be easy to remember. It accomplishes this by letting users input personal words—such as hobbies, colors, and numbers—and blending them with special characters, uppercase options, and random placement to produce unique combinations. The generator ensures the final result meets modern security standards, including length and character variety, while remaining personal enough to recall without hassle. In the screenshot, you can see the main interface labeled “Adgangskode Generator” (Danish for “Password Generator”), where users add their interests and favorite number. Sliders let you adjust how many letters to pull from each interest and set the total password length, along with toggles for using special characters and capitalization.</source>
-       <target>Adgangskode Generatoren er bygget omkring ideen, et stærkt password skal ikke kun forhindre brute-force angreb, men også være nem at huske. Den opnår dette ved at lade brugeren vælge sine egne ord, såsom hobbier, ynglingsfarve, og numre som den så blander sammen med special karakterer</target>
- <context-group purpose="location">
+        <target>Adgangskodegeneratoren er bygget omkring ideen om, at en stærk adgangskode ikke kun skal modstå brute force-angreb, men også være nem at huske. Den opnår dette ved at lade brugerne indtaste personlige ord – såsom hobbyer, farver og tal – og kombinere dem med særlige tegn, muligheder for store bogstaver og tilfældig placering for at skabe unikke kombinationer. Generatoren sikrer, at det endelige resultat opfylder moderne sikkerhedsstandarder, herunder længde og tegnvariation, samtidig med at den forbliver personlig nok til at kunne huskes uden besvær. På skærmbilledet kan du se hovedgrænsefladen med navnet 'Adgangskodegenerator', hvor brugerne tilføjer deres interesser og yndlingstal. Skydebjælker lader dig justere, hvor mange bogstaver der skal trækkes fra hver interesse, indstille den samlede adgangskodelængde samt slå til/fra for særlige tegn og store bogstaver.</target>
+        <context-group purpose="location">
           <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
           <context context-type="linenumber">108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8229343822264094797" datatype="html">
         <source>Key Features</source>
+        <target>Nøglefunktioner</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
           <context context-type="linenumber">113</context>
@@ -481,6 +482,7 @@
       </trans-unit>
       <trans-unit id="6999263501732147609" datatype="html">
         <source>One of its central features is dynamic input: interests and numbers can be typed or chosen from predefined lists, making it easy to experiment with different memorable words. A built-in mechanism transforms certain Danish characters into symbols for enhanced security, automatically detecting if the browser is in Danish or English. On-screen sliders let users instantly adjust overall length or how many letters are extracted from each interest. The generator evaluates password strength on the spot, highlighting whether it meets criteria such as lowercase, uppercase, numbers, special characters, and overall length. Once a base password is formed, an additional slider allows for appending abbreviated service names, ensuring that each login (such as for Facebook, Google, or LinkedIn) gets a unique, traceable—yet still memorable—password.</source>
+        <target>En af de centrale ideer bag værktøjet er det fleksible input: Du kan både skrive dine interesser og tal direkte eller vælge dem fra færdige lister, så det er nemt at prøve forskellige kombinationer af ord som er nemme at huske. Der er endda en smart funktion, der automatisk erstatter danske bogstaver (som æ, ø, å) med sikre symboler, alt efter om din browser er sat til dansk eller engelsk. Med intuitive skydebjælker på skærmen kan du lynhurtigt justere alt fra den samlede længde til, hvor mange bogstaver der skal tages fra hver interesse. Generatoren checker live, om din adgangskode er stærk nok ved at vise, om den opfylder krav som små/store bogstaver, tal, specialtegn og minimumslængde. Når du har fundet en god basisadgangskode, kan du endda tilføje forkortede navne for tjenester (som Facebook, Google eller LinkedIn) via en ekstra skydebjælke. Så får du en unik kode til hver konto, uden at skulle huske 20 forskellige passwords!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
           <context context-type="linenumber">114</context>
@@ -488,7 +490,7 @@
       </trans-unit>
       <trans-unit id="6499775365350975385" datatype="html">
         <source>Technology and Implementation</source>
-        <target>Teknologi og Implementering<\target> 
+        <target>Teknologi og Implementering</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
           <context context-type="linenumber">118</context>

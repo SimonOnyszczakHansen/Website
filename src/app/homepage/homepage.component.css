@@ -45,6 +45,7 @@ body {
   letter-spacing: 2px;
   color: #999;
   margin-bottom: 10px;
+  
 }
 
 .hero h1 {
@@ -61,7 +62,7 @@ body {
   background-clip: text;
 }
 
-.hero p {
+.hero h2 {
   font-size: 1rem;
   margin-bottom: 30px;
   color: #bbb;

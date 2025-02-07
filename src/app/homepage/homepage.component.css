@@ -40,7 +40,7 @@ body {
   }
 }
 
-.hero h3 {
+.hero h1 {
   font-size: 1rem;
   letter-spacing: 2px;
   color: #999;
@@ -48,14 +48,14 @@ body {
   
 }
 
-.hero h1 {
+.hero h3 {
   font-size: 2.5rem;
   font-weight: bold;
   color: #fff;
   margin-bottom: 20px;
 }
 
-.hero h1 span {
+.hero h3 span {
   background: linear-gradient(to right, #020072, #0065e9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

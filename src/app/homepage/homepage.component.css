@@ -48,21 +48,21 @@ body {
   
 }
 
-.hero h3 {
+.hero h2 {
   font-size: 2.5rem;
   font-weight: bold;
   color: #fff;
   margin-bottom: 20px;
 }
 
-.hero h3 span {
+.hero h2 span {
   background: linear-gradient(to right, #020072, #0065e9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.hero h2 {
+.hero h3 {
   font-size: 1rem;
   margin-bottom: 30px;
   color: #bbb;
@@ -95,7 +95,7 @@ body {
       padding: 40px 20px;
   }
 
-  .hero-content h3 {
+  .hero-content h2 {
       font-size: 2.2rem;
   }
 
@@ -115,7 +115,7 @@ body {
       padding: 30px 15px;
   }
 
-  .hero-content h3 {
+  .hero-content h2 {
       font-size: 2rem;
   }
 
@@ -137,11 +137,11 @@ body {
       padding: 40px 20px;
   }
 
-  .hero-content h3 {
+  .hero-content h2 {
       font-size: 1.8rem;
   }
 
-  .hero-content h2 {
+  .hero-content h3 {
       font-size: 0.9rem;
   }
 
@@ -162,7 +162,7 @@ body {
       font-size: 1.6rem;
   }
 
-  .hero-content h3 {
+  .hero-content h2 {
       font-size: 0.85rem;
   }
 

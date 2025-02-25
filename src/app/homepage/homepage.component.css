@@ -79,7 +79,7 @@ body {
   background-image: linear-gradient(to right, #020072, #0065e9), linear-gradient(to right, transparent, transparent);
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  border: 2px solid transparent;
+  border: none;
 }
 
 .cta-button:hover {

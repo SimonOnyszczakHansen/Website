@@ -9,6 +9,12 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "da": "src/locale/messages.da.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -27,7 +33,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "localize": true 
           },
           "configurations": {
             "production": {
@@ -49,6 +56,10 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "da": {
+              "localize": ["da"],
+              "outputPath": "dist/website-da/"
             }
           },
           "defaultConfiguration": "production"
@@ -64,6 +75,9 @@
             },
             "development": {
               "buildTarget": "Website:build:development"
+            },
+            "da": {
+              "buildTarget": "Website:build:da"
             }
           },
           "defaultConfiguration": "development"

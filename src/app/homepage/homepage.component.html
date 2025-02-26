@@ -1,11 +1,16 @@
 <body>
-    <div class="hero">
+    <section class="hero">
         <div class="hero-content">
-            <h3 i18n="Subheader above the main header|">Creating Modern Web Experiences</h3>
-            <h1 i18n="page main heading|">Transforming Ideas into <span>Digital Realities</span></h1>
-            <p i18n="Short indtroduction|A brief introduction of my name and where i am from">Hi! I'm Simon Onyszczak Hansen, a developer based in Denmark.</p>
-            <a i18n="button for getting in contact" class="cta-button" type="button" (click)="goToContactPage()">Get in contact <i class="fas fa-arrow-right"></i></a>
+            <h2 i18n="Main heading|">
+                Transforming Ideas into <span>Digital Realities</span>
+            </h2>
+            <h1 i18n="Short introduction|A brief introduction of my name and background">
+                Hi! I'm Simon Onyszczak Hansen, a datatechnician focused on programming.
+            </h1>
+            <button class="cta-button" (click)="goToContactPage()">
+                Get in contact <i class="fas fa-arrow-right"></i>
+            </button>
         </div>
-    </div>
+    </section>
     <app-footer></app-footer>
 </body>

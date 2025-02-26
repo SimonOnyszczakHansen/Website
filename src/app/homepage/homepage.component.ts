@@ -5,7 +5,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [ FooterComponent],
+  imports: [FooterComponent],
+
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })

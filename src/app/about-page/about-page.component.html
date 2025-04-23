@@ -1,46 +1,46 @@
 <body>
     <div class="hero">
         <div class="hero-content">
-            <h3>Datatechnician with focus on programming</h3>
-            <h1>Hi, My Name Is <span>Simon Onyszczak Hansen</span></h1>
-            <p>A passionate developer with a burning passion for Frontend and UX/UI design.</p>
+            <h3 i18n="education">Datatechnician with focus on programming</h3>
+            <h1 i18n="main header">Hi, My Name Is <span>Simon Onyszczak Hansen</span></h1>
+            <p i18n="under header">A passionate developer with a burning passion for Frontend and UX/UI design.</p>
         </div>
     </div>
 
-    <div class="about-me-section">
+    <section class="about-me-section">
         <div class="about-me-content">
-            <h1>About Me</h1>
+            <h1 i18n="main header for about me section">About Me</h1>
             <div class="about-me-grid">
                 <div class="about-me-text">
-                    <p>
+                    <p i18n="short description">
                         Hi! I'm Simon, a 20-year-old passionate developer with a love for IT and programming.
                     </p>
                     <div class="about-me-highlights">
                         <div class="highlight">
                             <i class="fas fa-school"></i>
-                            <p>Studying at ZBC Ringsted</p>
+                            <p i18n="card for where i am studying">Studying at ZBC Ringsted</p>
                         </div>
                         <div class="highlight">
                             <i class="fas fa-code"></i>
-                            <p>Working on a Password Generator</p>
+                            <p>Working on a Virtual reality app</p>
                         </div>
                         <div class="highlight">
                             <i class="fas fa-futbol"></i>
-                            <p>Football Enthusiast</p>
+                            <p i18n="card for football details">Football Enthusiast</p>
                         </div>
                         <div class="highlight">
                             <i class="fas fa-plane"></i>
-                            <p>Open to Relocation anywhere in Denmark</p>
+                            <p i18n="card for relocation">Open to Relocation anywhere in Denmark</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="skills-container">
         <div class="skills-header">
-            <h1>My Skills</h1>
+            <h1 i18n="header for carousel">My Skills</h1>
         </div>
     </div>
     <div class="carousel3d">
@@ -59,7 +59,7 @@
             </div>
             <div class="carousel3d-item">
                 <i class="fas fa-database"></i>
-                <p>SQL</p>
+                <p>MySQL/MsSQL</p>
             </div>
             <div class="carousel3d-item">
                 <i class="fab fa-angular"></i>
@@ -79,14 +79,32 @@
             </div>
         </div>
     </div>
+
+    <section class="timeline-section">
+        <div class="timeline">
+            <div *ngFor="let event of events; let i = index" class="timeline-item fade-in-up"
+                [ngClass]="{'left': i % 2 === 0, 'right': i % 2 !== 0}">
+                <div class="content">
+                    <div class="icon">
+                        <i [ngClass]="event.icon"></i>
+                    </div>
+                    <div class="text">
+                        <span class="date">{{ event.date }}</span>
+                        <h3><span>{{ event.title }}</span></h3>
+                        <p>{{ event.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="strengths-header-container">
-        <h1 class="strengths-header">My Strengths</h1>
+        <h1 i18n="main header for my strengths" class="strengths-header">My Strengths</h1>
     </div>
     <div class="card-container">
         <div class="card">
             <i class="fas fa-plane-departure"></i>
-            <h2>Flexibility</h2>
-            <p>
+            <h2 i18n="flexibility card header">Flexibility</h2>
+            <p i18n="flexibility card description">
                 I’m open to relocating anywhere in Denmark for the right opportunity. Embracing new environments and
                 challenges excites me.
             </p>
@@ -94,16 +112,16 @@
 
         <div class="card">
             <i class="fas fa-sync-alt"></i>
-            <h2>Adaptability</h2>
-            <p>
+            <h2 i18n="adaptability card header">Adaptability</h2>
+            <p i18n="adaptability card description">
                 Thriving in dynamic environments, I quickly adapt to changes, ensuring success in fast-paced projects.
             </p>
         </div>
 
         <div class="card">
             <i class="fas fa-users"></i>
-            <h2>Teamwork</h2>
-            <p>
+            <h2 i18n="teamwork card header">Teamwork</h2>
+            <p i18n="teamwork card description">
                 Collaborating with teams to bring ideas to life excites me. My collaborative approach fosters productive
                 teamwork and successful outcomes.
             </p>
@@ -111,8 +129,8 @@
 
         <div class="card">
             <i class="fas fa-brain"></i>
-            <h2>Problem Solving</h2>
-            <p>
+            <h2 i18n="problem solving card header">Problem Solving</h2>
+            <p i18n="problem solving card description">
                 Solving complex problems with elegant code drives me. I approach every challenge with a logical and
                 creative mindset.
             </p>
@@ -120,20 +138,19 @@
 
         <div class="card">
             <i class="fas fa-lightbulb"></i>
-            <h2>Creativity</h2>
-            <p>
+            <h2 i18n="Creativity card header">Creativity</h2>
+            <p i18n="Creativity card description">
                 With an eye for design, I bring creativity to each project, crafting visually stunning interfaces.
             </p>
         </div>
 
         <div class="card">
             <i class="fas fa-comments"></i>
-            <h2>Communication</h2>
-            <p>
+            <h2 i18n="communication card header">Communication</h2>
+            <p i18n="communication card description">
                 Effective communication is key. I prioritize clear exchanges to ensure everyone is aligned and informed.
             </p>
         </div>
     </div>
-
     <app-footer></app-footer>
 </body>

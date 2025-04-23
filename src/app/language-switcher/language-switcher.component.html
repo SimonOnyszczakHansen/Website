@@ -1,0 +1,4 @@
+<select #langSelect (change)="switchLanguage(langSelect.value)">
+    <option value="en" [selected]="currentLocale === 'en'">English</option>
+    <option value="da" [selected]="currentLocale === 'da'">Danish</option>
+</select>

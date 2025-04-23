@@ -1,12 +1,26 @@
-<button id="button-back" [routerLink]="['/about']" aria-label="Go back">
-  <i class="fas fa-arrow-left"></i> Back
-</button>
+<body>
+  <button id="button-back" [routerLink]="['/about']" aria-label="Go back">
+    <i class="fas fa-arrow-left"></i> Back
+  </button>
 
-<main>
-  <h1>Details about <span>{{ aboutDescription.title }}</span></h1>
-  <section *ngFor="let section of aboutDescription.section" id="{{ section.id }}" [attr.aria-labelledby]="section.id + '-heading'">
-    <h2 [id]="section.id + '-heading'">
-      <span>{{ section.title }}</span>
-    </h2>
-  </section>
-</main>
+  <nav id="table-of-contents" aria-label="Table of Contents">
+    <h4><span>Contents</span></h4>
+    <ul>
+      <li *ngFor="let section of aboutDescription.section">
+        <button (click)="scrollToSection(section.id)" [class.active]="activeSection === section.id">
+          {{ section.title }}
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+    <main>
+      <h1>Details about <span>{{ aboutDescription.title }}</span></h1>
+      <section *ngFor="let section of aboutDescription.section" id="{{ section.id }}"
+        [attr.aria-labelledby]="section.id + '-heading'">
+        <h2 [id]="section.id + '-heading'">
+          <span>{{ section.title }}</span>
+        </h2>
+      </section>
+    </main>
+</body>

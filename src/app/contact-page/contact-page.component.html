@@ -1,44 +1,44 @@
 <body>
     <header class="hero">
         <div class="hero-content">
-            <h1>Contact <span>Me</span></h1>
-            <p>Feel free to get in touch with me. I'd love to hear from you!</p>
+            <h1 i18n="main header for contact page">Contact <span>Me</span></h1>
+            <p i18n="under header for contact page">Feel free to get in touch with me. I'd love to hear from you!</p>
         </div>
     </header>
     <main>
         <section class="contact-container">
             <div class="contact-form">
-                <h2>Send a Message</h2>
+                <h2 i18n="header for send message form">Send a Message</h2>
                 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                         <i class="fas fa-user"></i>
                         <input type="text" id="name" formControlName="name" required placeholder="Your Name" aria-label="Your Name" autocomplete="off"/>
-                        <label for="name">Your Name</label>
+                        <label i18n="label for header for the name box" for="name">Your Name</label>
                     </div>
                     <div class="form-group">
                         <i class="fas fa-envelope"></i>
                         <input type="email" id="email" formControlName="email" required placeholder="Your Email" aria-label="Your Email" autocomplete="off"/>
-                        <label for="email">Your Email</label>
+                        <label i18n="label for header for email box" for="email">Your Email</label>
                     </div>
                     <div class="form-group">
                         <i class="fas fa-comment"></i>
                         <textarea id="message" formControlName="message" rows="6" required placeholder="Your Message" aria-label="Your Message" autocomplete="off"></textarea>
-                        <label for="message">Your Message</label>
+                        <label i18n="label for header for message box" for="message">Your Message</label>
                     </div>
-                    <button type="submit">Send Message</button>
+                    <button i18n="send message text for button" type="submit">Send Message</button>
                 </form>
             </div>
             <div class="contact-info">
-                <h2>Contact Information</h2>
-                <p>You can also reach me here:</p>
+                <h2 i18n="header for contact information form">Contact Information</h2>
+                <p i18n="underheader for contact information form">You can also reach me here:</p>
                 <ul>
                     <li><i class="fas fa-envelope"></i> <span class="contactInfoHeader">Email: </span> <a href="mailto:simon@onyszczak.dk">simon&#64;onyszczak.dk</a></li>
-                    <li><i class="fas fa-phone"></i> <span class="contactInfoHeader">Phone: </span> <span id="phoneNumber"><span id="countryCode">+45</span> 24 87 65 84</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span class="contactInfoHeader">Location: </span> Nysted, Denmark</li>
+                    <li i18n="text for phone number"><i class="fas fa-phone"></i> <span class="contactInfoHeader">Phone: </span> <span id="phoneNumber"><span id="countryCode">+45</span> 24 87 65 84</span></li>
+                    <li i18n="text for location"><i class="fas fa-map-marker-alt"></i> <span class="contactInfoHeader">Location: </span> Nysted, Denmark</li>
                 </ul>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/simon-hansen-nysted/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/SimonOnyszczakHansen" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/simon-hansen-nysted/" target="_blank" aria-label="My LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/SimonOnyszczakHansen" target="_blank" aria-label="My GitHub profile"><i class="fab fa-github"></i></a>
                 </div>
             </div>
             <div class="modal" [class.active]="showModal" (click)="closeModalOnOutsideClick($event)">

@@ -7,7 +7,7 @@
         </div>
     </div>
 
-    <div class="about-me-section">
+    <section class="about-me-section">
         <div class="about-me-content">
             <h1 i18n="main header for about me section">About Me</h1>
             <div class="about-me-grid">
@@ -22,7 +22,7 @@
                         </div>
                         <div class="highlight">
                             <i class="fas fa-code"></i>
-                            <p i18n="card for what i am workin on">Currently Working on a Password Generator</p>
+                            <p>Working on a Virtual reality app</p>
                         </div>
                         <div class="highlight">
                             <i class="fas fa-futbol"></i>
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="skills-container">
         <div class="skills-header">
@@ -79,6 +79,24 @@
             </div>
         </div>
     </div>
+
+    <section class="timeline-section">
+        <div class="timeline">
+            <div *ngFor="let event of events; let i = index" class="timeline-item fade-in-up"
+                [ngClass]="{'left': i % 2 === 0, 'right': i % 2 !== 0}">
+                <div class="content">
+                    <div class="icon">
+                        <i [ngClass]="event.icon"></i>
+                    </div>
+                    <div class="text">
+                        <span class="date">{{ event.date }}</span>
+                        <h3><span>{{ event.title }}</span></h3>
+                        <p>{{ event.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="strengths-header-container">
         <h1 i18n="main header for my strengths" class="strengths-header">My Strengths</h1>
     </div>

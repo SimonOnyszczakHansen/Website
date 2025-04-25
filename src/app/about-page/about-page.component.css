@@ -530,6 +530,14 @@ p {
     .card p {
         font-size: 0.9rem;
     }
+
+    .timeline-item .date {
+        font-size: 0.8rem;
+    }
+
+    .timeline-item h3 span {
+        font-size: 0.8rem;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

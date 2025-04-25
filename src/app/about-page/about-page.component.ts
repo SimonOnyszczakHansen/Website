@@ -20,30 +20,33 @@ export class AboutPageComponent {
   events: TimelineEvent[] = [
     {
       date: '2021',
-      title: 'wdwdaw',
-      description: '',
+      title: '',
+      description: 'ODWKODPKQW OKDOPWQKDQW KDOPKWDOPQWOKDQWOD OODQWkDOW OPDWK OK OPK wqoKKWQPdkqkwDQWOPDKOWOPDK',
       icon: 'fas fa-user-graduate',
     },
     {
       date: '2022',
       title: 'WJSIFEIF',
       description: '',
-      icon: 'fas fa-book-reader'
+      icon: 'fas fa-user-graduate',
     },
     {
       date: '2023',
       title: 'WJSIFEIF',
       description: '',
+      icon: 'fas fa-user-graduate',
     },
     {
       date: '2024',
       title: 'WJSIFEIF',
       description: '',
+      icon: 'fas fa-user-graduate',
     },
     {
       date: '2025',
       title: 'WJSIFEIF',
       description: '',
+      icon: 'fas fa-user-graduate',
     }
   ];
 }

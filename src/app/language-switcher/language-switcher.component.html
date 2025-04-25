@@ -1,4 +1,5 @@
-<select #langSelect (change)="switchLanguage(langSelect.value)">
-    <option value="en" [selected]="currentLocale === 'en'">English</option>
-    <option value="da" [selected]="currentLocale === 'da'">Danish</option>
+<select [(ngModel)]="current" (ngModelChange)="switch($event)">
+    <option *ngFor="let loc of locales" [value]="loc.code">
+        {{ loc.label }}
+    </option>
 </select>

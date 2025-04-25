@@ -50,16 +50,23 @@
                   "maximumError": "10kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": true          
+            },
+            "en": {
+              "localize": ["en"],
+              "outputPath": "dist/website-en",
+              "baseHref": "/en/"
+            },
+            "da": {
+              "localize": ["da"],
+              "outputPath": "dist/website-da",
+              "baseHref": "/da/"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
-            },
-            "da": {
-              "localize": ["da"],
-              "outputPath": "dist/website-da/"
             }
           },
           "defaultConfiguration": "production"
@@ -75,6 +82,9 @@
             },
             "development": {
               "buildTarget": "Website:build:development"
+            },
+            "en": {
+              "buildTarget": "Website:build:en"
             },
             "da": {
               "buildTarget": "Website:build:da"

@@ -13,6 +13,7 @@ body {
   width: 100%;
   font-family: Arial, sans-serif;
   color: #ffffff;
+  overflow: auto;
 }
 
 main {

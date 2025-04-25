@@ -354,19 +354,16 @@ p {
 
 .timeline-item .date {
     display: block;
+    font-family: skibidi;
     font-size: 1rem;
     color: #fff;
     margin-bottom: 0.5rem;
 }
 
-.timeline-item h3 span {
+.timeline-item h3 {
     margin: 0.2rem 0;
     font-size: 1.4rem;
     color: #fff;
-    /* background: linear-gradient(to right, #0300ad, #0065e9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text; */
 }
 
 .timeline-item p {

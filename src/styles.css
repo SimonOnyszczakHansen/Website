@@ -3,7 +3,7 @@
     src: url('assets/fonts/heavitas/Heavitas.ttf');
 }
 
-p, a, button, li, label, h1, h2, h3, h4, span{
+p, a, button, li, label, h1, h2, h3, h4 {
     font-family: skibidi;
     scroll-behavior: smooth;
 }
@@ -19,6 +19,7 @@ body {
     padding: 0;
     border: 0;
     background-attachment: fixed;
+    overflow: auto;
 }
 
 ::-webkit-scrollbar {

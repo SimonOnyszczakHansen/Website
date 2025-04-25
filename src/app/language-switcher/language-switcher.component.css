@@ -1,0 +1,39 @@
+.language-switcher {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8L0 0h12L6 8z' fill='%23BBB'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    border: 2px solid #0065e9;
+    border-radius: 1rem;
+    padding: 0.6rem 1.8rem 0.6rem 1rem;
+    font-family: skibidi;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+    position: fixed;
+    top: 2rem;
+    right: 4rem;
+    z-index: 9999999999;
+}
+
+.language-switcher:hover {
+    border-color: #020072;
+    transform: translateY(-2px);
+}
+
+.language-switcher:focus {
+    outline: none;
+    border-color: #00a1ff;
+    box-shadow: 0 0 0 3px rgba(0, 101, 233, 0.4);
+}
+
+.language-switcher option {
+    background-color: #1a1a1a;
+    color: #fff;
+}

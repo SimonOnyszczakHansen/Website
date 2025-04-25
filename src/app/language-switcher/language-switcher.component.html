@@ -1,4 +1,4 @@
-<select [(ngModel)]="current" (ngModelChange)="switch($event)">
+<select class="language-switcher" [(ngModel)]="current" (ngModelChange)="switch($event)">
     <option *ngFor="let loc of locales" [value]="loc.code">
         {{ loc.label }}
     </option>

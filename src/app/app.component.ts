@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet, Route, Router } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavbarService } from './services/navbar.service';
 import { CommonModule } from '@angular/common';
@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   title = 'Website';
   navbarVisible$ = this.navbarService.navbarVisible$;
 
-  constructor(private navbarService: NavbarService) { }
+  constructor(private navbarService: NavbarService) {}
   
   ngOnInit(): void {
     window.scrollTo(0, 0);

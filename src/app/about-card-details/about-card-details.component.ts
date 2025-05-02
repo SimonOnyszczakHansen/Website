@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit, ChangeDetectorRef } from '@angular/core';
 import { RouterLink, ActivatedRoute } from '@angular/router';
-import { NgForOf } from '@angular/common';
+import { NgForOf, NgIf } from '@angular/common';
 import { NavbarService } from '../services/navbar.service';
+import { CommonModule } from '@angular/common';
 
 interface Sections {
   id: string,
@@ -20,7 +21,7 @@ interface AboutDescription {
 @Component({
   selector: 'app-about-card-details',
   standalone: true,
-  imports: [RouterLink, NgForOf],
+  imports: [CommonModule, RouterLink, NgForOf, NgIf],
   templateUrl: './about-card-details.component.html',
   styleUrl: './about-card-details.component.css'
 })

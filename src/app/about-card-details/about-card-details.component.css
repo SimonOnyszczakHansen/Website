@@ -78,6 +78,7 @@ span {
   background: linear-gradient(45deg, #020072, #0065e9);
   border-radius: 6px;
   padding: 0.5rem 1rem;
+  z-index: 99999;
 }
 
 #button-back i {

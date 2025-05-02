@@ -6,7 +6,6 @@ import * as prism from 'prismjs';
 import 'prismjs/components/prism-typescript';
 import { FooterComponent } from "../footer/footer.component";
 import { NavbarService } from '../services/navbar.service';
-import { LocalizedString } from '@angular/compiler';
 
 interface Section {
   id: string,
@@ -77,17 +76,14 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
   }
 
   scrollToSection(sectionId: string): void {
-    const offset = 200;
     const element = document.getElementById(sectionId);
     if (element) {
       this.isScrolling = true;
-      const elementPosition = element.getBoundingClientRect().top;
-      const scrollPosition = window.scrollY + elementPosition - offset;
-      window.scrollTo({
-        top: scrollPosition,
-        behavior: 'smooth',
+      element.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
       });
-
+      
       setTimeout(() => {
         this.isScrolling = false;
         this.activeSection = sectionId;

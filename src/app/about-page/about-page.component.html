@@ -2,7 +2,7 @@
     <div class="hero">
         <div class="hero-content">
             <h3 i18n="education">Datatechnician with focus on programming</h3>
-            <h1 i18n="main header">Hi, My Name Is <span>Simon Onyszczak Hansen</span></h1>
+            <h1 i18n="main header">My Name Is <span>Simon Onyszczak Hansen</span></h1>
             <p i18n="under header">A passionate developer with a burning passion for Frontend and UX/UI design.</p>
         </div>
     </div>
@@ -82,7 +82,7 @@
 
     <section class="timeline-section">
         <div class="timeline">
-            <div *ngFor="let event of events; let i = index" class="timeline-item fade-in-up"
+            <div *ngFor="let event of events; let i = index" class="timeline-item"
                 [ngClass]="{'left': i % 2 === 0, 'right': i % 2 !== 0}">
                 <div class="content">
                     <div class="icon">

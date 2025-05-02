@@ -2,6 +2,14 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="back button for going back to the previous page" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-arrow-left&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Back </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-arrow-left&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Tilbage </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-card-details/about-card-details.component.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="7759713724015234637" datatype="html">
         <source>Datatechnician with focus on programming</source>
         <target>Datatekniker med speciale i programmering</target>
@@ -10,6 +18,15 @@
           <context context-type="linenumber">4,5</context>
         </context-group>
         <note priority="1" from="description">education</note>
+      </trans-unit>
+      <trans-unit id="852693156965705553" datatype="html">
+        <source>My Name Is <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Simon Onyszczak Hansen<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Mit Navn er  <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Simon Onyszczak Hansen<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+        <note priority="1" from="description">main header</note>
       </trans-unit>
       <trans-unit id="7304403234628017886" datatype="html">
         <source>Hi, My Name Is <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Simon Onyszczak Hansen<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
@@ -189,6 +206,70 @@
           <context context-type="linenumber">151,153</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="5615212710501195155" datatype="html">
+        <source>Paperboy</source>
+        <target>Avisbud</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4337165777493342295" datatype="html">
+        <source>Delivered the papers for Folketidende in my local area</source>
+        <target>Kørte med aviser for Folketidende i mit lokale område</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="293684588218281256" datatype="html">
+        <source>Jan 2022 - July 2022</source>
+        <target>Jan 2022 - Juli 2022</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4599204076547230596" datatype="html">
+        <source>Basic Course 2: Data &amp; Communication</source>
+        <target>Grundforløb 2: Data &amp; Kommunikation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="608749659509279811" datatype="html">
+        <source>took the basic course 2 for data and communication to start my career as a developer</source>
+        <target>Jeg tog Grundforløb 2 i data og kommunikation for at starte my uddannelse som programmør</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3935790155779287904" datatype="html">
+        <source>Aug 2022 - Oct 2022</source>
+        <target>Aug 2022 - Okt 2022</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4070696966486331987" datatype="html">
+        <source>apr 2023 - june 2023</source>
+        <target>Apr 2023 - Juni 2023</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5144609573675767057" datatype="html">
+        <source>Oct 2024 - Jan 2025</source>
+        <target>Okt 2024 - Jan 2025</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-page/about-page.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="main header for contact page" datatype="html">
         <source>Contact <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Me<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <target>Kontakt <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Mig<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
@@ -331,6 +412,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
           <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Back button for going ack to the previous page" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-arrow-left&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Back </source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fas fa-arrow-left&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Tilbage </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.html</context>
+          <context context-type="linenumber">7,10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8908193654743343440" datatype="html">
@@ -578,7 +667,7 @@
       </trans-unit>
       <trans-unit id="main header" datatype="html">
         <source>Hey There, Check Out My <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Work!<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
-        <source>Hej, se mit <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>arbejde!<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Hej, se mit <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>arbejde!<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/projects-page/projects-page.component.html</context>
           <context context-type="linenumber">4,5</context>

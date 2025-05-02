@@ -9,6 +9,8 @@
     background-clip: padding-box;
     position: relative;
     overflow: hidden;
+    padding-bottom: calc(2em + env(safe-area-insert-bottom));
+    margin-top: auto;
   }
   
   .footer:before {

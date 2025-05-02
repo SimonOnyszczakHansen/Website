@@ -1,5 +1,5 @@
 <body>
-  <button id="button-back" [routerLink]="['about']" aria-label="Go back">
+  <button i18n="@@back button for going back to the previous page" id="button-back" [routerLink]="['/about']" aria-label="Go back">
     <i class="fas fa-arrow-left"></i> Back
   </button>
 
@@ -21,6 +21,9 @@
         <h2 [id]="section.id + '-heading'">
           <span>{{ section.title }}</span>
         </h2>
+        <p>{{ section.content }}</p>
+        <img *ngIf="section.image" [src]="section.image" [alt]="section.title + ' image'" class="section-image">
+        <p>{{ section.content2 }}</p>
       </section>
     </main>
 </body>

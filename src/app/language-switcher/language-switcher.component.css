@@ -1,15 +1,18 @@
 .language-switcher {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    
+}
+
+.language-switcher select {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8L0 0h12L6 8z' fill='%23BBB'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     border: 1px solid rgb(0, 0, 255);
     border-radius: 1rem;
-    padding: 0.6rem 1.8rem 0.6rem 1rem;
+    padding: 0.6rem 1.4rem 0.6rem 1rem;
     font-family: skibidi;
     font-size: 1rem;
     color: #fff;
@@ -28,8 +31,12 @@
 }
 
 @media(max-width: 768px) {
-    .language-switcher {
+    .language-switcher select {
         top: 0.4rem;
         right: 0.4rem;
+        border: none;
+        backdrop-filter: none;
+        background-color: rgba(255, 255, 255, 0);
+        font-size: small;
     }
 }

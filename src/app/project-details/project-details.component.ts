@@ -177,7 +177,7 @@ function checkMinimumInterests() {
           sections: [
             {
               id: 'introduction',
-              title: 'introduction',
+              title: $localize `introduction`,
               content: $localize `We call our project PortionPal SmartFeeder, and it’s basically our attempt at making life easier for pet owners who worry about whether their furry friends are eating at the right times and in the right amounts. We worked on this project at Zealand Business College under the guidance of David Svarrer. During the development, our small team combined 3D printing, embedded electronics, and a web-based control interface to create a system that monitors how much food is dispensed, collects feedback from load cells, and even lets you manage it all remotely via a user-friendly dashboard.`,
               image: 'assets/images/PortionPal.png'
             },
@@ -249,7 +249,7 @@ return (statusCode == 200);`,
             {
               id: 'Introduction',
               title: $localize `Introduction`,
-              content: $localize `Smart Cit Traffic Management is a project we used as an exercise when i was at school to learn how to handle big amounts of data. The assignment was to collect real time data, so we decided to to use a software called flowkit demo, which simulated a traffic light, where the software identified all the vehicles and pedestrians that passed the traffic light. Below is an image of what the software looked like.`,
+              content: $localize `Smart City Traffic Management is a project we used as an exercise when i was at school to learn how to handle big amounts of data. The assignment was to collect real time data, so we decided to to use a software called flowkit demo, which simulated a traffic light, where the software identified all the vehicles and pedestrians that passed the traffic light. Below is an image of what the software looked like.`,
               image: 'assets/images/FlowKitDemo.png',
               content2: $localize `In the image you can see that there is a zone. This zone is where the software could detect if there was a vehicle or a pedestrian. The gates could register if a vehicle passed through the zone.`,
             },

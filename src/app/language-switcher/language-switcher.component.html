@@ -1,5 +1,8 @@
-<select class="language-switcher" [(ngModel)]="current" (ngModelChange)="switch($event)">
-    <option *ngFor="let loc of locales" [value]="loc.code">
-        {{ loc.label }}
-    </option>
-</select>
+<div class="language-switcher">
+    <select [(ngModel)]="current" (ngModelChange)="switch($event)">
+        <option *ngFor="let loc of locales" [value]="loc.code">
+            {{ loc.label }}
+        </option>
+    </select>
+    <i class="fas fa-chevron-down"></i>
+</div>

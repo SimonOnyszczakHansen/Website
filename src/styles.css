@@ -12,7 +12,7 @@ p, a, button, li, label, h1, h2, h3, h4 {
     scroll-behavior: smooth;
 }
 
-html, body {
+body {
     height: 100%;
     margin: 0;
     padding: 0;

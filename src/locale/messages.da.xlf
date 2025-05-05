@@ -88,7 +88,7 @@
       </trans-unit>
       <trans-unit id="card for relocation" datatype="html">
         <source>Open to Relocation anywhere in Denmark</source>
-        <target>Er åben for at flytter hvor som helst i Danmark</target>
+        <target>Er åben for at flytte hvor som helst i Danmark</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about-page/about-page.component.html</context>
           <context context-type="linenumber">33,34</context>
@@ -422,9 +422,25 @@
           <context context-type="linenumber">7,10</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="Table of contents for the project details page" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Contents<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Contents<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="Project details header" datatype="html">
+        <source>Information about <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="INTERPOLATION" equiv-text="{{ project.title }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Information om <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="INTERPOLATION" equiv-text="{{ project.title }}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8908193654743343440" datatype="html">
         <source>Password Generator</source>
-        <target>Adgangskodegenerator</target>
+        <target>Adgangskode Generator</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
           <context context-type="linenumber">103</context>
@@ -514,6 +530,14 @@
           <context context-type="linenumber">172</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="4999223185408722127" datatype="html">
+        <source>introduction</source>
+        <target>introduktion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="4651807027467711345" datatype="html">
         <source>We call our project PortionPal SmartFeeder, and it’s basically our attempt at making life easier for pet owners who worry about whether their furry friends are eating at the right times and in the right amounts. We worked on this project at Zealand Business College under the guidance of David Svarrer. During the development, our small team combined 3D printing, embedded electronics, and a web-based control interface to create a system that monitors how much food is dispensed, collects feedback from load cells, and even lets you manage it all remotely via a user-friendly dashboard.</source>
         <target>Vi kalder vores projekt PortionPal SmartFeeder, og det er i bund og grund vores forsøg på at gøre livet lettere for kæledyrsejere, der bekymrer sig om, om deres pelsede venner spiser på de rigtige tidspunkter og i de rette mængder. Vi arbejdede på dette projekt på Zealand Business College under vejledning af David Svarrer. Under udviklingen kombinerede vores lille team 3D-print, indlejrede elektroniske komponenter og en webbaseret kontrolgrænseflade for at skabe et system, der overvåger, hvor meget mad der dispenseres, indsamler data fra vægtsensorer og endda lader dig styre det hele eksternt via et brugervenligt dashboard.</target>
@@ -580,15 +604,19 @@
       </trans-unit>
       <trans-unit id="8445772289716822312" datatype="html">
         <source>The PortionPal SmartFeeder prototype demonstrates that it’s totally possible to automate pet feeding in a way that is both precise and user-friendly. Printing our own enclosure gave us freedom to customize the internal mechanics, while the Arduino’s WiFi capabilities made it easy to manage everything remotely. We overcame challenges around calibrating load cells and preventing valve jams, and ended up with a working system that can handle daily feeding schedules. Future ideas might include adding a camera or tracking more detailed statistics, but even in its current state, it showcases how a straightforward combination of 3D printing, embedded hardware, and a modern web stack can offer busy owners peace of mind about their pets’ nutrition.</source>
-        <target>Prototypen PortionPal SmartFeeder viser, at det er fuldt ud muligt at automatisere kæledyrsfodring på en måde, der både er præcis og brugervenlig. Ved selv at 3D-printe indkapslingen fik vi frihed til at tilpasse de interne mekanikker, mens Arduinoens WiFi-funktioner gjorde det nemt at styre det hele eksternt. Vi overvandt udfordringer med kalibrering af vejeceller og forebyggelse af ventilblokeringer og endte med et velfungerende system, der kan håndtere daglige fodringsplaner. Fremtidige idéer kunne være at tilføje et kamera eller at indsamle mere detaljerede statistikker, men selv i sin nuværende udgave viser det, hvordan en enkel kombination af 3D-print, indlejret hardware og en moderne webstack kan give travle ejere ro i sindet omkring deres kæledyrs ernæring.</target>
+        <target>Vores prototype af PortionPal SmartFeeder viser, at man sagtens kan lave en præcis og brugervenlig automatisk fodrer til kæledyr. Ved selv at 3D-printe kabinettet kunne vi tilpasse mekanikken helt efter behov, og Arduinoens indbyggede WiFi gør det nemt at styre fodringen på afstand.
+
+Vi havde lidt udfordringer med at kalibrere vægtsensorerne og undgå, at ventilerne blokerede, men dem fik vi løst. Nu kører systemet stabilt og følger de daglige fodringsplaner, vi har lagt ind.
+
+I fremtiden kunne vi fx tilføje et kamera eller samle flere data om, hvor meget og hvornår dit kæledyr spiser. Men allerede nu viser PortionPal, hvordan en enkel kombination af 3D-print, indlejret hardware og en moderne web-platform kan give travle kæledyrsejere tryghed i hverdagen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
           <context context-type="linenumber">244</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3901396327702597889" datatype="html">
-        <source>Smart Cit Traffic Management is a project we used as an exercise when i was at school to learn how to handle big amounts of data. The assignment was to collect real time data, so we decided to to use a software called flowkit demo, which simulated a traffic light, where the software identified all the vehicles and pedestrians that passed the traffic light. Below is an image of what the software looked like.</source>
-        <target>Smart Cit Traffic Management er et projekt, vi brugte som øvelse i skolen for at lære at håndtere store mængder data. Opgaven var at indsamle realtidsdata, så vi besluttede at bruge et program kaldet Flowkit Demo, som simulerede et trafiklys, hvor softwaren identificerede alle køretøjer og fodgængere, der passerede trafiklyset. Nedenfor er et billede af, hvordan softwaren så ud.</target>
+        <source>Smart City Traffic Management is a project we used as an exercise when i was at school to learn how to handle big amounts of data. The assignment was to collect real time data, so we decided to to use a software called flowkit demo, which simulated a traffic light, where the software identified all the vehicles and pedestrians that passed the traffic light. Below is an image of what the software looked like.</source>
+        <target>Smart City Traffic Management er et projekt, vi brugte som øvelse i skolen for at lære at håndtere store mængder data. Opgaven var at indsamle realtidsdata, så vi besluttede at bruge et program kaldet Flowkit Demo, som simulerede et trafiklys, hvor softwaren identificerede alle køretøjer og fodgængere, der passerede trafiklyset. Nedenfor er et billede af, hvordan softwaren så ud.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/project-details/project-details.component.ts</context>
           <context context-type="linenumber">256</context>

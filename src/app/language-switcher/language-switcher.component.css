@@ -12,11 +12,9 @@
     appearance: none;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
     border: 1px solid rgb(0, 0, 255);
     border-radius: 1rem;
-    padding: 0.6rem 1rem 0.6rem 1rem;
+    padding: 0.6rem 2rem 0.6rem 1rem;
     font-family: skibidi;
     font-size: 1rem;
     color: #fff;
@@ -27,7 +25,7 @@
 }
 
 .language-switcher option {
-    background-color: #000
+    background-color: #000;
 }
 
 .language-switcher i {
@@ -46,7 +44,6 @@
     transform: translateY(-50%) rotate(-90deg);
 }
 
-
 @media (max-width: 768px) {
     .language-switcher {
         top: 0.7rem;
@@ -57,12 +54,12 @@
         background-color: transparent;
         backdrop-filter: none;
         border: none;
-        padding: 0.4rem 0.6rem;
+        padding: 0.4rem 2rem 0.4rem 0.6rem;
         font-size: 0.875rem;
     }
 
     .language-switcher i {
-        right: 0.6rem;
+        right: 1rem;
         font-size: 0.7rem;
     }
 }

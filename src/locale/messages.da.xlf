@@ -614,7 +614,7 @@ I fremtiden kunne vi fx tilføje et kamera eller samle flere data om, hvor meget
           <context context-type="linenumber">244</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3901396327702597889" datatype="html">
+      <trans-unit id="8101506301747002974" datatype="html">
         <source>Smart City Traffic Management is a project we used as an exercise when i was at school to learn how to handle big amounts of data. The assignment was to collect real time data, so we decided to to use a software called flowkit demo, which simulated a traffic light, where the software identified all the vehicles and pedestrians that passed the traffic light. Below is an image of what the software looked like.</source>
         <target>Smart City Traffic Management er et projekt, vi brugte som øvelse i skolen for at lære at håndtere store mængder data. Opgaven var at indsamle realtidsdata, så vi besluttede at bruge et program kaldet Flowkit Demo, som simulerede et trafiklys, hvor softwaren identificerede alle køretøjer og fodgængere, der passerede trafiklyset. Nedenfor er et billede af, hvordan softwaren så ud.</target>
         <context-group purpose="location">

@@ -3,22 +3,23 @@
     src: url('assets/fonts/heavitas/Heavitas.ttf');
 }
 
-p, a, button, li, label, h1, h2, h3, h4, span{
+:root {
+    color-scheme: dark;
+}
+
+p, a, button, li, label, h1, h2, h3, h4 {
     font-family: skibidi;
     scroll-behavior: smooth;
 }
 
 body {
-    background: rgb(7, 0, 134);
-    background: radial-gradient(circle, rgb(0, 0, 40) 0%, rgb(0, 0, 5) 100%);
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: screen;
     margin: 0;
     padding: 0;
-    border: 0;
-    background-attachment: fixed;
+    background: radial-gradient(circle, rgb(0, 0, 40) 0%, rgb(0, 0, 5) 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
 }
 
 ::-webkit-scrollbar {

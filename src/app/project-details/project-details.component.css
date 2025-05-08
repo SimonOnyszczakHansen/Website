@@ -1,11 +1,9 @@
-/* Resets & Basic Structure */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html,
 body {
   margin: 0;
   padding: 0;
@@ -13,6 +11,7 @@ body {
   width: 100%;
   font-family: Arial, sans-serif;
   color: #ffffff;
+  overflow: auto;
 }
 
 main {
@@ -86,7 +85,9 @@ span {
 
 #table-of-contents {
   position: fixed;
-  top: 20rem;
+  top: 120px;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
   right: 20px;
   padding: 1rem;
   border-radius: 8px;
@@ -123,14 +124,19 @@ span {
   padding: 0.3rem;
   font-weight: bold;
   transition: color 0.3s ease;
+  z-index: 99999;
 }
 
 #table-of-contents button.active {
   color: white;
 }
 
+:target {
+  scroll-margin-top: 140px;
+}
+
 section {
-  margin-bottom: 2rem;
+  scroll-margin-top: 140px;
 }
 
 .section-image {

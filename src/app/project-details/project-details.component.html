@@ -3,12 +3,12 @@
 </head>
 
 <body>
-  <button id="button-back" [routerLink]="['/projects']" aria-label="Go back">
+  <button i18n="@@Back button for going ack to the previous page" id="button-back" [routerLink]="['/projects']" aria-label="Go back">
     <i class="fas fa-arrow-left"></i> Back
   </button>
 
   <nav id="table-of-contents" aria-label="Table of Contents">
-    <h4><span>Contents</span></h4>
+    <h4 i18n="@@Table of contents for the project details page"><span>Contents</span></h4>
     <ul>
       <li *ngFor="let section of project?.sections">
         <button (click)="scrollToSection(section.id)" [class.active]="activeSection === section.id">
@@ -19,7 +19,7 @@
   </nav>
 
   <main>
-    <h1>Information about <span>{{ project.title }}</span></h1>
+    <h1 i18n="@@Project details header">Information about <span>{{ project.title }}</span></h1>
     <div *ngIf="loading">Loading...</div>
     <div *ngIf="error">{{ error }}</div>
 

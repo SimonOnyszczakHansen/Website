@@ -467,7 +467,6 @@ p {
     background: radial-gradient(circle, rgba(0, 101, 233, 0.5), transparent);
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     .hero-content {
         padding: 0 10px;
@@ -486,8 +485,8 @@ p {
     }
 
     .carousel3d-item {
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
         margin: -60px 0 0 -60px;
     }
 
@@ -497,6 +496,38 @@ p {
 
     .carousel3d-item p {
         font-size: 0.9rem;
+    }
+
+    .carousel3d-item:nth-child(1) {
+        transform: rotateY(0deg) translateZ(250px);
+    }
+    
+    .carousel3d-item:nth-child(2) {
+        transform: rotateY(45deg) translateZ(250px);
+    }
+    
+    .carousel3d-item:nth-child(3) {
+        transform: rotateY(90deg) translateZ(250px);
+    }
+    
+    .carousel3d-item:nth-child(4) {
+        transform: rotateY(135deg) translateZ(250px);
+    }
+    
+    .carousel3d-item:nth-child(5) {
+        transform: rotateY(180deg) translateZ(250px);
+    }
+    
+    .carousel3d-item:nth-child(6) {
+        transform: rotateY(225deg) translateZ(250px);
+    }
+    
+    .carousel3d-item:nth-child(7) {
+        transform: rotateY(270deg) translateZ(250px);
+    }
+    
+    .carousel3d-item:nth-child(8) {
+        transform: rotateY(315deg) translateZ(250px);
     }
 
     .about-me-text p {
@@ -544,6 +575,10 @@ p {
   .timeline-item .icon {
     left: -1.5rem;
     right: auto;
+  }
+
+  .skills-header {
+    text-align: center;
   }
 }
 
